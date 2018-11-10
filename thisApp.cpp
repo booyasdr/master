@@ -53,7 +53,7 @@ bool wxFX3App::OnInit() {
         g.transferSize = 131072*4;
      } else if(!strcmp(argv[1],"fx3_100")) {
         g.fs = 100e6;
-        g.transferSize = 131072*2;
+        g.transferSize = 131072*4;
      } else {
         g.fs = 64e6;
         g.transferSize = 131072*2;

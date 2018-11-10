@@ -39,7 +39,7 @@ class connectionClass {
 	class parmClass {
 		public:
 		float center_freq=16e6;
-		float samp_rate=32e6;
+		float bandwidth=32e6;
 		float fft_size=4096/4;
 		float fft_fps=20;
 		char *audio_compression=(char *)"none";

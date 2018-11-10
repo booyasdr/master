@@ -1946,7 +1946,7 @@
 	<stdio.h>
 	<stddef.h>
 
-1186429292 c:\sdr\wxwidgets\include\wx\wxprec.h
+1186425692 c:\sdr\wxwidgets\include\wx\wxprec.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 	"wx/msw/wrapwin.h"
@@ -1959,7 +1959,7 @@
 	"wx/mgl/private.h"
 	"wx/wx.h"
 
-1298329768 c:\sdr\wxwidgets\include\wx\defs.h
+1298326168 c:\sdr\wxwidgets\include\wx\defs.h
 	"wx/platform.h"
 	"wx/features.h"
 	"wx/version.h"
@@ -1970,7 +1970,7 @@
 	<unistd.h>
 	"wx/msw/winundef.h"
 
-1266337294 c:\sdr\wxwidgets\include\wx\platform.h
+1266333694 c:\sdr\wxwidgets\include\wx\platform.h
 	<stddef.h>
 	<AvailabilityMacros.h>
 	<unistd.h>
@@ -1984,7 +1984,7 @@
 
 1441548936 c:\sdr\wxwidgets\lib\gcc_lib\mswd\wx\setup.h
 
-1187353694 c:\sdr\wxwidgets\include\wx\chkconf.h
+1187350094 c:\sdr\wxwidgets\include\wx\chkconf.h
 	"wx/palmos/chkconf.h"
 	"wx/msw/wince/chkconf.h"
 	"wx/msw/chkconf.h"
@@ -1996,35 +1996,35 @@
 	"wx/x11/chkconf.h"
 	"wx/univ/chkconf.h"
 
-1234540844 c:\sdr\wxwidgets\include\wx\msw\wince\chkconf.h
+1234537244 c:\sdr\wxwidgets\include\wx\msw\wince\chkconf.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\chkconf.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\chkconf.h
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\chkconf.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\chkconf.h
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\libraries.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\libraries.h
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\libraries.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\libraries.h
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\gccpriv.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\gccpriv.h
 	<_mingw.h>
 	<w32api.h>
 
-1186429290 c:\sdr\wxwidgets\include\wx\features.h
+1186425690 c:\sdr\wxwidgets\include\wx\features.h
 
-1298329768 c:\sdr\wxwidgets\include\wx\version.h
+1298326168 c:\sdr\wxwidgets\include\wx\version.h
 	"wx/cpp.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\cpp.h
+1186425692 c:\sdr\wxwidgets\include\wx\cpp.h
 
-1194635780 c:\sdr\wxwidgets\include\wx\dlimpexp.h
+1194632180 c:\sdr\wxwidgets\include\wx\dlimpexp.h
 
-1264692366 c:\sdr\wxwidgets\include\wx\debug.h
+1264688766 c:\sdr\wxwidgets\include\wx\debug.h
 	<assert.h>
 	<limits.h>
 	"wx/wxchar.h"
 
-1298329768 c:\sdr\wxwidgets\include\wx\wxchar.h
+1298326168 c:\sdr\wxwidgets\include\wx\wxchar.h
 	"wx/platform.h"
 	"wx/dlimpexp.h"
 	<stdio.h>
@@ -2054,37 +2054,37 @@
 	<time.h>
 	<string.h>
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\winundef.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\winundef.h
 
-1213633884 c:\sdr\wxwidgets\include\wx\msw\wrapwin.h
+1213630284 c:\sdr\wxwidgets\include\wx\msw\wrapwin.h
 	"wx/platform.h"
 	<windows.h>
 	"wx/msw/winundef.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\wrapcctl.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\wrapcctl.h
 	"wx/msw/wrapwin.h"
 	<commctrl.h>
 	"wx/msw/missing.h"
 
-1188495504 c:\sdr\wxwidgets\include\wx\msw\missing.h
+1188491904 c:\sdr\wxwidgets\include\wx\msw\missing.h
 	<windows.h>
 	"wx/msw/winundef.h"
 	"wx/msw/wince/missing.h"
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\missing.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\missing.h
 	"wx/msw/private.h"
 	"shellapi.h"
 
-1264692360 c:\sdr\wxwidgets\include\wx\msw\private.h
+1264688760 c:\sdr\wxwidgets\include\wx\msw\private.h
 	"wx/msw/wrapwin.h"
 	"wx/msw/microwin.h"
 	"wx/log.h"
 	"wx/gdicmn.h"
 	"wx/colour.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\microwin.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\microwin.h
 
-1211197896 c:\sdr\wxwidgets\include\wx\log.h
+1211194296 c:\sdr\wxwidgets\include\wx\log.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/arrstr.h"
@@ -2094,7 +2094,7 @@
 	"wx/generic/logg.h"
 	"wx/cocoa/log.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\string.h
+1264688766 c:\sdr\wxwidgets\include\wx\string.h
 	"wx/defs.h"
 	<ctype.h>
 	<stdio.h>
@@ -2117,11 +2117,11 @@
 	"wx/arrstr.h"
 	"wx/iosfwrap.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\buffer.h
+1264688766 c:\sdr\wxwidgets\include\wx\buffer.h
 	"wx/wxchar.h"
 	<stdlib.h>
 
-1186429292 c:\sdr\wxwidgets\include\wx\strconv.h
+1186425692 c:\sdr\wxwidgets\include\wx\strconv.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 	"wx/buffer.h"
@@ -2129,33 +2129,33 @@
 	<stdlib.h>
 	"wx/fontenc.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\fontenc.h
+1186425694 c:\sdr\wxwidgets\include\wx\fontenc.h
 
-1264692366 c:\sdr\wxwidgets\include\wx\beforestd.h
+1264688766 c:\sdr\wxwidgets\include\wx\beforestd.h
 
-1264692366 c:\sdr\wxwidgets\include\wx\afterstd.h
+1264688766 c:\sdr\wxwidgets\include\wx\afterstd.h
 	"wx/msw/winundef.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\arrstr.h
+1264688764 c:\sdr\wxwidgets\include\wx\arrstr.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/dynarray.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\dynarray.h
+1186425692 c:\sdr\wxwidgets\include\wx\dynarray.h
 	"wx/defs.h"
 	"wx/beforestd.h"
 	<vector>
 	<algorithm>
 	"wx/afterstd.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\iosfwrap.h
+1186425692 c:\sdr\wxwidgets\include\wx\iosfwrap.h
 	<iostream.h>
 	<iosfwd>
 	"wx/msw/winundef.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\logg.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\logg.h
 
-1194635780 c:\sdr\wxwidgets\include\wx\gdicmn.h
+1194632180 c:\sdr\wxwidgets\include\wx\gdicmn.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/string.h"
@@ -2163,7 +2163,7 @@
 	"wx/hashmap.h"
 	"wx/math.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\list.h
+1264688764 c:\sdr\wxwidgets\include\wx\list.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -2173,22 +2173,22 @@
 	<list>
 	"wx/afterstd.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\object.h
+1264688764 c:\sdr\wxwidgets\include\wx\object.h
 	"wx/memory.h"
 	"wx/xti.h"
 	"wx/msw/msvcrt.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\memory.h
+1186425692 c:\sdr\wxwidgets\include\wx\memory.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/msgout.h"
 	<stddef.h>
 
-1186429292 c:\sdr\wxwidgets\include\wx\msgout.h
+1186425692 c:\sdr\wxwidgets\include\wx\msgout.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\xti.h
+1211194296 c:\sdr\wxwidgets\include\wx\xti.h
 	"wx/defs.h"
 	"wx/memory.h"
 	"wx/flags.h"
@@ -2200,9 +2200,9 @@
 	<typeinfo>
 	"wx/dynarray.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\flags.h
+1186425692 c:\sdr\wxwidgets\include\wx\flags.h
 
-1234540846 c:\sdr\wxwidgets\include\wx\hashmap.h
+1234537246 c:\sdr\wxwidgets\include\wx\hashmap.h
 	"wx/string.h"
 	<unordered_map>
 	<tr1/unordered_map>
@@ -2210,21 +2210,21 @@
 	<hash_map>
 	<stddef.h>
 
-1264692366 c:\sdr\wxwidgets\include\wx\intl.h
+1264688766 c:\sdr\wxwidgets\include\wx\intl.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/fontenc.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\msvcrt.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\msvcrt.h
 	<stdlib.h>
 	<crtdbg.h>
 
-1264692364 c:\sdr\wxwidgets\include\wx\math.h
+1264688764 c:\sdr\wxwidgets\include\wx\math.h
 	"wx/defs.h"
 	<math.h>
 	<float.h>
 
-1211197896 c:\sdr\wxwidgets\include\wx\colour.h
+1211194296 c:\sdr\wxwidgets\include\wx\colour.h
 	"wx/defs.h"
 	"wx/gdiobj.h"
 	"wx/variant.h"
@@ -2240,10 +2240,10 @@
 	"wx/cocoa/colour.h"
 	"wx/os2/colour.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\gdiobj.h
+1186425692 c:\sdr\wxwidgets\include\wx\gdiobj.h
 	"wx/object.h"
 
-1186429290 c:\sdr\wxwidgets\include\wx\variant.h
+1186425690 c:\sdr\wxwidgets\include\wx\variant.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -2254,7 +2254,7 @@
 	"wx/db.h"
 	"wx/iosfwrap.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\datetime.h
+1264688766 c:\sdr\wxwidgets\include\wx\datetime.h
 	"wx/defs.h"
 	<time.h>
 	"wx/msw/wince/time.h"
@@ -2262,15 +2262,15 @@
 	"wx/longlong.h"
 	"wx/dynarray.h"
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\time.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\time.h
 
-1264692366 c:\sdr\wxwidgets\include\wx\longlong.h
+1264688766 c:\sdr\wxwidgets\include\wx\longlong.h
 	"wx/defs.h"
 	"wx/string.h"
 	<limits.h>
 	"wx/iosfwrap.h"
 
-1234540846 c:\sdr\wxwidgets\include\wx\db.h
+1234537246 c:\sdr\wxwidgets\include\wx\db.h
 	"wx/defs.h"
 	"wx/string.h"
 	<afxwin.h>
@@ -2287,18 +2287,18 @@
 	<sqlext.h>
 	"wx/object.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\isql.h
+1186425692 c:\sdr\wxwidgets\include\wx\isql.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\isqlext.h
+1186425692 c:\sdr\wxwidgets\include\wx\isqlext.h
 	"wx/isql.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\colour.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\colour.h
 	"wx/object.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\colour.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\colour.h
 	"wx/object.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\wrapcdlg.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\wrapcdlg.h
 	"wx/defs.h"
 	"wx/msw/wrapwin.h"
 	"wx/msw/private.h"
@@ -2306,7 +2306,7 @@
 	<commdlg.h>
 	"wx/msw/winundef.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\wx.h
+1186425694 c:\sdr\wxwidgets\include\wx\wx.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/dynarray.h"
@@ -2386,13 +2386,13 @@
 	"wx/validate.h"
 	"wx/valtext.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\hash.h
+1211194296 c:\sdr\wxwidgets\include\wx\hash.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/list.h"
 	"wx/dynarray.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\event.h
+1264688766 c:\sdr\wxwidgets\include\wx\event.h
 	"wx/defs.h"
 	"wx/cpp.h"
 	"wx/object.h"
@@ -2402,16 +2402,16 @@
 	"wx/thread.h"
 	"wx/dynarray.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\clntdata.h
+1186425692 c:\sdr\wxwidgets\include\wx\clntdata.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/hashmap.h"
 	"wx/vector.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\vector.h
+1264688766 c:\sdr\wxwidgets\include\wx\vector.h
 	"wx/defs.h"
 
-1186429290 c:\sdr\wxwidgets\include\wx\cursor.h
+1186425690 c:\sdr\wxwidgets\include\wx\cursor.h
 	"wx/defs.h"
 	"wx/palmos/cursor.h"
 	"wx/msw/cursor.h"
@@ -2426,15 +2426,15 @@
 	"wx/os2/cursor.h"
 	"wx/utils.h"
 
-1195480530 c:\sdr\wxwidgets\include\wx\msw\cursor.h
+1195476930 c:\sdr\wxwidgets\include\wx\msw\cursor.h
 	"wx/msw/gdiimage.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\gdiimage.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\gdiimage.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/list.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\utils.h
+1264688764 c:\sdr\wxwidgets\include\wx\utils.h
 	"wx/object.h"
 	"wx/list.h"
 	"wx/filefn.h"
@@ -2446,7 +2446,7 @@
 	<unistd.h>
 	<stdio.h>
 
-1266337294 c:\sdr\wxwidgets\include\wx\filefn.h
+1266333694 c:\sdr\wxwidgets\include\wx\filefn.h
 	"wx/list.h"
 	"wx/arrstr.h"
 	"wx/msw/wince/time.h"
@@ -2482,13 +2482,13 @@
 	<fcntl.h>
 	<sys/types.h>
 
-1186429290 c:\sdr\wxwidgets\include\wx\platinfo.h
+1186425690 c:\sdr\wxwidgets\include\wx\platinfo.h
 	"wx/string.h"
 
-1298329768 c:\sdr\wxwidgets\include\wx\thread.h
+1298326168 c:\sdr\wxwidgets\include\wx\thread.h
 	"wx/defs.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\app.h
+1211194296 c:\sdr\wxwidgets\include\wx\app.h
 	"wx/event.h"
 	"wx/build.h"
 	"wx/init.h"
@@ -2506,19 +2506,19 @@
 	"wx/os2/app.h"
 	"wx/univ/theme.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\build.h
+1186425692 c:\sdr\wxwidgets\include\wx\build.h
 	"wx/version.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\init.h
+1264688766 c:\sdr\wxwidgets\include\wx\init.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\app.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\app.h
 	"wx/event.h"
 	"wx/icon.h"
 	"wx/msw/wrapwin.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\icon.h
+1186425692 c:\sdr\wxwidgets\include\wx\icon.h
 	"wx/iconloc.h"
 	"wx/generic/icon.h"
 	"wx/msw/icon.h"
@@ -2533,13 +2533,13 @@
 	"wx/os2/icon.h"
 	"wx/variant.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\iconloc.h
+1186425692 c:\sdr\wxwidgets\include\wx\iconloc.h
 	"wx/string.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\icon.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\icon.h
 	"wx/bitmap.h"
 
-1194635780 c:\sdr\wxwidgets\include\wx\bitmap.h
+1194632180 c:\sdr\wxwidgets\include\wx\bitmap.h
 	"wx/string.h"
 	"wx/gdicmn.h"
 	"wx/colour.h"
@@ -2557,11 +2557,11 @@
 	"wx/os2/bitmap.h"
 	"wx/generic/mask.h"
 
-1194635774 c:\sdr\wxwidgets\include\wx\msw\bitmap.h
+1194632174 c:\sdr\wxwidgets\include\wx\msw\bitmap.h
 	"wx/msw/gdiimage.h"
 	"wx/palette.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\palette.h
+1264688766 c:\sdr\wxwidgets\include\wx\palette.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -2574,40 +2574,40 @@
 	"wx/mac/palette.h"
 	"wx/os2/palette.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\palette.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\palette.h
 	"wx/gdiobj.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\paletteg.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\paletteg.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\mask.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\mask.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\icon.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\icon.h
 	"wx/msw/gdiimage.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\theme.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\theme.h
 	"wx/string.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\stream.h
+1211194296 c:\sdr\wxwidgets\include\wx\stream.h
 	"wx/defs.h"
 	<stdio.h>
 	"wx/object.h"
 	"wx/string.h"
 	"wx/filefn.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\stopwatch.h
+1264688764 c:\sdr\wxwidgets\include\wx\stopwatch.h
 	"wx/defs.h"
 	"wx/longlong.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\module.h
+1264688764 c:\sdr\wxwidgets\include\wx\module.h
 	"wx/object.h"
 	"wx/list.h"
 	"wx/dynarray.h"
 
-1234540848 c:\sdr\wxwidgets\include\wx\window.h
+1234537248 c:\sdr\wxwidgets\include\wx\window.h
 	"wx/event.h"
 	"wx/list.h"
 	"wx/cursor.h"
@@ -2633,7 +2633,7 @@
 	"wx/os2/window.h"
 	"wx/univ/window.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\font.h
+1211194296 c:\sdr\wxwidgets\include\wx\font.h
 	"wx/defs.h"
 	"wx/fontenc.h"
 	"wx/gdiobj.h"
@@ -2649,10 +2649,10 @@
 	"wx/cocoa/font.h"
 	"wx/os2/font.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\font.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\font.h
 	"wx/gdicmn.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\region.h
+1194632178 c:\sdr\wxwidgets\include\wx\region.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/palmos/region.h"
@@ -2666,13 +2666,13 @@
 	"wx/cocoa/region.h"
 	"wx/os2/region.h"
 
-1264692360 c:\sdr\wxwidgets\include\wx\msw\region.h
+1264688760 c:\sdr\wxwidgets\include\wx\msw\region.h
 
-1211197896 c:\sdr\wxwidgets\include\wx\validate.h
+1211194296 c:\sdr\wxwidgets\include\wx\validate.h
 	"wx/defs.h"
 	"wx/event.h"
 
-1298329768 c:\sdr\wxwidgets\include\wx\accel.h
+1298326168 c:\sdr\wxwidgets\include\wx\accel.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/generic/accel.h"
@@ -2684,33 +2684,33 @@
 	"wx/generic/accel.h"
 	"wx/os2/accel.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\accel.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\accel.h
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\accel.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\accel.h
 
-1211197896 c:\sdr\wxwidgets\include\wx\access.h
+1211194296 c:\sdr\wxwidgets\include\wx\access.h
 	"wx/defs.h"
 	"wx/variant.h"
 	"wx/msw/ole/access.h"
 
-1186429242 c:\sdr\wxwidgets\include\wx\msw\ole\access.h
+1186425642 c:\sdr\wxwidgets\include\wx\msw\ole\access.h
 
-1213633884 c:\sdr\wxwidgets\include\wx\msw\window.h
+1213630284 c:\sdr\wxwidgets\include\wx\msw\window.h
 	"wx/hash.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\window.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\window.h
 	"wx/bitmap.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\containr.h
+1211194296 c:\sdr\wxwidgets\include\wx\containr.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\panel.h
+1186425692 c:\sdr\wxwidgets\include\wx\panel.h
 	"wx/generic/panelg.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\generic\panelg.h
+1194632178 c:\sdr\wxwidgets\include\wx\generic\panelg.h
 	"wx/window.h"
 	"wx/containr.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\toplevel.h
+1211194296 c:\sdr\wxwidgets\include\wx\toplevel.h
 	"wx/window.h"
 	"wx/iconbndl.h"
 	"wx/palmos/toplevel.h"
@@ -2726,25 +2726,25 @@
 	"wx/motif/toplevel.h"
 	"wx/univ/toplevel.h"
 
-1194635780 c:\sdr\wxwidgets\include\wx\iconbndl.h
+1194632180 c:\sdr\wxwidgets\include\wx\iconbndl.h
 	"wx/dynarray.h"
 	"wx/gdicmn.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\toplevel.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\toplevel.h
 
-1264692356 c:\sdr\wxwidgets\include\wx\univ\toplevel.h
+1264688756 c:\sdr\wxwidgets\include\wx\univ\toplevel.h
 	"wx/univ/inpcons.h"
 	"wx/univ/inphand.h"
 	"wx/icon.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\inpcons.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\inpcons.h
 	"wx/object.h"
 	"wx/event.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\inphand.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\inphand.h
 	"wx/univ/inpcons.h"
 
-1195480532 c:\sdr\wxwidgets\include\wx\frame.h
+1195476932 c:\sdr\wxwidgets\include\wx\frame.h
 	"wx/toplevel.h"
 	"wx/univ/frame.h"
 	"wx/palmos/frame.h"
@@ -2756,11 +2756,11 @@
 	"wx/cocoa/frame.h"
 	"wx/os2/frame.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\frame.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\frame.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\frame.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\frame.h
 
-1264692366 c:\sdr\wxwidgets\include\wx\image.h
+1264688766 c:\sdr\wxwidgets\include\wx\image.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -2779,40 +2779,40 @@
 	"wx/imagxpm.h"
 	"wx/imagiff.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\imagbmp.h
+1264688764 c:\sdr\wxwidgets\include\wx\imagbmp.h
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imagpng.h
+1186425692 c:\sdr\wxwidgets\include\wx\imagpng.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imaggif.h
+1186425692 c:\sdr\wxwidgets\include\wx\imaggif.h
 	"wx/image.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\imagpcx.h
+1186425694 c:\sdr\wxwidgets\include\wx\imagpcx.h
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imagjpeg.h
+1186425692 c:\sdr\wxwidgets\include\wx\imagjpeg.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imagtga.h
+1186425692 c:\sdr\wxwidgets\include\wx\imagtga.h
 	"wx/image.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\imagtiff.h
+1264688766 c:\sdr\wxwidgets\include\wx\imagtiff.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imagpnm.h
+1186425692 c:\sdr\wxwidgets\include\wx\imagpnm.h
 	"wx/image.h"
 
-1186429290 c:\sdr\wxwidgets\include\wx\imagxpm.h
+1186425690 c:\sdr\wxwidgets\include\wx\imagxpm.h
 	"wx/image.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imagiff.h
+1186425692 c:\sdr\wxwidgets\include\wx\imagiff.h
 	"wx/image.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\dc.h
+1264688766 c:\sdr\wxwidgets\include\wx\dc.h
 	"wx/object.h"
 	"wx/intl.h"
 	"wx/cursor.h"
@@ -2838,7 +2838,7 @@
 	"wx/os2/dc.h"
 	"wx/dcgraph.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\brush.h
+1186425692 c:\sdr\wxwidgets\include\wx\brush.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -2853,12 +2853,12 @@
 	"wx/cocoa/brush.h"
 	"wx/os2/brush.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\brush.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\brush.h
 	"wx/gdicmn.h"
 	"wx/gdiobj.h"
 	"wx/bitmap.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\pen.h
+1186425692 c:\sdr\wxwidgets\include\wx\pen.h
 	"wx/defs.h"
 	"wx/palmos/pen.h"
 	"wx/msw/pen.h"
@@ -2871,31 +2871,31 @@
 	"wx/cocoa/pen.h"
 	"wx/os2/pen.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\pen.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\pen.h
 	"wx/gdiobj.h"
 	"wx/bitmap.h"
 	"wx/colour.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\dc.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\dc.h
 	"wx/defs.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\dcgraph.h
+1211194296 c:\sdr\wxwidgets\include\wx\dcgraph.h
 	"wx/geometry.h"
 	"wx/dynarray.h"
 	"wx/graphics.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\geometry.h
+1211194296 c:\sdr\wxwidgets\include\wx\geometry.h
 	"wx/defs.h"
 	"wx/utils.h"
 	"wx/gdicmn.h"
 	"wx/math.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\graphics.h
+1264688766 c:\sdr\wxwidgets\include\wx\graphics.h
 	"wx/defs.h"
 	"wx/geometry.h"
 	"wx/dynarray.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\dcclient.h
+1186425692 c:\sdr\wxwidgets\include\wx\dcclient.h
 	"wx/defs.h"
 	"wx/palmos/dcclient.h"
 	"wx/msw/dcclient.h"
@@ -2909,11 +2909,11 @@
 	"wx/cocoa/dcclient.h"
 	"wx/os2/dcclient.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\dcclient.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\dcclient.h
 	"wx/dc.h"
 	"wx/dynarray.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\dcmemory.h
+1186425692 c:\sdr\wxwidgets\include\wx\dcmemory.h
 	"wx/bitmap.h"
 	"wx/palmos/dcmemory.h"
 	"wx/msw/dcmemory.h"
@@ -2927,21 +2927,21 @@
 	"wx/cocoa/dcmemory.h"
 	"wx/os2/dcmemory.h"
 
-1188301874 c:\sdr\wxwidgets\include\wx\msw\dcmemory.h
+1188298274 c:\sdr\wxwidgets\include\wx\msw\dcmemory.h
 	"wx/dcclient.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\dcprint.h
+1186425694 c:\sdr\wxwidgets\include\wx\dcprint.h
 	"wx/defs.h"
 	"wx/palmos/dcprint.h"
 	"wx/msw/dcprint.h"
 	"wx/os2/dcprint.h"
 	"wx/mac/dcprint.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\dcprint.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\dcprint.h
 	"wx/dc.h"
 	"wx/cmndata.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\cmndata.h
+1211194296 c:\sdr\wxwidgets\include\wx\cmndata.h
 	"wx/window.h"
 	"wx/font.h"
 	"wx/encinfo.h"
@@ -2949,10 +2949,10 @@
 	"wx/gdicmn.h"
 	"wx/stream.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\encinfo.h
+1186425692 c:\sdr\wxwidgets\include\wx\encinfo.h
 	"wx/string.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\dcscreen.h
+1186425692 c:\sdr\wxwidgets\include\wx\dcscreen.h
 	"wx/defs.h"
 	"wx/palmos/dcscreen.h"
 	"wx/msw/dcscreen.h"
@@ -2966,10 +2966,10 @@
 	"wx/cocoa/dcscreen.h"
 	"wx/os2/dcscreen.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\dcscreen.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\dcscreen.h
 	"wx/dc.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\button.h
+1194632178 c:\sdr\wxwidgets\include\wx\button.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/button.h"
@@ -2982,7 +2982,7 @@
 	"wx/os2/button.h"
 	"wx/palmos/button.h"
 
-1186429290 c:\sdr\wxwidgets\include\wx\control.h
+1186425690 c:\sdr\wxwidgets\include\wx\control.h
 	"wx/defs.h"
 	"wx/window.h"
 	"wx/univ/control.h"
@@ -2995,19 +2995,19 @@
 	"wx/cocoa/control.h"
 	"wx/os2/control.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\control.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\control.h
 	"wx/univ/inphand.h"
 	"wx/univ/inpcons.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\control.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\control.h
 	"wx/dynarray.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\button.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\button.h
 	"wx/bitmap.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\button.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\button.h
 
-1194635778 c:\sdr\wxwidgets\include\wx\menuitem.h
+1194632178 c:\sdr\wxwidgets\include\wx\menuitem.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/univ/menuitem.h"
@@ -3020,18 +3020,18 @@
 	"wx/cocoa/menuitem.h"
 	"wx/os2/menuitem.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\menuitem.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\menuitem.h
 
-1187180310 c:\sdr\wxwidgets\include\wx\msw\menuitem.h
+1187176710 c:\sdr\wxwidgets\include\wx\msw\menuitem.h
 	"wx/ownerdrw.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\ownerdrw.h
+1264688766 c:\sdr\wxwidgets\include\wx\ownerdrw.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/colour.h"
 	"wx/font.h"
 
-1194635780 c:\sdr\wxwidgets\include\wx\menu.h
+1194632180 c:\sdr\wxwidgets\include\wx\menu.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/window.h"
@@ -3046,16 +3046,16 @@
 	"wx/cocoa/menu.h"
 	"wx/os2/menu.h"
 
-1187180304 c:\sdr\wxwidgets\include\wx\univ\menu.h
+1187176704 c:\sdr\wxwidgets\include\wx\univ\menu.h
 	"wx/accel.h"
 	"wx/dynarray.h"
 
-1194635774 c:\sdr\wxwidgets\include\wx\msw\menu.h
+1194632174 c:\sdr\wxwidgets\include\wx\msw\menu.h
 	"wx/accel.h"
 	"wx/dynarray.h"
 	"wx/arrstr.h"
 
-1195480532 c:\sdr\wxwidgets\include\wx\dialog.h
+1195476932 c:\sdr\wxwidgets\include\wx\dialog.h
 	"wx/defs.h"
 	"wx/containr.h"
 	"wx/toplevel.h"
@@ -3069,12 +3069,12 @@
 	"wx/cocoa/dialog.h"
 	"wx/os2/dialog.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\dialog.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\dialog.h
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\dialog.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\dialog.h
 	"wx/panel.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\timer.h
+1186425694 c:\sdr\wxwidgets\include\wx\timer.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/longlong.h"
@@ -3090,15 +3090,15 @@
 	"wx/mac/timer.h"
 	"wx/os2/timer.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\timer.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\timer.h
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\timer.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\timer.h
 
-1299080390 c:\sdr\wxwidgets\include\wx\settings.h
+1299076790 c:\sdr\wxwidgets\include\wx\settings.h
 	"wx/colour.h"
 	"wx/font.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\msgdlg.h
+1264688766 c:\sdr\wxwidgets\include\wx\msgdlg.h
 	"wx/defs.h"
 	"wx/generic/msgdlgg.h"
 	"wx/generic/msgdlgg.h"
@@ -3112,15 +3112,15 @@
 	"wx/cocoa/msgdlg.h"
 	"wx/os2/msgdlg.h"
 
-1195480532 c:\sdr\wxwidgets\include\wx\generic\msgdlgg.h
+1195476932 c:\sdr\wxwidgets\include\wx\generic\msgdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\msgdlg.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\msgdlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\dataobj.h
+1186425692 c:\sdr\wxwidgets\include\wx\dataobj.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/bitmap.h"
@@ -3151,17 +3151,17 @@
 	"wx/cocoa/dataobj2.h"
 	"wx/os2/dataobj2.h"
 
-1186429242 c:\sdr\wxwidgets\include\wx\msw\ole\dataform.h
+1186425642 c:\sdr\wxwidgets\include\wx\msw\ole\dataform.h
 
-1186429242 c:\sdr\wxwidgets\include\wx\msw\ole\dataobj.h
+1186425642 c:\sdr\wxwidgets\include\wx\msw\ole\dataobj.h
 
-1186429242 c:\sdr\wxwidgets\include\wx\msw\ole\dataobj2.h
+1186425642 c:\sdr\wxwidgets\include\wx\msw\ole\dataobj2.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\ctrlsub.h
+1186425692 c:\sdr\wxwidgets\include\wx\ctrlsub.h
 	"wx/defs.h"
 	"wx/control.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\bmpbuttn.h
+1186425692 c:\sdr\wxwidgets\include\wx\bmpbuttn.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/button.h"
@@ -3174,14 +3174,14 @@
 	"wx/cocoa/bmpbuttn.h"
 	"wx/os2/bmpbuttn.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\bmpbuttn.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\bmpbuttn.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\bmpbuttn.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\bmpbuttn.h
 	"wx/button.h"
 	"wx/bitmap.h"
 	"wx/brush.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\checkbox.h
+1186425692 c:\sdr\wxwidgets\include\wx\checkbox.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/checkbox.h"
@@ -3194,12 +3194,12 @@
 	"wx/os2/checkbox.h"
 	"wx/palmos/checkbox.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\checkbox.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\checkbox.h
 	"wx/button.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\checkbox.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\checkbox.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\checklst.h
+1186425692 c:\sdr\wxwidgets\include\wx\checklst.h
 	"wx/listbox.h"
 	"wx/univ/checklst.h"
 	"wx/msw/wince/checklst.h"
@@ -3211,7 +3211,7 @@
 	"wx/cocoa/checklst.h"
 	"wx/os2/checklst.h"
 
-1194635780 c:\sdr\wxwidgets\include\wx\listbox.h
+1194632180 c:\sdr\wxwidgets\include\wx\listbox.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/listbox.h"
@@ -3223,26 +3223,26 @@
 	"wx/os2/listbox.h"
 	"wx/cocoa/listbox.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\listbox.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\listbox.h
 	"wx/scrolwin.h"
 	"wx/dynarray.h"
 	"wx/arrstr.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\scrolwin.h
+1211194296 c:\sdr\wxwidgets\include\wx\scrolwin.h
 	"wx/panel.h"
 	"wx/gtk/scrolwin.h"
 	"wx/gtk1/scrolwin.h"
 
-1298329766 c:\sdr\wxwidgets\include\wx\msw\listbox.h
+1298326166 c:\sdr\wxwidgets\include\wx\msw\listbox.h
 	"wx/dynarray.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\checklst.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\checklst.h
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\checklst.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\checklst.h
 
-1194635774 c:\sdr\wxwidgets\include\wx\msw\checklst.h
+1194632174 c:\sdr\wxwidgets\include\wx\msw\checklst.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\choice.h
+1186425692 c:\sdr\wxwidgets\include\wx\choice.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/choice.h"
@@ -3255,10 +3255,10 @@
 	"wx/cocoa/choice.h"
 	"wx/os2/choice.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\choice.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\choice.h
 	"wx/combobox.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\combobox.h
+1186425692 c:\sdr\wxwidgets\include\wx\combobox.h
 	"wx/defs.h"
 	"wx/textctrl.h"
 	"wx/ctrlsub.h"
@@ -3271,7 +3271,7 @@
 	"wx/cocoa/combobox.h"
 	"wx/os2/combobox.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\textctrl.h
+1211194296 c:\sdr\wxwidgets\include\wx\textctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
@@ -3288,24 +3288,24 @@
 	"wx/cocoa/textctrl.h"
 	"wx/os2/textctrl.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\ioswrap.h
+1186425692 c:\sdr\wxwidgets\include\wx\ioswrap.h
 	<iostream.h>
 	<iostream>
 	"wx/msw/winundef.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\textctrl.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\textctrl.h
 	"wx/scrolwin.h"
 	"wx/univ/inphand.h"
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\textctrlce.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\textctrlce.h
 	"wx/dynarray.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\textctrl.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\textctrl.h
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\combobox.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\combobox.h
 	"wx/combo.h"
 
-1298329768 c:\sdr\wxwidgets\include\wx\combo.h
+1298326168 c:\sdr\wxwidgets\include\wx\combo.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/renderer.h"
@@ -3313,28 +3313,28 @@
 	"wx/msw/combo.h"
 	"wx/generic/combo.h"
 
-1211455690 c:\sdr\wxwidgets\include\wx\renderer.h
+1211452090 c:\sdr\wxwidgets\include\wx\renderer.h
 	"wx/gdicmn.h"
 	"wx/colour.h"
 	"wx/font.h"
 	"wx/bitmap.h"
 	"wx/string.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\combo.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\combo.h
 	"wx/timer.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\generic\combo.h
+1264688764 c:\sdr\wxwidgets\include\wx\generic\combo.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\combobox.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\combobox.h
 	"wx/choice.h"
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\choicece.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\choicece.h
 	"wx/defs.h"
 	"wx/dynarray.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\choice.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\choice.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\scrolbar.h
+1186425692 c:\sdr\wxwidgets\include\wx\scrolbar.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/scrolbar.h"
@@ -3346,15 +3346,15 @@
 	"wx/cocoa/scrolbar.h"
 	"wx/os2/scrolbar.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\scrolbar.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\scrolbar.h
 	"wx/univ/scrarrow.h"
 	"wx/renderer.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\scrarrow.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\scrarrow.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\scrolbar.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\scrolbar.h
 
-1186429290 c:\sdr\wxwidgets\include\wx\stattext.h
+1186425690 c:\sdr\wxwidgets\include\wx\stattext.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/stattext.h"
@@ -3367,11 +3367,11 @@
 	"wx/os2/stattext.h"
 	"wx/palmos/stattext.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\stattext.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\stattext.h
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\stattext.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\stattext.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\statbmp.h
+1186425692 c:\sdr\wxwidgets\include\wx\statbmp.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/bitmap.h"
@@ -3385,15 +3385,15 @@
 	"wx/cocoa/statbmp.h"
 	"wx/os2/statbmp.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\statbmp.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\statbmp.h
 	"wx/bitmap.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\statbmp.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\statbmp.h
 	"wx/control.h"
 	"wx/icon.h"
 	"wx/bitmap.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\statbox.h
+1186425692 c:\sdr\wxwidgets\include\wx\statbox.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/statbox.h"
@@ -3405,11 +3405,11 @@
 	"wx/cocoa/statbox.h"
 	"wx/os2/statbox.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\statbox.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\statbox.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\statbox.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\statbox.h
 
-1220360144 c:\sdr\wxwidgets\include\wx\radiobox.h
+1220356544 c:\sdr\wxwidgets\include\wx\radiobox.h
 	"wx/ctrlsub.h"
 	"wx/dynarray.h"
 	"wx/univ/radiobox.h"
@@ -3422,14 +3422,14 @@
 	"wx/os2/radiobox.h"
 	"wx/palmos/radiobox.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\radiobox.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\radiobox.h
 	"wx/statbox.h"
 	"wx/dynarray.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\radiobox.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\radiobox.h
 	"wx/statbox.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\radiobut.h
+1186425692 c:\sdr\wxwidgets\include\wx\radiobut.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/radiobut.h"
@@ -3442,12 +3442,12 @@
 	"wx/os2/radiobut.h"
 	"wx/palmos/radiobut.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\radiobut.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\radiobut.h
 	"wx/checkbox.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\radiobut.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\radiobut.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\slider.h
+1186425692 c:\sdr\wxwidgets\include\wx\slider.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/slider.h"
@@ -3460,15 +3460,15 @@
 	"wx/os2/slider.h"
 	"wx/palmos/slider.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\slider.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\slider.h
 	"wx/univ/scrthumb.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\scrthumb.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\scrthumb.h
 	"wx/timer.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\slider95.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\slider95.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\gauge.h
+1186425692 c:\sdr\wxwidgets\include\wx\gauge.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/gauge.h"
@@ -3480,11 +3480,11 @@
 	"wx/cocoa/gauge.h"
 	"wx/os2/gauge.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\gauge.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\gauge.h
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\gauge95.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\gauge95.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\dirdlg.h
+1186425692 c:\sdr\wxwidgets\include\wx\dirdlg.h
 	"wx/dialog.h"
 	"wx/generic/dirdlgg.h"
 	"wx/generic/dirdlgg.h"
@@ -3496,12 +3496,12 @@
 	"wx/cocoa/dirdlg.h"
 	"wx/generic/dirdlgg.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\dirdlgg.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\dirdlgg.h
 	"wx/dialog.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\dirdlg.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\dirdlg.h
 
-1186429292 c:\sdr\wxwidgets\include\wx\toolbar.h
+1186425692 c:\sdr\wxwidgets\include\wx\toolbar.h
 	"wx/defs.h"
 	"wx/tbarbase.h"
 	"wx/univ/toolbar.h"
@@ -3515,44 +3515,44 @@
 	"wx/cocoa/toolbar.h"
 	"wx/os2/toolbar.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\tbarbase.h
+1264688766 c:\sdr\wxwidgets\include\wx\tbarbase.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/list.h"
 	"wx/control.h"
 
-1264692356 c:\sdr\wxwidgets\include\wx\univ\toolbar.h
+1264688756 c:\sdr\wxwidgets\include\wx\univ\toolbar.h
 	"wx/button.h"
 
-1234540844 c:\sdr\wxwidgets\include\wx\msw\tbar95.h
+1234537244 c:\sdr\wxwidgets\include\wx\msw\tbar95.h
 	"wx/dynarray.h"
 	"wx/imaglist.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\imaglist.h
+1186425692 c:\sdr\wxwidgets\include\wx\imaglist.h
 	"wx/generic/imaglist.h"
 	"wx/msw/imaglist.h"
 	"wx/mac/imaglist.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\imaglist.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\imaglist.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/icon.h"
 
-1186429250 c:\sdr\wxwidgets\include\wx\msw\imaglist.h
+1186425650 c:\sdr\wxwidgets\include\wx\msw\imaglist.h
 	"wx/bitmap.h"
 
-1186429248 c:\sdr\wxwidgets\include\wx\msw\wince\tbarwce.h
+1186425648 c:\sdr\wxwidgets\include\wx\msw\wince\tbarwce.h
 	"wx/dynarray.h"
 	"wx/msw/tbar95.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\layout.h
+1194632178 c:\sdr\wxwidgets\include\wx\layout.h
 	"wx/object.h"
 
-1211197896 c:\sdr\wxwidgets\include\wx\sizer.h
+1211194296 c:\sdr\wxwidgets\include\wx\sizer.h
 	"wx/defs.h"
 	"wx/window.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\mdi.h
+1186425692 c:\sdr\wxwidgets\include\wx\mdi.h
 	"wx/defs.h"
 	"wx/generic/mdig.h"
 	"wx/msw/mdi.h"
@@ -3563,12 +3563,12 @@
 	"wx/cocoa/mdi.h"
 	"wx/generic/mdig.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\mdig.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\mdig.h
 	"wx/frame.h"
 	"wx/panel.h"
 	"wx/notebook.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\notebook.h
+1186425692 c:\sdr\wxwidgets\include\wx\notebook.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/univ/notebook.h"
@@ -3580,32 +3580,32 @@
 	"wx/cocoa/notebook.h"
 	"wx/os2/notebook.h"
 
-1194635780 c:\sdr\wxwidgets\include\wx\bookctrl.h
+1194632180 c:\sdr\wxwidgets\include\wx\bookctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
 	"wx/notebook.h"
 	"wx/choicebk.h"
 
-1264692366 c:\sdr\wxwidgets\include\wx\choicebk.h
+1264688766 c:\sdr\wxwidgets\include\wx\choicebk.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/choice.h"
 
-1264692358 c:\sdr\wxwidgets\include\wx\univ\notebook.h
+1264688758 c:\sdr\wxwidgets\include\wx\univ\notebook.h
 	"wx/arrstr.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\notebook.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\notebook.h
 	"wx/control.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\notebook.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\notebook.h
 	"wx/event.h"
 	"wx/control.h"
 
-1211197890 c:\sdr\wxwidgets\include\wx\msw\mdi.h
+1211194290 c:\sdr\wxwidgets\include\wx\msw\mdi.h
 	"wx/frame.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\statusbr.h
+1186425692 c:\sdr\wxwidgets\include\wx\statusbr.h
 	"wx/defs.h"
 	"wx/window.h"
 	"wx/list.h"
@@ -3617,47 +3617,47 @@
 	"wx/mac/statusbr.h"
 	"wx/generic/statusbr.h"
 
-1186429194 c:\sdr\wxwidgets\include\wx\univ\statusbr.h
+1186425594 c:\sdr\wxwidgets\include\wx\univ\statusbr.h
 	"wx/univ/inpcons.h"
 	"wx/arrstr.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\statbr95.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\statbr95.h
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\statusbr.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\statusbr.h
 	"wx/defs.h"
 	"wx/pen.h"
 	"wx/arrstr.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\choicdlg.h
+1186425692 c:\sdr\wxwidgets\include\wx\choicdlg.h
 	"wx/generic/choicdgg.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\generic\choicdgg.h
+1194632178 c:\sdr\wxwidgets\include\wx\generic\choicdgg.h
 	"wx/dynarray.h"
 	"wx/dialog.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\textdlg.h
+1186425692 c:\sdr\wxwidgets\include\wx\textdlg.h
 	"wx/generic/textdlgg.h"
 	"wx/numdlg.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\generic\textdlgg.h
+1194632178 c:\sdr\wxwidgets\include\wx\generic\textdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 	"wx/valtext.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\valtext.h
+1264688764 c:\sdr\wxwidgets\include\wx\valtext.h
 	"wx/defs.h"
 	"wx/textctrl.h"
 	"wx/validate.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\numdlg.h
+1186425692 c:\sdr\wxwidgets\include\wx\numdlg.h
 	"wx/defs.h"
 	"wx/generic/numdlgg.h"
 
-1194635778 c:\sdr\wxwidgets\include\wx\generic\numdlgg.h
+1194632178 c:\sdr\wxwidgets\include\wx\generic\numdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\filedlg.h
+1186425692 c:\sdr\wxwidgets\include\wx\filedlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 	"wx/arrstr.h"
@@ -3671,32 +3671,32 @@
 	"wx/cocoa/filedlg.h"
 	"wx/os2/filedlg.h"
 
-1186429286 c:\sdr\wxwidgets\include\wx\generic\filedlgg.h
+1186425686 c:\sdr\wxwidgets\include\wx\generic\filedlgg.h
 	"wx/listctrl.h"
 	"wx/datetime.h"
 	"wx/filefn.h"
 	"wx/filedlg.h"
 
-1186429292 c:\sdr\wxwidgets\include\wx\listctrl.h
+1186425692 c:\sdr\wxwidgets\include\wx\listctrl.h
 	"wx/defs.h"
 	"wx/listbase.h"
 	"wx/msw/listctrl.h"
 	"wx/mac/carbon/listctrl.h"
 	"wx/generic/listctrl.h"
 
-1186429294 c:\sdr\wxwidgets\include\wx\listbase.h
+1186425694 c:\sdr\wxwidgets\include\wx\listbase.h
 	"wx/colour.h"
 	"wx/font.h"
 	"wx/gdicmn.h"
 	"wx/event.h"
 
-1220360142 c:\sdr\wxwidgets\include\wx\msw\listctrl.h
+1220356542 c:\sdr\wxwidgets\include\wx\msw\listctrl.h
 	"wx/textctrl.h"
 
-1264692364 c:\sdr\wxwidgets\include\wx\generic\listctrl.h
+1264688764 c:\sdr\wxwidgets\include\wx\generic\listctrl.h
 	"wx/textctrl.h"
 
-1186429252 c:\sdr\wxwidgets\include\wx\msw\filedlg.h
+1186425652 c:\sdr\wxwidgets\include\wx\msw\filedlg.h
 
 1186429252 c:\sdr\wxwidgets\include\wx\msw\wx.rc
 	<winresrc.h>
@@ -3716,7 +3716,7 @@
 
 1186429252 c:\sdr\wxwidgets\include\wx\msw\rcdefs.h
 
-1431640801 c:\sdr\wxwidgets\include\wx\setup.h
+1431637201 c:\sdr\wxwidgets\include\wx\setup.h
 
 1450559218 source:c:\radio\c\booyasdrnew\wx_pch.h
 	<wx/wxprec.h>
@@ -10107,11 +10107,11 @@
 	<wx/string.h>
 	<wx/settings.h>
 
-1488373928 source:c:\radio\c\booyasdrweb\wx_pch.h
+1488370328 source:c:\radio\c\booyasdrweb\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1465212274 source:c:\radio\c\booyasdrweb\fx2dev.cc
+1465208674 source:c:\radio\c\booyasdrweb\fx2dev.cc
 	<stdio.h>
 	<errno.h>
 	<string.h>
@@ -10123,16 +10123,16 @@
 	"fx2dev.h"
 	<lusb0_usb.h>
 
-1517769922 c:\radio\c\booyasdrweb\fx2dev.h
+1517766322 c:\radio\c\booyasdrweb\fx2dev.h
 	<stdio.h>
 
-1465212246 source:c:\radio\c\booyasdrweb\global.cpp
+1465208646 source:c:\radio\c\booyasdrweb\global.cpp
 	"global.h"
 
-1530057502 c:\radio\c\booyasdrweb\global.h
+1530053902 c:\radio\c\booyasdrweb\global.h
 	<math.h>
 
-1530137340 source:c:\radio\c\booyasdrweb\main_loop.cpp
+1540667265 source:c:\radio\c\booyasdrweb\main_loop.cpp
 	<windows.h>
 	<stdio.h>
 	<stdlib.h>
@@ -10146,31 +10146,31 @@
 	"webServer.h"
 	<pthread.h>
 
-1529534930 c:\radio\c\booyasdrweb\radio.h
+1529531330 c:\radio\c\booyasdrweb\radio.h
 	<pthread.h>
 	"fftw3.h"
 	"global.h"
 	"monitor.h"
 
-1530137418 c:\radio\c\booyasdrweb\spectrum.h
+1530133818 c:\radio\c\booyasdrweb\spectrum.h
 	"global.h"
 	"monitor.h"
 	<pthread.h>
 
-1488373928 c:\radio\c\booyasdrweb\openfx3.h
+1540667265 c:\radio\c\booyasdrweb\openfx3.h
 	"inc\CyAPI.h"
 
-1437519888 c:\radio\c\booyasdrweb\inc\cyapi.h
+1437516288 c:\radio\c\booyasdrweb\inc\cyapi.h
 	"cyusb30_def.h"
 	"winbase.h"
 
-1420318460 c:\radio\c\booyasdrweb\inc\cyusb30_def.h
+1420314860 c:\radio\c\booyasdrweb\inc\cyusb30_def.h
 
-1479410030 c:\radio\c\booyasdrweb\main_loop.h
+1479406430 c:\radio\c\booyasdrweb\main_loop.h
 	<pthread.h>
 	<windows.h>
 
-1530137364 source:c:\radio\c\booyasdrweb\main_loop_fx2.cpp
+1530133764 source:c:\radio\c\booyasdrweb\main_loop_fx2.cpp
 	<stdio.h>
 	<sys/time.h>
 	"openFX2.h"
@@ -10180,25 +10180,25 @@
 	"radio.h"
 	"spectrum.h"
 
-1475021968 c:\radio\c\booyasdrweb\openfx2.h
+1475018368 c:\radio\c\booyasdrweb\openfx2.h
 	"fx2dev.h"
 
-1519781088 source:c:\radio\c\booyasdrweb\monitor.cpp
+1519777488 source:c:\radio\c\booyasdrweb\monitor.cpp
 	"monitor.h"
 	"global.h"
 
-1529450132 c:\radio\c\booyasdrweb\monitor.h
+1529446532 c:\radio\c\booyasdrweb\monitor.h
 	<windows.h>
 	<stdio.h>
 	<stdlib.h>
 
-1488243466 source:c:\radio\c\booyasdrweb\openfx2.cpp
+1488239866 source:c:\radio\c\booyasdrweb\openfx2.cpp
 	<stdio.h>
 	<sys/time.h>
 	"fx2dev.h"
 	<lusb0_usb.h>
 
-1321414300 source:c:\radio\c\booyasdrweb\openfx3.cpp
+1540667265 source:c:\radio\c\booyasdrweb\openfx3.cpp
 	<sys/stat.h>
 	<iostream>
 	<stdio.h>
@@ -10209,7 +10209,7 @@
 1488373928 source:c:\radio\c\booyasdrweb\resource.rc
 	"wx/msw/wx.rc"
 
-1530056332 source:c:\radio\c\booyasdrweb\spectrum.cpp
+1530052732 source:c:\radio\c\booyasdrweb\spectrum.cpp
 	<stdio.h>
 	<fftw3.h>
 	<math.h>
@@ -10220,7 +10220,7 @@
 	"monitor.h"
 	"main_loop.h"
 
-1530137440 source:c:\radio\c\booyasdrweb\spectrumframe.cpp
+1540667265 source:c:\radio\c\booyasdrweb\spectrumframe.cpp
 	<sys/time.h>
 	"spectrumFrame.h"
 	"monitor.h"
@@ -10234,7 +10234,7 @@
 	<wx/string.h>
 	<wx/settings.h>
 
-1519617942 c:\radio\c\booyasdrweb\spectrumframe.h
+1540667265 c:\radio\c\booyasdrweb\spectrumframe.h
 	"timeFrame.h"
 	<wx/stattext.h>
 	<wx/menu.h>
@@ -10242,18 +10242,18 @@
 	<wx/panel.h>
 	<wx/frame.h>
 
-1488373928 c:\radio\c\booyasdrweb\timeframe.h
+1488370328 c:\radio\c\booyasdrweb\timeframe.h
 	<wx/stattext.h>
 	<wx/slider.h>
 	<wx/panel.h>
 	<wx/frame.h>
 	<wx/timer.h>
 
-1519617984 c:\radio\c\booyasdrweb\thisapp.h
+1540667265 c:\radio\c\booyasdrweb\thisapp.h
 	<wx/app.h>
 	"timeFrame.h"
 
-1530137464 source:c:\radio\c\booyasdrweb\thisapp.cpp
+1540668101 source:c:\radio\c\booyasdrweb\thisapp.cpp
 	<stdio.h>
 	"wx_pch.h"
 	"thisApp.h"
@@ -10272,11 +10272,11 @@
 	"spectrumFrame.h"
 	<wx/image.h>
 
-1488373928 c:\radio\c\booyasdrweb\wx_pch.h
+1488370328 c:\radio\c\booyasdrweb\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1530137476 source:c:\radio\c\booyasdrweb\timeframe.cpp
+1530133876 source:c:\radio\c\booyasdrweb\timeframe.cpp
 	"wx_pch.h"
 	"timeFrame.h"
 	"openFX3.h"
@@ -10286,7 +10286,7 @@
 	<wx/string.h>
 	<wx/settings.h>
 
-1530054760 source:c:\radio\c\booyasdrweb\radio.cpp
+1530051160 source:c:\radio\c\booyasdrweb\radio.cpp
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -10297,7 +10297,7 @@
 	"main_loop.h"
 	"webServer.h"
 
-1530054760 source:c:\radio\c\booyasdrweb\spectrumuser.cpp
+1530051160 source:c:\radio\c\booyasdrweb\spectrumuser.cpp
 	<stdio.h>
 	<fftw3.h>
 	<math.h>
@@ -10307,7 +10307,7 @@
 	"monitor.h"
 	"webServer.h"
 
-1519781146 c:\radio\c\booyasdrweb\spectrumuser.h
+1519777546 c:\radio\c\booyasdrweb\spectrumuser.h
 	"global.h"
 	"monitor.h"
 	<pthread.h>
@@ -10876,7 +10876,7 @@
 	"main_loop.h"
 	<pthread.h>
 
-1530228296 c:\radio\c\booyasdrweb\radiouser.h
+1530224696 c:\radio\c\booyasdrweb\radiouser.h
 	<pthread.h>
 	"fftw3.h"
 	"global.h"
@@ -10884,7 +10884,7 @@
 	"connection.h"
 	"monitor.h"
 
-1530229124 source:c:\radio\c\booyasdrweb\radiouser.cpp
+1530225524 source:c:\radio\c\booyasdrweb\radiouser.cpp
 	<mmsystem.h>
 	<stdio.h>
 	<math.h>
@@ -10894,10 +10894,10 @@
 	"monitor.h"
 	"webServer.h"
 
-1501244830 source:c:\radio\c\booyasdrweb\ima_adpcm.cc
+1501241230 source:c:\radio\c\booyasdrweb\ima_adpcm.cc
 	"ima_adpcm.h"
 
-1507676296 c:\radio\c\booyasdrweb\ima_adpcm.h
+1507672696 c:\radio\c\booyasdrweb\ima_adpcm.h
 
 1518139714 h:\radio\c\booyasdrweb\radiouser.h
 	<pthread.h>
@@ -11206,22 +11206,22 @@
 1517455564 c:\radio\c\webserver\dispatcher.h
 	"connection.h"
 
-1530054478 c:\radio\c\booyasdrweb\connection.h
+1541876435 c:\radio\c\booyasdrweb\connection.h
 	<pthread.h>
 	<winsock2.h>
 	"radioUser.h"
 	"include/cWebSockets.h"
 
-1490834204 c:\radio\c\booyasdrweb\include\cwebsockets.h
+1490830604 c:\radio\c\booyasdrweb\include\cwebsockets.h
 	"base64.h"
 	"sha1.h"
 
-1471926606 c:\radio\c\booyasdrweb\include\base64.h
+1471923006 c:\radio\c\booyasdrweb\include\base64.h
 	<stdio.h>
 
-1471926606 c:\radio\c\booyasdrweb\include\sha1.h
+1471923006 c:\radio\c\booyasdrweb\include\sha1.h
 
-1479996344 c:\radio\c\booyasdrweb\webserver.h
+1479992744 c:\radio\c\booyasdrweb\webserver.h
 	"global.h"
 	"connection.h"
 
@@ -11229,7 +11229,7 @@
 	"global.h"
 	"connection.h"
 
-1531593320 source:c:\radio\c\booyasdrweb\webserver.cpp
+1531589720 source:c:\radio\c\booyasdrweb\webserver.cpp
 	<winsock2.h>
 	<stdlib.h>
 	<stdio.h>
@@ -11241,24 +11241,24 @@
 	"webServer.h"
 	"radio.h"
 
-1465259210 source:c:\radio\c\booyasdrweb\webserver\base64.cpp
+1465255610 source:c:\radio\c\booyasdrweb\webserver\base64.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1465259196 source:c:\radio\c\booyasdrweb\webserver\cwebsockets.cpp
+1465255596 source:c:\radio\c\booyasdrweb\webserver\cwebsockets.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../include/str.h"
 	"../include/cWebSockets.h"
 
-1492033650 c:\radio\c\booyasdrweb\include\str.h
+1492030050 c:\radio\c\booyasdrweb\include\str.h
 
-1465259204 source:c:\radio\c\booyasdrweb\webserver\sha1.cpp
+1465255604 source:c:\radio\c\booyasdrweb\webserver\sha1.cpp
 	"../include/sha1.h"
 
-1465259216 source:c:\radio\c\booyasdrweb\webserver\string.cpp
+1465255616 source:c:\radio\c\booyasdrweb\webserver\string.cpp
 	"../include/str.h"
 	<stdio.h>
 	<string.h>
@@ -11267,7 +11267,7 @@
 1517534939 source:c:\radio\c\booyasdrweb\dispatcher.cpp
 	"dispatcher.h"
 
-1530382545 source:c:\radio\c\booyasdrweb\connection.cpp
+1541876455 source:c:\radio\c\booyasdrweb\connection.cpp
 	"global.h"
 	<winsock2.h>
 	<pthread.h>
@@ -11641,7 +11641,7 @@
 	"monitor.h"
 	"webServer.h"
 
-1338142690 c:\sdr\lib\pthread\include\pthread.h
+1338139090 c:\sdr\lib\pthread\include\pthread.h
 	<windows.h>
 	"config.h"
 	<time.h>
@@ -11652,17 +11652,17 @@
 	<sched.h>
 	<sys/types.h>
 
-1309359964 c:\sdr\lib\pthread\include\sched.h
+1309356364 c:\sdr\lib\pthread\include\sched.h
 	"need_errno.h"
 	<errno.h>
 	<sys/types.h>
 	<time.h>
 
-1353853672 c:\sdr\lib\fftw\fftw3.h
+1353850072 c:\sdr\lib\fftw\fftw3.h
 	<stdio.h>
 	<stddef.h>
 
-1466761886 c:\sdr\lib\libusb-win32\include\lusb0_usb.h
+1466758286 c:\sdr\lib\libusb-win32\include\lusb0_usb.h
 	<stdlib.h>
 	<windows.h>
 	<pshpack1.h>

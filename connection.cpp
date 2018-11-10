@@ -91,7 +91,7 @@ void* connectionClass::receive(void *args) {
         // MSG
                     connectionClass::parmClass *cparm = &pc->parm;
                     cparm->center_freq=16e6;
-                    cparm->samp_rate=32e6;
+                    cparm->bandwidth=g.fs/2;
                     cparm->fft_size=1024*g.webrx_fft_size_kHz;
                     cparm->fft_fps=32;
                     #ifdef COMPRESS_AUDIO
@@ -108,7 +108,7 @@ void* connectionClass::receive(void *args) {
 
                     sprintf(text,"center_freq=%.2f bandwidth=%.2f fft_size=%.2f fft_fps=%.2f audio_compression=%s "
                         "fft_compression=%s max_clients=%d setup ",
-                        cparm->center_freq,cparm->samp_rate,cparm->fft_size,cparm->fft_fps,cparm->audio_compression
+                        cparm->center_freq,cparm->bandwidth,cparm->fft_size,cparm->fft_fps,cparm->audio_compression
                         ,cparm->fft_compression,pwebServer->maxConnection);
                         printf(text);
                         printf("%d\n",pc);

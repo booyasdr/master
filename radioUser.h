@@ -70,13 +70,13 @@ class radioUserClass {
 
    pthread_mutex_t mutexControl;           // tune stage input lock
    pthread_mutex_t mutexTuneIdx;           // tune stage input lock
-   pthread_mutex_t mutexDAvailable;        // tune stage input lock
    pthread_t demod_thread[N_RADIO_THREAD]; // radio thread descriptor pointer
 //    profileClassClass *profC;
 
 public:
-   radioUserClass(void){pc = NULL; };
-   radioUserClass(class connectionClass *PC) {pc =  PC; };
+   pthread_mutex_t mutexDAvailable;        // tune stage input lock
+   radioUserClass(void){pc = NULL; memset(demod_thread,'\0',sizeof(pthread_t *)*N_RADIO_THREAD);};
+   radioUserClass(class connectionClass *PC) {pc =  PC;  memset(demod_thread,'\0',sizeof(pthread_t *)*N_RADIO_THREAD);};
 //    ~radioUserClass(){stop();};
    class agc AGC;
 

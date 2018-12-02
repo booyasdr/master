@@ -123,7 +123,8 @@ void webServerClass::closeConnection(connectionClass* pc) {
    pc->isOpen = false;
    pc->state = notConnected;
 //   Sleep(300); // wait for pipes to clear
-   pc->ru->stop(); // stop the radio
+   pc->ru->stop();   // stop the radio
+   pc->close();      //
    while(!pc->WSq.empty()) pc->WSq.pop();
    bool found = false;
    MUTEXCONNECTIONLIST_LOCK

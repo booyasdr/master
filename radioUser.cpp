@@ -126,13 +126,18 @@ void radioUserClass::run(void ) {
    for(int n = 0; n < N_RADIO_THREAD; n++) {
      int rc = pthread_create(&demod_thread[n], NULL,radioUser, (void *) this);
      if (rc) printf("ERROR; return code from pthread_create() is %d\n", rc);
+     pthread_detach(demod_thread[n]);
    }
    isOn = true;
 }
 
 void radioUserClass::stop(void ) {
-   printf("radioUser stop: pc = %d, isOn = %d\n",pc,isOn);
    if(!isOn) return;
+   for(int n = 0; n < N_RADIO_THREAD; n++) {
+      pthread_mutex_unlock(&mutexDAvailable);  // allows radioUser to see notConnected
+      Sleep(100);                                  // wait for first radio thread to end
+   }
+   isOn = false;
    mode = Silent;
    if(!pc) { // close only for local radio
       if(waveOutClose(hWaveOut) != MMSYSERR_NOERROR) {
@@ -140,15 +145,6 @@ void radioUserClass::stop(void ) {
          return;
       }
    }
-   for(int n = 0; n < N_RADIO_THREAD; n++) {
-      int rc = pthread_cancel(demod_thread[n]);
-      if (rc) printf("ERROR; return code from pthread_cancel() is %d\n", rc);
-   }
-
-//   pthread_mutex_destroy(&mutexDAvailable);
-//   pthread_mutex_destroy(&mutexControl);
-//   pthread_mutex_destroy(&mutexTuneIdx);
-   isOn = false;
 }
 
 void radioUserClass::allocate(void ) {
@@ -241,13 +237,13 @@ void *radioUserClass::radioUser(void *arg) {
 //   profileThreadClass *profT = new profileThreadClass;
 //   ru->profC->registerThread(profT);
 
-   connectionState *pstate, localState = WS; // dummy local state
+   connectionState *ppcstate, localState = WS; // dummy local state
    bool *pIsOpen, localIsOpen = true;
    if(pc!=NULL) {
-		pstate = &ru->pc->state;
+		ppcstate = &ru->pc->state;
 		pIsOpen = &ru->pc->isOpen;
    } else {
-		pstate  = &localState;
+		ppcstate  = &localState;
 		pIsOpen = &localIsOpen;
    }
 //			profT->init();
@@ -261,7 +257,7 @@ void *radioUserClass::radioUser(void *arg) {
    double SMScale = g.Vpp*pow(2,-16)/(50e-6*localRadioUser.processGain*processGain);
    double tunekHzLast = 0, fftHzLast = 0;
 
-   while(*pstate) {
+   while(*ppcstate != notConnected) {
 //			profT->wait();
       fftwf_complex** outDec = ru->deQ(); // block until dataAvialable
       if(!*pIsOpen) continue;             // do not process when connection is not open
@@ -455,12 +451,10 @@ void *radioUserClass::radioUser(void *arg) {
 
             Aoffset = 0;
         }
-
          for(int  n = 0; n < bbLen/2 ; n++) {
              sndBuffer[iBuf][n]
                = (praw[n] * wt[n] + prawlast[n+bbLen/2] * wt[n+bbLen/2])*Amag + Aoffset;
          }
-
          if( ru->first_time) {
             ru->first_time = false;
             continue;
@@ -484,11 +478,9 @@ void *radioUserClass::radioUser(void *arg) {
             // void sendWSData(char *trigraph, char *data,int NByte) {
             pc->sendWSData("AUD ",(char *)sndBuffer[iBuf],nAUD);
 #endif
-
          for(int k = 0; k < bbLen ; k++,n++) {
              SMeter += bbBufOut[IFbuf][k][0]*bbBufOut[IFbuf][k][0];
          }
-
          smidx++;
          smidx = smidx%smskip;
 //         if(smidx == 0) {
@@ -496,9 +488,9 @@ void *radioUserClass::radioUser(void *arg) {
 //            printf("SMeter %f\n",SMeter);
 //            SMeter = 0;
 //         }
-
         }
+    } // while(*ppcstate != notConnected)
 
-    } // while(true)
-    pthread_exit(NULL);
+   printf("Exit radioUser %x pthread_self is %u\n",(int)ru,pthread_self());
+   pthread_exit(NULL);
 }

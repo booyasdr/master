@@ -18,15 +18,19 @@ void *connectionClass::init(void *args){
     pthread_mutex_init(&send_mutex, NULL);
     pthread_mutex_lock(&send_mutex);
 
-    pthread_cancel(send_thread);     // cancel threads incase they were left hanging
-    pthread_cancel(receive_thread);
-
     state = http;
 
    if(!ru) ru = new radioUserClass(this);
 
     pthread_create(&send_thread   , NULL, send   , (void *) this);
     pthread_create(&receive_thread, NULL, receive, (void *) this);
+
+    pthread_detach(send_thread);
+    pthread_detach(receive_thread);
+}
+
+void *connectionClass::close(void ){
+   pthread_mutex_unlock(&send_mutex);           // allows connection, send to see notConnected
 }
 
 void* connectionClass::receive(void *args) {
@@ -169,10 +173,11 @@ Default:     int len = WEBSOCKET_get_content( wsmsgRcv.ws.d, retval, (unsigned c
             printf("Received Sock %d conn %d addr %s port %d WS msg:\n%s\n",
                    msgsock,pc->id, inet_ntoa(from.sin_addr), ntohs(from.sin_port),wsmsgRcv.raw.d);
 
-        }
-    } // while(*state > notConnected)
-    pwebServer->closeConnection(pc);
-    pthread_exit(NULL);
+      }
+   } // while(*state > notConnected)
+   pwebServer->closeConnection(pc);
+   printf("Exit connectionClass::receive, socket %d connection %d with %d connections open\n",msgsock,pc->id,pwebServer->nConnection);
+   pthread_exit(NULL);
 }
 
 void *connectionClass::send(void *args) {
@@ -180,16 +185,14 @@ void *connectionClass::send(void *args) {
    webServerClass *pwebServer = (webServerClass *) pc->voidPserver;
    connectionState *state = &pc->state;
    SOCKET msgsock = pc->sock;
-   pthread_mutex_t send_mutex = pc->send_mutex;
    Queue<WSmsg*,MAXMESSAGE>  *pWSq = &pc->WSq;           // create a pointer to the queue
    struct sockaddr_in from = pc->from;
    int fromlen = sizeof(from);
-   unsigned long msgCount = 0, ioPeriod = 10;
 
    WSmsg *wsmsg;
    int retval;
    while(*state > notConnected) {
-      pthread_mutex_lock(&send_mutex);
+      pthread_mutex_lock(&pc->send_mutex);
       while(!pWSq->empty()) {
          if(*state == notConnected) break;
          wsmsg = pWSq->front();
@@ -204,8 +207,7 @@ void *connectionClass::send(void *args) {
    } // while(*state > notConnected)
 
 error:
-   pwebServer->closeConnection(pc);
-   printf("Disconnect socket %d connection %d with %d connections open\n",msgsock,pc->id,pwebServer->nConnection);
+   printf("Exit connectionClass::send, socket %d connection %d with %d connections open\n",msgsock,pc->id,pwebServer->nConnection);
    pthread_exit(NULL);
    return NULL;
 }

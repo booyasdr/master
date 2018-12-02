@@ -33,6 +33,7 @@ class connectionClass {
 	void *voidPserver;
 
    void *init(void *args);      // pass in webServer pointer
+   void *close(void );
    static void *receive(void *args);   // pass in this as thread argument
    static void *send(void *args);      // pass in this as thread argument
 

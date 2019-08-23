@@ -8,7 +8,8 @@
 #include "radioUser.h"
 #include "include/cWebSockets.h"
 
-#define MSGLEN (16*1024)
+//#define MSGLEN (16*1024)
+#define MSGLEN (17*1024)
 #define MAXMESSAGE 100
 
 typedef struct{ char d[MSGLEN]; int l; } msg;

@@ -43,22 +43,22 @@ void openConsoleWindow() {
 IMPLEMENT_APP(wxFX3App);
 
 bool wxFX3App::OnInit() {
-
-   if(argc > 1) {
-     if(!strcmp(argv[1],"fx2_16")) {
-        g.fs = 16e6;
-        g.transferSize = 131072;
-     } else if(!strcmp(argv[1],"fx3_64")) {
-        g.fs = 64e6;
-        g.transferSize = 131072*4;
-     } else if(!strcmp(argv[1],"fx3_100")) {
-        g.fs = 100e6;
-        g.transferSize = 131072*4;
-     } else {
-        g.fs = 64e6;
-        g.transferSize = 131072*2;
-     }
-   }
+   g.init(argc,argv);
+//   if(argc > 1) {
+//     if(!strcmp(argv[1],"fx2_16")) {
+//        g.fs = 16e6;
+//        g.transferSize = 131072;
+//     } else if(!strcmp(argv[1],"fx3_64")) {
+//        g.fs = 64e6;
+//        g.transferSize = 131072*2;
+//     } else if(!strcmp(argv[1],"fx3_100")) {
+//        g.fs = 100e6;
+//        g.transferSize = 131072*4;
+//     } else {
+//        g.fs = 64e6;
+//        g.transferSize = 131072*2;
+//     }
+//   }
    strcpy(g.execName,argv[0]);
    bool wxsOK = true;
    if(g.gui) {
@@ -67,9 +67,9 @@ bool wxFX3App::OnInit() {
       wxInitAllImageHandlers();
       if ( wxsOK )
       {
-      spectrumFrame* Frame = new spectrumFrame(0);
-      Frame->Show();
-      SetTopWindow(Frame);
+      	spectrumFrame* Frame = new spectrumFrame(0);
+      	Frame->Show();
+      	SetTopWindow(Frame);
       }
       //*)
       wxsOK = true;

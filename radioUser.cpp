@@ -89,19 +89,19 @@ void radioUserClass::init( void ) {
 
 void radioUserClass::run(void ) {
 
-   if(!pc) { // open only for local radio
-   if(waveOutOpen(&hWaveOut,WAVE_MAPPER,&wfx,0,0,CALLBACK_NULL) != MMSYSERR_NOERROR) {
-        fprintf(stderr, "unable to open WAVE_MAPPER device\n");
-        return;
-    }
-    printf("The Wave Mapper device was opened successfully!\n");
+   if(!pc) { // open wave only for local radio
+      if(waveOutOpen(&hWaveOut,WAVE_MAPPER,&wfx,0,0,CALLBACK_NULL) != MMSYSERR_NOERROR) {
+         fprintf(stderr, "unable to open WAVE_MAPPER device\n");
+         return;
+      }
+      printf("The Wave Mapper device was opened successfully!\n");
 
-    for(int  m = 0 ; m< nsndBuffer; m++) {
-        ZeroMemory( &header[m],   sizeof(WAVEHDR)     );
-        header[m].dwBufferLength = bbLen*sizeof(short)/2; // halve for overlap
-        header[m].lpData = (LPSTR) sndBuffer[m];
-        waveOutPrepareHeader(hWaveOut, &header[m], sizeof(WAVEHDR));
-    }
+      for(int  m = 0 ; m< nsndBuffer; m++) {
+           ZeroMemory( &header[m],   sizeof(WAVEHDR)     );
+           header[m].dwBufferLength = bbLen*sizeof(short)/2; // halve for overlap
+           header[m].lpData = (LPSTR) sndBuffer[m];
+           waveOutPrepareHeader(hWaveOut, &header[m], sizeof(WAVEHDR));
+      }
    }
    for(int  m = 0 ; m< nsndBuffer; m++) {
      ZeroMemory( sndBuffer[m], bbLen*sizeof(short) );
@@ -342,7 +342,7 @@ void *radioUserClass::radioUser(void *arg) {
         COMPLEX *bbBufInC    = (COMPLEX *) bbBufIn[IFbuf]; // declare pointers for copying
         enum radioMode mode = ru->mode;
         if(mode != oldMode) {
-            memset(bbBufIn[0],'\0',sizeof(fftwf_complex) * bbLen * N_IF_BUF);
+            memset(bbBufIn[0],0,sizeof(fftwf_complex) * bbLen * N_IF_BUF);
             oldMode = mode;
         }
 
@@ -464,6 +464,7 @@ void *radioUserClass::radioUser(void *arg) {
             monitor.record((short *)header[iBuf].lpData,header[iBuf].dwBufferLength);
          } else {            // web radio
 #ifdef COMPRESS_AUDIO
+//#if 1
          if(iBuf%2) {
             ru->adpcm_state = encode_ima_adpcm_i16_u8(sndBuffer[ru->iadpcmin],adpcmBuffer[ru->iadpcmout], nAUD, ru->adpcm_state);
             // webServer.enQ(pc,(void *)adpcmBuffer[ru->iadpcmout],nADPCM,audio);

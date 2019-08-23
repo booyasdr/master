@@ -3,7 +3,7 @@
 
 #ifndef GLOBAL_H
 #define GLOBAL_H
-#define COMPRESS_AUDIO
+//#define COMPRESS_AUDIO
 #define U8NEW
 
 #include <math.h>
@@ -74,6 +74,25 @@ class classGlobal {
             fclose(fid);
          }
     }
+   void init(int argc,char **argv) {
+    if(argc > 1) {
+     if(!strcmp(argv[1],"fx2_16")) {
+        fs = 16e6;
+        transferSize = 131072;
+     } else if(!strcmp(argv[1],"fx3_64")) {
+        fs = 64e6;
+        transferSize = 131072*2;
+     } else if(!strcmp(argv[1],"fx3_100")) {
+        fs = 100e6;
+        webrx_fft_size_kHz *=50./32.;
+        transferSize = 131072*2;
+     } else {
+        fs = 64e6;
+        transferSize = 131072*2;
+     }
+   }
+   }
+
 };
 
 extern class classGlobal g;

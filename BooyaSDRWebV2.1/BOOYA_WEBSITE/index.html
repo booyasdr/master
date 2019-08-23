@@ -1,0 +1,155 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>OpenWebRX | Open Source SDR Web App for Everyone!</title>
+		<script type="text/javascript">
+			//Global variables
+			var client_id="";
+			var ws_url, starting_frequency;
+
+			ws_url="ws://booyasdrlive.duckdns.org:2008/ws/";
+			// local url
+			ws_url="ws://127.0.0.1:2008/ws/";
+
+			starting_frequency = 1500e3;
+			starting_frequency = 800e3;
+			starting_frequency = 990e3;
+
+			var rx_photo_height= 350;
+			var audio_buffering_fill_to=5;
+			var starting_mod = 'am';
+			var gmod = starting_mod; // global
+			var volume_factor = 1;
+			var starting_offset_frequency = starting_frequency-16e6;
+			var waterfall_colors = [0x000000ff,0x0000ffff,0x00ffffff,0x00ff00ff,0xffff00ff,0xff0000ff,0xff00ffff,0xffffffff];
+			var waterfall_min_level_default = -101;
+			var waterfall_max_level_default = -75;
+			var waterfall_auto_level_margin = (5, 40);
+			var wf_display = true;
+		</script>
+		<link rel="stylesheet" type="text/css" href="openwebrx.css" />
+		<script src="sdr.js"></script>
+		<script src="myconfig.js"></script>
+		<script src="wfdisplay.js"></script>
+		<script src="openwebrx.js"></script>
+	</head>
+<body onload="wfdisplay_init();">
+<div id="webrx-page-container">
+	<div id="webrx-top-container" ondblclick="toggle_rx_photo()">
+		<div id="webrx-top-photo-clip">
+			<img src="pics\WashingtonDC.jpg" id="webrx-top-photo"/>
+			<div id="webrx-rx-photo-title" align="right">United States Capitol</div>
+			<div id="webrx-rx-photo-desc"></div>
+		</div>
+		<div id="webrx-top-bar-background" class="webrx-top-bar-parts"></div>
+		<div id="webrx-top-bar" class="webrx-top-bar-parts">
+			<div>
+			<img id="id-logo-one" src="pics/by48x48.ico" />
+			<div id="id-title-true">BooyaSDR</div>
+			<div id="id-location" align = "center" >Silver Spring<br>Maryland<br>USA</div>
+			<img id="id-webrx-top-logo" src="pics/openwebrx-top-logo.png" />
+			</div>
+			<div id="openwebrx-rx-details-arrow">
+				<a id="openwebrx-rx-details-arrow-up" onclick="toggle_rx_photo();"><img src="pics/openwebrx-rx-details-arrow-up.png" /></a>
+				<a id="openwebrx-rx-details-arrow-down" onclick="toggle_rx_photo();"><img src="pics/openwebrx-rx-details-arrow.png" /></a>
+			</div>
+			<section id="openwebrx-main-buttons">
+				<ul>
+					<li onmouseup="toggle_panel('openwebrx-panel-status');"><img src="pics/openwebrx-panel-status.png" /><br/>Status</li>
+					<li onmouseup="toggle_panel('openwebrx-panel-log');"><img  src="pics/openwebrx-panel-log.png" /><br/>Log</li>
+					<li onmouseup="toggle_panel('openwebrx-panel-receiver');"><img src="pics/openwebrx-panel-receiver.png" /><br/>Receiver</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<div id="webrx-main-container">
+		<div id="openwebrx-band-container" height="30">
+				<canvas id="id-band-canvas" width="2500" height="30" ></canvas>
+			</div>
+			<div id="openwebrx-scale-container">
+				<canvas id="openwebrx-scale-canvas" width="0" height="0"></canvas>
+			</div>
+			<div id="webrx-canvas-container"> <!-- add canvas in javascript --> </div>
+			<div id="openwebrx-panels-container">
+
+				<div class="openwebrx-panel" id="openwebrx-panel-receiver" data-panel-name="client-params" data-panel-pos="right" data-panel-order="0" data-panel-size="259,115">
+					<div id="webrx-actual-freq">---.--- MHz</div>
+					<div id="webrx-mouse-freq">---.--- MHz</div>
+					<div class="openwebrx-panel-line">
+						<div class="openwebrx-button openwebrx-demodulator-button" id="am-button" onclick="set_demodulator_mod(this,'am' );">AM</div>
+						<div class="openwebrx-button openwebrx-demodulator-button" onclick="set_demodulator_mod(this,'lsb');">LSB</div>
+						<div class="openwebrx-button openwebrx-demodulator-button" onclick="set_demodulator_mod(this,'usb');">USB</div>
+						<div class="openwebrx-button openwebrx-demodulator-button" onclick="set_demodulator_mod(this ,'cw');">CW</div>
+					</div>
+					<div class="openwebrx-panel-line">
+						<img id="id-step-0" src="pics/stepdn.20.png" onclick="freqstep(0)" />
+						<img id="id-step-1" src="pics/stepdn.18.png" onclick="freqstep(1)" style="padding-bottom:1px" />
+						<img id="id-step-2" src="pics/stepdn.16.png" onclick="freqstep(2)" style="padding-bottom:2px" />
+						<img id="id-step-3" src="pics/stepup.16.png" onclick="freqstep(3)" style="padding-bottom:2px" />
+						<img id="id-step-4" src="pics/stepup.18.png" onclick="freqstep(4)" style="padding-bottom:1px" />
+						<img id="id-step-5" src="pics/stepup.20.png" onclick="freqstep(5)" />
+					</div>
+					<div class="openwebrx-panel-line">
+						<div title="Mute on/off" id="openwebrx-mute-off" class="openwebrx-button" onclick="toggleMute();"><img src="pics/openwebrx-speaker.png" class="openwebrx-sliderbtn-img" id="openwebrx-mute-img"></div>
+						<input title="Volume" id="openwebrx-panel-volume" class="openwebrx-panel-slider" type="range" min="0" max="1000" value="400" step="1" onchange="updateVolume()" oninput="updateVolume()">
+					</div>
+					<div class="openwebrx-panel-line">
+						<div title="Auto-adjust waterfall colors" id="openwebrx-waterfall-colors-auto" class="openwebrx-button" onclick="waterfall_measure_minmax_now=true;"><img src="pics/openwebrx-waterfall-auto.png" class="openwebrx-sliderbtn-img"></div>
+						<input title="Waterfall minimum level" id="openwebrx-waterfall-color-min" class="openwebrx-panel-slider" type="range" min="-110" max="-60" value="-100" step="1" onchange="updateWaterfallColors(0);" oninput="updateVolume()">
+					</div>
+					<div class="openwebrx-panel-line">
+						<div title="Set waterfall colors to default" id="openwebrx-waterfall-colors-default" class="openwebrx-button" onclick="waterfallColorsDefault()"><img src="pics/openwebrx-waterfall-default.png" class="openwebrx-sliderbtn-img"></div>
+						<input title="Waterfall maximum level" id="openwebrx-waterfall-color-max" class="openwebrx-panel-slider" type="range" min="-110" max="-60" value="-70" step="1" onchange="updateWaterfallColors(1);" oninput="updateVolume()">
+					</div>
+					<div class="openwebrx-panel-line">
+						<div class="openwebrx-button openwebrx-square-button" onclick="wf_zoomInOneStep();"  title="Zoom in one step">  <img src="pics/openwebrx-zoom-in.png" /></div>
+						<div class="openwebrx-button openwebrx-square-button" onclick="wf_zoomOutOneStep();" title="Zoom out one step"> <img src="pics/openwebrx-zoom-out.png" /></div>
+						<div class="openwebrx-button openwebrx-square-button" onclick="wf_zoomInTotal();"  title="Zoom in totally"><img src="pics/openwebrx-zoom-in-total.png" /></div>
+						<div class="openwebrx-button openwebrx-square-button" onclick="wf_zoomOutTotal();" title="Zoom out totally"><img src="pics/openwebrx-zoom-out-total.png" /></div>
+<!--						<div id="openwebrx-smeter-db">0 dB</div> -->
+					</div>
+<!--					<div class="openwebrx-panel-line">
+						<div id="openwebrx-smeter-outer">
+							<div id="openwebrx-smeter-bar"></div>
+						</div>
+					</div>
+-->				</div>
+
+				<div class="openwebrx-panel" id="openwebrx-panel-log" data-panel-name="debug" data-panel-pos="left" data-panel-order="1"data-panel-size="619,142">
+					<div class="openwebrx-panel-inner" id="openwebrx-log-scroll">
+						<div id="openwebrx-client-log-title"></strong><span id="openwebrx-problems"></span></div>
+						<span id="openwebrx-client-1" style="font-size:14pt">More info and get yours at: </span><span style="font-size:14pt;color:Yellow">
+							<a style="font-size:14pt" href="http://booyasdr.sf.net" target="_blank">booyasdr.sf.net</a></span>
+							<span style="font-size:14pt"><br>Email: booyasdr@gmail.com with questions and comments</span>
+							<br>Author: Reginald Eisenblatt<br/>
+						<div id="openwebrx-debugdiv"></div>
+					</div>
+				</div>
+
+				<div class="openwebrx-panel" id="openwebrx-panel-status" data-panel-name="status" data-panel-pos="left" data-panel-order="0" data-panel-size="615,50" data-panel-transparent="true">
+					<div class="openwebrx-progressbar" id="openwebrx-bar-audio-buffer"> <span class="openwebrx-progressbar-text">Audio buffer [0 ms]</span><div class="openwebrx-progressbar-bar"></div></div>
+					<div class="openwebrx-progressbar" id="openwebrx-bar-audio-output"> <span class="openwebrx-progressbar-text">Audio output [0 sps]</span><div class="openwebrx-progressbar-bar"></div></div>
+					<div class="openwebrx-progressbar" id="openwebrx-bar-audio-speed"> <span class="openwebrx-progressbar-text">Audio stream [0 kbps]</span><div class="openwebrx-progressbar-bar"></div></div>
+					<div class="openwebrx-progressbar" id="openwebrx-bar-network-speed"> <span class="openwebrx-progressbar-text">Network usage [0 kbps]</span><div class="openwebrx-progressbar-bar"></div></div>
+					<!--
+					<div class="openwebrx-progressbar" id="openwebrx-bar-server-cpu"> <span class="openwebrx-progressbar-text">Server CPU [0%]</span><div class="openwebrx-progressbar-bar"></div></div>
+					-->
+					<div class="openwebrx-progressbar" id="openwebrx-bar-clients"> <span class="openwebrx-progressbar-text">Clients</span><div class="openwebrx-progressbar-bar"></div></div>
+				</div>
+				<div class="openwebrx-panel" data-panel-name="client-under-devel" data-panel-pos="none" data-panel-order="0" data-panel-size="245,55" style="background-color: Red;">
+					<span style="font-size: 15pt; font-weight: bold;">Under construction</span>
+					<br />We're working on the code right now, so the application might fail.
+				</div>
+			</div>
+	</div>
+</div>
+	<div id="openwebrx-big-grey" onclick="iosPlayButtonClick();">
+		<div id="openwebrx-play-button-text">
+		<img id="openwebrx-play-button" src="pics/openwebrx-play-button.png" />
+		<br /><br />Start OpenWebRX
+		</div>
+	</div>
+	</body>
+</html>

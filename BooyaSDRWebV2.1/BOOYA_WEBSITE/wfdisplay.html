@@ -1,0 +1,43 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> <meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="openwebrx.css" />
+	<style type="text/css"></style>
+	<script  type="text/javascript" src="wfdisplay.js"></script>
+
+</head>
+
+<body onload = "wfdisplay_init()">
+
+	<h1>Web</h1>
+	<p id="par" >Paragraph<br>new line</p>
+	<button onclick="stopButton()">Stop</button>
+	<button onclick="pauseButton()">Pause Toggle</button>
+	<button onclick="zoomInButton()">Zoom In</button>
+	<button onclick="zoomOutButton()">Zoom Out</button>
+	<span id = "zoom-label" style="position:relative; left: 20px">Zoom level: 0</span>
+
+	<div id="wf-canvas-container" style = "
+		position: relative;
+		display: block;
+		width: 100%;
+		margin-left: -5px;
+		border: red solid 5px;
+		overflow-y: scroll;
+		overflow-x; hidden;
+		resize: horizontal;
+		height: 800px;">
+
+		<canvas id="wf-canvas" width = "1024" height = "400" style = "
+			position: absolute;
+			display: block;
+			margin-left: 0px;
+			border: red solid 0px;
+			resize: horizontal;
+			width: 1024px;
+			height: 800px"
+		></canvas>
+	</div>
+	</body>
+</html>

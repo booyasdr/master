@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="spectrumFrame">
+		<title>Booya SDR Spectrum Window</title>
+		<pos>10,800</pos>
+		<size>1024,800</size>
+		<id_arg>0</id_arg>
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX</style>
+		<handler function="OnPanel1EraseBackground" entry="EVT_ERASE_BACKGROUND" />
+		<object class="wxPanel" name="ID_SPFRPANEL1" variable="mainSpectrumPanel" member="yes">
+			<pos>0,20</pos>
+			<size>1024,500</size>
+			<style>0</style>
+			<handler function="OnmainSpectrumPanelPaint" entry="EVT_PAINT" />
+			<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+				<label>    Radio&#x0A;Frequency&#x0A;     kHz</label>
+				<pos>10,4</pos>
+				<style>wxALIGN_RIGHT</style>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+				<label>      Fine&#x0A; Frequency&#x0A;   100 Hz</label>
+				<pos>370,4</pos>
+				<size>56,40</size>
+				<style>wxALIGN_RIGHT</style>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+				<label>Display&#x0A;Brightness</label>
+				<pos>696,16</pos>
+				<size>55,32</size>
+				<style>wxALIGN_RIGHT</style>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+				<label>Audio&#x0A;Gain</label>
+				<pos>540,16</pos>
+				<size>33,32</size>
+				<style>wxALIGN_RIGHT</style>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+				<label>Start&#x0A;MHz</label>
+				<pos>872,4</pos>
+			</object>
+			<object class="wxSlider" name="ID_SLIDER6" variable="startMhzSlider" member="yes">
+				<max>60</max>
+				<pagesize>1</pagesize>
+				<thumb>1</thumb>
+				<pos>900,0</pos>
+				<style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+				<handler function="OnstartMhzSliderCmdScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+				<handler function="OnstartMhzSliderCmdScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+				<handler function="OnstartMhzSliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT7" variable="startMHzLabel" member="yes">
+				<label>0</label>
+				<pos>875,36</pos>
+				<size>13,13</size>
+				<style>wxALIGN_RIGHT</style>
+			</object>
+			<object class="wxSlider" name="ID_SLIDER4" variable="gainSlider" member="yes">
+				<min>-7</min>
+				<max>7</max>
+				<pagesize>1</pagesize>
+				<linesize>1</linesize>
+				<pos>575,0</pos>
+				<style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+				<handler function="OngainSliderCmdScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+				<handler function="OngainSliderCmdScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+				<handler function="OngainSliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBTRACK" />
+				<handler function="OngainSliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBRELEASE" />
+			</object>
+			<object class="wxSlider" name="ID_SLIDER3" variable="brightnessSlider" member="yes">
+				<min>-7</min>
+				<max>7</max>
+				<pagesize>1</pagesize>
+				<linesize>1</linesize>
+				<pos>750,0</pos>
+				<style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+				<handler function="OnbrightnessSliderCmdScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+				<handler function="OnbrightnessSliderCmdScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+				<handler function="OnbrightnessSliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBTRACK" />
+				<handler function="OnbrightnessSliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBRELEASE" />
+			</object>
+			<object class="wxSlider" name="ID_SLIDER2" variable="fineFrequencySlider" member="yes">
+				<min>-6</min>
+				<max>6</max>
+				<pagesize>1</pagesize>
+				<linesize>1</linesize>
+				<pos>432,0</pos>
+				<fg>wxSYS_COLOUR_MENUTEXT</fg>
+				<style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+				<handler function="OnfineFrequencySliderCmdScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+				<handler function="OnfineFrequencySliderCmdScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+				<handler function="OnfineFrequencySliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBTRACK" />
+				<handler function="OnfineFrequencySliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBRELEASE" />
+			</object>
+			<object class="wxSlider" name="ID_SLIDER1" variable="frequencySlider" member="yes">
+				<max>32000</max>
+				<pagesize>5</pagesize>
+				<tick>1000</tick>
+				<pos>64,0</pos>
+				<size>300,50</size>
+				<tooltip>Tune the Radio</tooltip>
+				<help>Tune the Radio</help>
+				<style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+				<handler function="OnfrequencySliderCmdScrollLineUp" entry="EVT_COMMAND_SCROLL_LINEUP" />
+				<handler function="OnfrequencySliderCmdScrollLineDown" entry="EVT_COMMAND_SCROLL_LINEDOWN" />
+				<handler function="OnfrequencySliderCmdScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+				<handler function="OnfrequencySliderCmdScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+				<handler function="OnfrequencySliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBTRACK" />
+				<handler function="OnfrequencySliderCmdScrollChanged" entry="EVT_COMMAND_SCROLL_THUMBRELEASE" />
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="radioMode" member="yes">
+				<label>Radio Mode</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="SilentMenu" member="yes">
+					<label>Silent</label>
+					<handler function="OnSilentMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM2" variable="AMMenu" member="yes">
+					<label>AM</label>
+					<handler function="OnAMMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM3" variable="DSBMenu" member="yes">
+					<label>DSB</label>
+					<handler function="OnDSBMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM4" variable="LSBMenu" member="yes">
+					<label>LSB</label>
+					<handler function="OnLSBMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM5" variable="USBMenu" member="yes">
+					<label>USB</label>
+					<handler function="OnUSBMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM6" variable="CWMenu" member="yes">
+					<label>CW</label>
+					<handler function="OnCWMenuSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM31" variable="MenuQuit" member="yes">
+					<label>Quit</label>
+					<handler function="OnQuitSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="kHzPanelBar" member="yes">
+				<label>Resolution</label>
+				<object class="wxMenuItem" name="ID_MENUITEM48" variable="MenuItem10" member="yes">
+					<label>kHz/Panel</label>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM7" variable="khpb125" member="yes">
+					<label>125</label>
+					<handler function="Onkhpb125Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM8" variable="khpb250" member="yes">
+					<label>250</label>
+					<handler function="Onkhpb250Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM9" variable="khpb500" member="yes">
+					<label>500</label>
+					<handler function="Onkhpb500Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM10" variable="khpb1000" member="yes">
+					<label>1000</label>
+					<handler function="Onkhpb1000Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM11" variable="khpb2000" member="yes">
+					<label>2000</label>
+					<handler function="Onkhpb2000Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+			</object>
+			<object class="wxMenu" variable="NPanelMenu" member="yes">
+				<label>Height</label>
+				<object class="wxMenuItem" name="ID_MENUITEM49" variable="nb4" member="yes">
+					<label>4</label>
+					<handler function="Onnb4Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM50" variable="nb5" member="yes">
+					<label>5</label>
+					<handler function="Onnb5Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM12" variable="nb6" member="yes">
+					<label>6</label>
+					<handler function="Onnb6Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM13" variable="nb7" member="yes">
+					<label>7</label>
+					<handler function="Onnb7Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_NB8" variable="nb8" member="yes">
+					<label>8</label>
+					<handler function="Onnb8Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM15" variable="nb9" member="yes">
+					<label>9</label>
+					<handler function="Onnb9Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM16" variable="nb10" member="yes">
+					<label>10</label>
+					<handler function="Onnb10Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM17" variable="nb11" member="yes">
+					<label>11</label>
+					<handler function="Onnb11Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM18" variable="nb12" member="yes">
+					<label>12</label>
+					<handler function="Onnb12Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM19" variable="nb13" member="yes">
+					<label>13</label>
+					<handler function="Onnb13Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM20" variable="nb14" member="yes">
+					<label>14</label>
+					<handler function="Onnb14Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM21" variable="nb15" member="yes">
+					<label>15</label>
+					<handler function="Onnb15Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM22" variable="nb16" member="yes">
+					<label>16</label>
+					<handler function="Onnb16Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM14" variable="nb17" member="yes">
+					<label>17</label>
+					<handler function="Onnb17Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM27" variable="nb18" member="yes">
+					<label>18</label>
+					<handler function="Onnb18Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu6" member="yes">
+				<label>Width</label>
+				<object class="wxMenuItem" name="ID_MENUITEM23" variable="Widthx1" member="yes">
+					<label>1024</label>
+					<handler function="OnWidthx1Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM24" variable="Widthx2" member="yes">
+					<label>2048</label>
+					<handler function="OnWidthx2Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM45" variable="MenuItem11" member="yes">
+					<label>960</label>
+					<handler function="OnMenu960Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM46" variable="MenuItem12" member="yes">
+					<label>1280</label>
+					<handler function="OnMenu1280Selected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+			</object>
+			<object class="wxMenu" variable="AMAGC" member="yes">
+				<label>AM AGC</label>
+				<object class="wxMenuItem" name="ID_MENUITEM26" variable="AMAGCoff" member="yes">
+					<label>Off</label>
+					<handler function="OnAMAGCoffSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM25" variable="AMAGCon" member="yes">
+					<label>On</label>
+					<handler function="OnAMAGConSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Window</label>
+				<object class="wxMenuItem" name="ID_MENUITEM28" variable="MenuSpectrum" member="yes">
+					<label>Spectrum</label>
+					<help>Bring Spectrum window to top</help>
+					<handler function="OnMenuSpectrumSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM29" variable="MenuTimeSample" member="yes">
+					<label>Time Sample</label>
+					<help>Bring Time window to top</help>
+					<handler function="OnMenuTimeSampleSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM30" variable="MenuConsole" member="yes">
+					<label>Console</label>
+					<help>Bring Console to top</help>
+					<handler function="OnMenuConsoleSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu3" member="yes">
+				<label>Help</label>
+				<object class="wxMenuItem" name="ID_MENUITEM36" variable="Menu4" member="yes">
+					<label>Radio Mode - Choose radio demodulation type</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM38" variable="Menu7" member="yes">
+					<label>Resolution - Set freqeuency resolution in kHz/Panel</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM37" variable="MenuItem1" member="yes">
+					<label>Hieght - Number of vertical panels in window</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM39" variable="MenuItem4" member="yes">
+					<label>Width - Set window width in panels</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM40" variable="MenuItem5" member="yes">
+					<label>AM AGC - Turn AGC on and off for AM mode</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM41" variable="MenuItem6" member="yes">
+					<label>Window - Bring selected window to the front</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM42" variable="MenuItem7" member="yes">
+					<label>Reduce the Audio Gain slider, if strong signals are distorted</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM43" variable="MenuItem8" member="yes">
+					<label>Thumb wheel changes the start frequency</label>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM44" variable="MenuItem9" member="yes">
+					<label>Tune radio by clicking on frequency display</label>
+				</object>
+				<object class="wxMenu" name="ID_MENUITEM35" variable="Menu5" member="yes">
+					<label>About</label>
+					<object class="wxMenuItem" name="ID_MENUITEM32" variable="MenuItem2" member="yes">
+						<label>booyasdr.sf.net</label>
+					</object>
+					<object class="wxMenuItem" name="ID_MENUITEM33" variable="MenuItem3" member="yes">
+						<label>booyasdr@gmail.com</label>
+					</object>
+					<object class="wxMenuItem" name="ID_MENUITEM34" variable="Menu2" member="yes">
+						<label>MIT License 2017, Booya Corp.</label>
+					</object>
+				</object>
+			</object>
+			<object class="wxMenu" variable="ColorCode" member="yes">
+				<label>Color Code</label>
+			</object>
+		</object>
+	</object>
+</wxsmith>

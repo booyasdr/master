@@ -1,0 +1,720 @@
+   1              		.cpu arm926ej-s
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"auxutil.c"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.rodata
+  17              		.align	2
+  18              	.LC0:
+  19 0000 4170706C 		.ascii	"Application Error code %d\012\000"
+  19      69636174 
+  19      696F6E20 
+  19      4572726F 
+  19      7220636F 
+  20              		.text
+  21              		.align	2
+  22              		.global	CyFxAppErrorHandler
+  24              	CyFxAppErrorHandler:
+  25              	.LFB0:
+  26              		.file 1 "../auxutil.c"
+   1:../auxutil.c  **** #include "auxutil.h"
+   2:../auxutil.c  **** 
+   3:../auxutil.c  **** #include <cyu3types.h>
+   4:../auxutil.c  **** #include "cyu3system.h"
+   5:../auxutil.c  **** #include "cyu3os.h"
+   6:../auxutil.c  **** #include "cyu3dma.h"
+   7:../auxutil.c  **** #include "cyu3error.h"
+   8:../auxutil.c  **** #include "cyu3usb.h"
+   9:../auxutil.c  **** #include "cyu3uart.h"
+  10:../auxutil.c  **** #include "cyfxslfifosyncmulti.h"
+  11:../auxutil.c  **** #include "cyu3gpif.h"
+  12:../auxutil.c  **** #include "cyu3pib.h"
+  13:../auxutil.c  **** #include "pib_regs.h"
+  14:../auxutil.c  **** #include "auxutil.h"
+  15:../auxutil.c  **** #include <cyu3gpio.h>
+  16:../auxutil.c  **** #include <stdio.h>
+  17:../auxutil.c  **** 
+  18:../auxutil.c  **** /* Application Error Handler */
+  19:../auxutil.c  **** void CyFxAppErrorHandler (
+  20:../auxutil.c  ****         CyU3PReturnStatus_t apiRetStatus    /* API return status */
+  21:../auxutil.c  ****         ) {
+  27              		.loc 1 21 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 00482DE9 		stmfd	sp!, {fp, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 11, -8
+  35              		.cfi_offset 14, -4
+  36 0004 04B08DE2 		add	fp, sp, #4
+  37              	.LCFI1:
+  38              		.cfi_def_cfa 11, 4
+  39 0008 08D04DE2 		sub	sp, sp, #8
+  40 000c 08000BE5 		str	r0, [fp, #-8]
+  22:../auxutil.c  ****     /* Application failed with the error code apiRetStatus */
+  23:../auxutil.c  ****     /* Add custom debug or recovery actions here */
+  24:../auxutil.c  ****     /* Loop Indefinitely */
+  25:../auxutil.c  ****     CyU3PDebugPrint (4, "Application Error code %d\n", apiRetStatus);
+  41              		.loc 1 25 0
+  42 0010 0400A0E3 		mov	r0, #4
+  43 0014 10109FE5 		ldr	r1, .L3
+  44 0018 08201BE5 		ldr	r2, [fp, #-8]
+  45 001c FEFFFFEB 		bl	CyU3PDebugPrint
+  46              	.L2:
+  26:../auxutil.c  ****     for (;;)
+  27:../auxutil.c  ****     {
+  28:../auxutil.c  ****         /* Thread sleep : 100 ms */
+  29:../auxutil.c  ****         CyU3PThreadSleep (100);
+  47              		.loc 1 29 0 discriminator 1
+  48 0020 6400A0E3 		mov	r0, #100
+  49 0024 FEFFFFEB 		bl	_tx_thread_sleep
+  30:../auxutil.c  ****     }
+  50              		.loc 1 30 0 discriminator 1
+  51 0028 FCFFFFEA 		b	.L2
+  52              	.L4:
+  53              		.align	2
+  54              	.L3:
+  55 002c 00000000 		.word	.LC0
+  56              		.cfi_endproc
+  57              	.LFE0:
+  59              		.align	2
+  60              		.global	CyFxApplnLPMRqtCB
+  62              	CyFxApplnLPMRqtCB:
+  63              	.LFB1:
+  31:../auxutil.c  **** }
+  32:../auxutil.c  **** 
+  33:../auxutil.c  **** /* Callback function to handle LPM requests from the USB 3.0 host. This function is invoked by the 
+  34:../auxutil.c  ****    whenever a state change from U0 -> U1 or U0 -> U2 happens. If we return CyTrue from this functio
+  35:../auxutil.c  ****    FX3 device is retained in the low power state. If we return CyFalse, the FX3 device immediately 
+  36:../auxutil.c  ****    to trigger an exit back to U0.
+  37:../auxutil.c  **** 
+  38:../auxutil.c  ****    This application does not have any state in which we should not allow U1/U2 transitions; and the
+  39:../auxutil.c  ****    the function always return CyTrue.
+  40:../auxutil.c  ****  */
+  41:../auxutil.c  **** CyBool_t CyFxApplnLPMRqtCB ( CyU3PUsbLinkPowerMode link_mode) {
+  64              		.loc 1 41 0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 8
+  67              		@ frame_needed = 1, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+  69 0030 04B02DE5 		str	fp, [sp, #-4]!
+  70              	.LCFI2:
+  71              		.cfi_def_cfa_offset 4
+  72              		.cfi_offset 11, -4
+  73 0034 00B08DE2 		add	fp, sp, #0
+  74              	.LCFI3:
+  75              		.cfi_def_cfa_register 11
+  76 0038 0CD04DE2 		sub	sp, sp, #12
+  77 003c 0030A0E1 		mov	r3, r0
+  78 0040 05304BE5 		strb	r3, [fp, #-5]
+  42:../auxutil.c  **** 
+  43:../auxutil.c  ****     return CyTrue;
+  79              		.loc 1 43 0
+  80 0044 0130A0E3 		mov	r3, #1
+  44:../auxutil.c  **** }
+  81              		.loc 1 44 0
+  82 0048 0300A0E1 		mov	r0, r3
+  83 004c 00D04BE2 		sub	sp, fp, #0
+  84              		@ sp needed
+  85 0050 04B09DE4 		ldr	fp, [sp], #4
+  86 0054 1EFF2FE1 		bx	lr
+  87              		.cfi_endproc
+  88              	.LFE1:
+  90              		.section	.rodata
+  91 001b 00       		.align	2
+  92              	.LC1:
+  93 001c 44656275 		.ascii	"Debug Init done\012\000"
+  93      6720496E 
+  93      69742064 
+  93      6F6E650A 
+  93      00
+  94              		.text
+  95              		.align	2
+  96              		.global	CyFxSlFifoApplnDebugInit
+  98              	CyFxSlFifoApplnDebugInit:
+  99              	.LFB2:
+  45:../auxutil.c  **** 
+  46:../auxutil.c  **** /*  The debug prints can be seen using a UART console
+  47:../auxutil.c  ****  * running at 115200 baud rate. */
+  48:../auxutil.c  **** void CyFxSlFifoApplnDebugInit (void) {
+ 100              		.loc 1 48 0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 32
+ 103              		@ frame_needed = 1, uses_anonymous_args = 0
+ 104 0058 00482DE9 		stmfd	sp!, {fp, lr}
+ 105              	.LCFI4:
+ 106              		.cfi_def_cfa_offset 8
+ 107              		.cfi_offset 11, -8
+ 108              		.cfi_offset 14, -4
+ 109 005c 04B08DE2 		add	fp, sp, #4
+ 110              	.LCFI5:
+ 111              		.cfi_def_cfa 11, 4
+ 112 0060 20D04DE2 		sub	sp, sp, #32
+  49:../auxutil.c  ****     CyU3PUartConfig_t uartConfig;
+  50:../auxutil.c  ****     CyU3PReturnStatus_t apiRetStatus = CY_U3P_SUCCESS;
+ 113              		.loc 1 50 0
+ 114 0064 0030A0E3 		mov	r3, #0
+ 115 0068 08300BE5 		str	r3, [fp, #-8]
+  51:../auxutil.c  ****     /* Initialize the UART for printing debug messages */
+  52:../auxutil.c  ****     apiRetStatus = CyU3PUartInit();
+ 116              		.loc 1 52 0
+ 117 006c FEFFFFEB 		bl	CyU3PUartInit
+ 118 0070 08000BE5 		str	r0, [fp, #-8]
+  53:../auxutil.c  ****     if (apiRetStatus != CY_U3P_SUCCESS)
+ 119              		.loc 1 53 0
+ 120 0074 08301BE5 		ldr	r3, [fp, #-8]
+ 121 0078 000053E3 		cmp	r3, #0
+ 122 007c 0100000A 		beq	.L8
+  54:../auxutil.c  ****     {
+  55:../auxutil.c  ****         /* Error handling */
+  56:../auxutil.c  ****         CyFxAppErrorHandler(apiRetStatus);
+ 123              		.loc 1 56 0
+ 124 0080 08001BE5 		ldr	r0, [fp, #-8]
+ 125 0084 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 126              	.L8:
+  57:../auxutil.c  ****     }
+  58:../auxutil.c  **** 
+  59:../auxutil.c  ****     /* Set UART configuration */
+  60:../auxutil.c  ****     CyU3PMemSet ((uint8_t *)&uartConfig, 0, sizeof (uartConfig));
+ 127              		.loc 1 60 0
+ 128 0088 20304BE2 		sub	r3, fp, #32
+ 129 008c 0300A0E1 		mov	r0, r3
+ 130 0090 0010A0E3 		mov	r1, #0
+ 131 0094 1820A0E3 		mov	r2, #24
+ 132 0098 FEFFFFEB 		bl	CyU3PMemSet
+  61:../auxutil.c  ****     uartConfig.baudRate = CY_U3P_UART_BAUDRATE_115200;
+ 133              		.loc 1 61 0
+ 134 009c B0309FE5 		ldr	r3, .L12
+ 135 00a0 10300BE5 		str	r3, [fp, #-16]
+  62:../auxutil.c  ****     uartConfig.stopBit = CY_U3P_UART_ONE_STOP_BIT;
+ 136              		.loc 1 62 0
+ 137 00a4 0130A0E3 		mov	r3, #1
+ 138 00a8 0C304BE5 		strb	r3, [fp, #-12]
+  63:../auxutil.c  ****     uartConfig.parity = CY_U3P_UART_NO_PARITY;
+ 139              		.loc 1 63 0
+ 140 00ac 0030A0E3 		mov	r3, #0
+ 141 00b0 0B304BE5 		strb	r3, [fp, #-11]
+  64:../auxutil.c  ****     uartConfig.txEnable = CyTrue;
+ 142              		.loc 1 64 0
+ 143 00b4 0130A0E3 		mov	r3, #1
+ 144 00b8 20300BE5 		str	r3, [fp, #-32]
+  65:../auxutil.c  ****     uartConfig.rxEnable = CyFalse;
+ 145              		.loc 1 65 0
+ 146 00bc 0030A0E3 		mov	r3, #0
+ 147 00c0 1C300BE5 		str	r3, [fp, #-28]
+  66:../auxutil.c  ****     uartConfig.flowCtrl = CyFalse;
+ 148              		.loc 1 66 0
+ 149 00c4 0030A0E3 		mov	r3, #0
+ 150 00c8 18300BE5 		str	r3, [fp, #-24]
+  67:../auxutil.c  ****     uartConfig.isDma = CyTrue;
+ 151              		.loc 1 67 0
+ 152 00cc 0130A0E3 		mov	r3, #1
+ 153 00d0 14300BE5 		str	r3, [fp, #-20]
+  68:../auxutil.c  **** 
+  69:../auxutil.c  ****     apiRetStatus = CyU3PUartSetConfig (&uartConfig, NULL);
+ 154              		.loc 1 69 0
+ 155 00d4 20304BE2 		sub	r3, fp, #32
+ 156 00d8 0300A0E1 		mov	r0, r3
+ 157 00dc 0010A0E3 		mov	r1, #0
+ 158 00e0 FEFFFFEB 		bl	CyU3PUartSetConfig
+ 159 00e4 08000BE5 		str	r0, [fp, #-8]
+  70:../auxutil.c  ****     if (apiRetStatus != CY_U3P_SUCCESS)
+ 160              		.loc 1 70 0
+ 161 00e8 08301BE5 		ldr	r3, [fp, #-8]
+ 162 00ec 000053E3 		cmp	r3, #0
+ 163 00f0 0100000A 		beq	.L9
+  71:../auxutil.c  ****     {
+  72:../auxutil.c  ****         CyFxAppErrorHandler(apiRetStatus);
+ 164              		.loc 1 72 0
+ 165 00f4 08001BE5 		ldr	r0, [fp, #-8]
+ 166 00f8 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 167              	.L9:
+  73:../auxutil.c  ****     }
+  74:../auxutil.c  **** 
+  75:../auxutil.c  ****     /* Set the UART transfer to a really large value. */
+  76:../auxutil.c  ****     apiRetStatus = CyU3PUartTxSetBlockXfer (0xFFFFFFFF);
+ 168              		.loc 1 76 0
+ 169 00fc 0000E0E3 		mvn	r0, #0
+ 170 0100 FEFFFFEB 		bl	CyU3PUartTxSetBlockXfer
+ 171 0104 08000BE5 		str	r0, [fp, #-8]
+  77:../auxutil.c  ****     if (apiRetStatus != CY_U3P_SUCCESS)
+ 172              		.loc 1 77 0
+ 173 0108 08301BE5 		ldr	r3, [fp, #-8]
+ 174 010c 000053E3 		cmp	r3, #0
+ 175 0110 0100000A 		beq	.L10
+  78:../auxutil.c  ****     {
+  79:../auxutil.c  ****         CyFxAppErrorHandler(apiRetStatus);
+ 176              		.loc 1 79 0
+ 177 0114 08001BE5 		ldr	r0, [fp, #-8]
+ 178 0118 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 179              	.L10:
+  80:../auxutil.c  ****     }
+  81:../auxutil.c  **** 
+  82:../auxutil.c  ****     /* Initialize the debug module. */
+  83:../auxutil.c  ****     apiRetStatus = CyU3PDebugInit (CY_U3P_LPP_SOCKET_UART_CONS, 8);
+ 180              		.loc 1 83 0
+ 181 011c 0300A0E3 		mov	r0, #3
+ 182 0120 0810A0E3 		mov	r1, #8
+ 183 0124 FEFFFFEB 		bl	CyU3PDebugInit
+ 184 0128 08000BE5 		str	r0, [fp, #-8]
+  84:../auxutil.c  ****     if (apiRetStatus != CY_U3P_SUCCESS)
+ 185              		.loc 1 84 0
+ 186 012c 08301BE5 		ldr	r3, [fp, #-8]
+ 187 0130 000053E3 		cmp	r3, #0
+ 188 0134 0100000A 		beq	.L11
+  85:../auxutil.c  ****     {
+  86:../auxutil.c  ****         CyFxAppErrorHandler(apiRetStatus);
+ 189              		.loc 1 86 0
+ 190 0138 08001BE5 		ldr	r0, [fp, #-8]
+ 191 013c FEFFFFEB 		bl	CyFxAppErrorHandler
+ 192              	.L11:
+  87:../auxutil.c  ****     }
+  88:../auxutil.c  ****     CyU3PDebugPrint (4, "Debug Init done\n");
+ 193              		.loc 1 88 0
+ 194 0140 0400A0E3 		mov	r0, #4
+ 195 0144 0C109FE5 		ldr	r1, .L12+4
+ 196 0148 FEFFFFEB 		bl	CyU3PDebugPrint
+  89:../auxutil.c  **** 
+  90:../auxutil.c  **** }
+ 197              		.loc 1 90 0
+ 198 014c 04D04BE2 		sub	sp, fp, #4
+ 199              		@ sp needed
+ 200 0150 0088BDE8 		ldmfd	sp!, {fp, pc}
+ 201              	.L13:
+ 202              		.align	2
+ 203              	.L12:
+ 204 0154 00C20100 		.word	115200
+ 205 0158 1C000000 		.word	.LC1
+ 206              		.cfi_endproc
+ 207              	.LFE2:
+ 209              		.section	.rodata
+ 210 002d 000000   		.align	2
+ 211              	.LC2:
+ 212 0030 55534220 		.ascii	"USB set device descriptor failed, Error code = %d\012"
+ 212      73657420 
+ 212      64657669 
+ 212      63652064 
+ 212      65736372 
+ 213 0062 00       		.ascii	"\000"
+ 214 0063 00       		.align	2
+ 215              	.LC3:
+ 216 0064 55534220 		.ascii	"USB set configuration descriptor failed, Error code"
+ 216      73657420 
+ 216      636F6E66 
+ 216      69677572 
+ 216      6174696F 
+ 217 0097 203D2025 		.ascii	" = %d\012\000"
+ 217      640A00
+ 218 009e 0000     		.align	2
+ 219              	.LC4:
+ 220 00a0 55534220 		.ascii	"USB set device qualifier descriptor failed, Error c"
+ 220      73657420 
+ 220      64657669 
+ 220      63652071 
+ 220      75616C69 
+ 221 00d3 6F646520 		.ascii	"ode = %d\012\000"
+ 221      3D202564 
+ 221      0A00
+ 222 00dd 000000   		.align	2
+ 223              	.LC5:
+ 224 00e0 55534220 		.ascii	"USB Set Other Speed Descriptor failed, Error Code ="
+ 224      53657420 
+ 224      4F746865 
+ 224      72205370 
+ 224      65656420 
+ 225 0113 2025640A 		.ascii	" %d\012\000"
+ 225      00
+ 226              		.align	2
+ 227              	.LC6:
+ 228 0118 55534220 		.ascii	"USB Set Configuration Descriptor failed, Error Code"
+ 228      53657420 
+ 228      436F6E66 
+ 228      69677572 
+ 228      6174696F 
+ 229 014b 203D2025 		.ascii	" = %d\012\000"
+ 229      640A00
+ 230 0152 0000     		.align	2
+ 231              	.LC7:
+ 232 0154 55534220 		.ascii	"USB set string descriptor failed, Error code = %d\012"
+ 232      73657420 
+ 232      73747269 
+ 232      6E672064 
+ 232      65736372 
+ 233 0186 00       		.ascii	"\000"
+ 234 0187 00       		.text
+ 235              		.align	2
+ 236              		.global	setDescriptors
+ 238              	setDescriptors:
+ 239              	.LFB3:
+  91:../auxutil.c  **** 
+  92:../auxutil.c  **** 
+  93:../auxutil.c  **** void setDescriptors(void) {
+ 240              		.loc 1 93 0
+ 241              		.cfi_startproc
+ 242              		@ args = 0, pretend = 0, frame = 8
+ 243              		@ frame_needed = 1, uses_anonymous_args = 0
+ 244 015c 00482DE9 		stmfd	sp!, {fp, lr}
+ 245              	.LCFI6:
+ 246              		.cfi_def_cfa_offset 8
+ 247              		.cfi_offset 11, -8
+ 248              		.cfi_offset 14, -4
+ 249 0160 04B08DE2 		add	fp, sp, #4
+ 250              	.LCFI7:
+ 251              		.cfi_def_cfa 11, 4
+ 252 0164 08D04DE2 		sub	sp, sp, #8
+  94:../auxutil.c  **** 
+  95:../auxutil.c  ****     CyU3PReturnStatus_t apiRetStatus = CY_U3P_SUCCESS;
+ 253              		.loc 1 95 0
+ 254 0168 0030A0E3 		mov	r3, #0
+ 255 016c 08300BE5 		str	r3, [fp, #-8]
+  96:../auxutil.c  **** 
+  97:../auxutil.c  **** 	/* Set the USB Enumeration descriptors */
+  98:../auxutil.c  **** 
+  99:../auxutil.c  **** /* Super speed device descriptor. */
+ 100:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_SS_DEVICE_DESCR, (int)NULL, (uint8_t *)CyFxUSB30Devic
+ 256              		.loc 1 100 0
+ 257 0170 0000A0E3 		mov	r0, #0
+ 258 0174 0010A0E3 		mov	r1, #0
+ 259 0178 28229FE5 		ldr	r2, .L25
+ 260 017c FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 261 0180 08000BE5 		str	r0, [fp, #-8]
+ 101:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 262              		.loc 1 101 0
+ 263 0184 08301BE5 		ldr	r3, [fp, #-8]
+ 264 0188 000053E3 		cmp	r3, #0
+ 265 018c 0500000A 		beq	.L15
+ 102:../auxutil.c  **** {
+ 103:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set device descriptor failed, Error code = %d\n", apiRetStatus);
+ 266              		.loc 1 103 0
+ 267 0190 0400A0E3 		mov	r0, #4
+ 268 0194 10129FE5 		ldr	r1, .L25+4
+ 269 0198 08201BE5 		ldr	r2, [fp, #-8]
+ 270 019c FEFFFFEB 		bl	CyU3PDebugPrint
+ 104:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 271              		.loc 1 104 0
+ 272 01a0 08001BE5 		ldr	r0, [fp, #-8]
+ 273 01a4 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 274              	.L15:
+ 105:../auxutil.c  **** }
+ 106:../auxutil.c  **** /* High speed device descriptor. */
+ 107:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_HS_DEVICE_DESCR, (int)NULL, (uint8_t *)CyFxUSB20Devic
+ 275              		.loc 1 107 0
+ 276 01a8 0100A0E3 		mov	r0, #1
+ 277 01ac 0010A0E3 		mov	r1, #0
+ 278 01b0 F8219FE5 		ldr	r2, .L25+8
+ 279 01b4 FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 280 01b8 08000BE5 		str	r0, [fp, #-8]
+ 108:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 281              		.loc 1 108 0
+ 282 01bc 08301BE5 		ldr	r3, [fp, #-8]
+ 283 01c0 000053E3 		cmp	r3, #0
+ 284 01c4 0500000A 		beq	.L16
+ 109:../auxutil.c  **** {
+ 110:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set device descriptor failed, Error code = %d\n", apiRetStatus);
+ 285              		.loc 1 110 0
+ 286 01c8 0400A0E3 		mov	r0, #4
+ 287 01cc D8119FE5 		ldr	r1, .L25+4
+ 288 01d0 08201BE5 		ldr	r2, [fp, #-8]
+ 289 01d4 FEFFFFEB 		bl	CyU3PDebugPrint
+ 111:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 290              		.loc 1 111 0
+ 291 01d8 08001BE5 		ldr	r0, [fp, #-8]
+ 292 01dc FEFFFFEB 		bl	CyFxAppErrorHandler
+ 293              	.L16:
+ 112:../auxutil.c  **** }
+ 113:../auxutil.c  **** 
+ 114:../auxutil.c  **** /* BOS descriptor */
+ 115:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_SS_BOS_DESCR, (int)NULL, (uint8_t *)CyFxUSBBOSDscr);
+ 294              		.loc 1 115 0
+ 295 01e0 0700A0E3 		mov	r0, #7
+ 296 01e4 0010A0E3 		mov	r1, #0
+ 297 01e8 C4219FE5 		ldr	r2, .L25+12
+ 298 01ec FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 299 01f0 08000BE5 		str	r0, [fp, #-8]
+ 116:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 300              		.loc 1 116 0
+ 301 01f4 08301BE5 		ldr	r3, [fp, #-8]
+ 302 01f8 000053E3 		cmp	r3, #0
+ 303 01fc 0500000A 		beq	.L17
+ 117:../auxutil.c  **** {
+ 118:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set configuration descriptor failed, Error code = %d\n", apiRetStatus)
+ 304              		.loc 1 118 0
+ 305 0200 0400A0E3 		mov	r0, #4
+ 306 0204 AC119FE5 		ldr	r1, .L25+16
+ 307 0208 08201BE5 		ldr	r2, [fp, #-8]
+ 308 020c FEFFFFEB 		bl	CyU3PDebugPrint
+ 119:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 309              		.loc 1 119 0
+ 310 0210 08001BE5 		ldr	r0, [fp, #-8]
+ 311 0214 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 312              	.L17:
+ 120:../auxutil.c  **** }
+ 121:../auxutil.c  **** 
+ 122:../auxutil.c  **** /* Device qualifier descriptor */
+ 123:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_DEVQUAL_DESCR, (int)NULL, (uint8_t *)CyFxUSBDeviceQua
+ 313              		.loc 1 123 0
+ 314 0218 0200A0E3 		mov	r0, #2
+ 315 021c 0010A0E3 		mov	r1, #0
+ 316 0220 94219FE5 		ldr	r2, .L25+20
+ 317 0224 FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 318 0228 08000BE5 		str	r0, [fp, #-8]
+ 124:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 319              		.loc 1 124 0
+ 320 022c 08301BE5 		ldr	r3, [fp, #-8]
+ 321 0230 000053E3 		cmp	r3, #0
+ 322 0234 0500000A 		beq	.L18
+ 125:../auxutil.c  **** {
+ 126:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set device qualifier descriptor failed, Error code = %d\n", apiRetStat
+ 323              		.loc 1 126 0
+ 324 0238 0400A0E3 		mov	r0, #4
+ 325 023c 7C119FE5 		ldr	r1, .L25+24
+ 326 0240 08201BE5 		ldr	r2, [fp, #-8]
+ 327 0244 FEFFFFEB 		bl	CyU3PDebugPrint
+ 127:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 328              		.loc 1 127 0
+ 329 0248 08001BE5 		ldr	r0, [fp, #-8]
+ 330 024c FEFFFFEB 		bl	CyFxAppErrorHandler
+ 331              	.L18:
+ 128:../auxutil.c  **** }
+ 129:../auxutil.c  **** 
+ 130:../auxutil.c  **** /* Super speed configuration descriptor */
+ 131:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_SS_CONFIG_DESCR,(int) NULL, (uint8_t *)CyFxUSBSSConfi
+ 332              		.loc 1 131 0
+ 333 0250 0600A0E3 		mov	r0, #6
+ 334 0254 0010A0E3 		mov	r1, #0
+ 335 0258 64219FE5 		ldr	r2, .L25+28
+ 336 025c FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 337 0260 08000BE5 		str	r0, [fp, #-8]
+ 132:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 338              		.loc 1 132 0
+ 339 0264 08301BE5 		ldr	r3, [fp, #-8]
+ 340 0268 000053E3 		cmp	r3, #0
+ 341 026c 0500000A 		beq	.L19
+ 133:../auxutil.c  **** {
+ 134:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set configuration descriptor failed, Error code = %d\n", apiRetStatus)
+ 342              		.loc 1 134 0
+ 343 0270 0400A0E3 		mov	r0, #4
+ 344 0274 3C119FE5 		ldr	r1, .L25+16
+ 345 0278 08201BE5 		ldr	r2, [fp, #-8]
+ 346 027c FEFFFFEB 		bl	CyU3PDebugPrint
+ 135:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 347              		.loc 1 135 0
+ 348 0280 08001BE5 		ldr	r0, [fp, #-8]
+ 349 0284 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 350              	.L19:
+ 136:../auxutil.c  **** }
+ 137:../auxutil.c  **** 
+ 138:../auxutil.c  **** /* High speed configuration descriptor */
+ 139:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_HS_CONFIG_DESCR, (int)NULL, (uint8_t *)CyFxUSBHSConfi
+ 351              		.loc 1 139 0
+ 352 0288 0400A0E3 		mov	r0, #4
+ 353 028c 0010A0E3 		mov	r1, #0
+ 354 0290 30219FE5 		ldr	r2, .L25+32
+ 355 0294 FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 356 0298 08000BE5 		str	r0, [fp, #-8]
+ 140:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 357              		.loc 1 140 0
+ 358 029c 08301BE5 		ldr	r3, [fp, #-8]
+ 359 02a0 000053E3 		cmp	r3, #0
+ 360 02a4 0500000A 		beq	.L20
+ 141:../auxutil.c  **** {
+ 142:../auxutil.c  ****     CyU3PDebugPrint (4, "USB Set Other Speed Descriptor failed, Error Code = %d\n", apiRetStatus);
+ 361              		.loc 1 142 0
+ 362 02a8 0400A0E3 		mov	r0, #4
+ 363 02ac 18119FE5 		ldr	r1, .L25+36
+ 364 02b0 08201BE5 		ldr	r2, [fp, #-8]
+ 365 02b4 FEFFFFEB 		bl	CyU3PDebugPrint
+ 143:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 366              		.loc 1 143 0
+ 367 02b8 08001BE5 		ldr	r0, [fp, #-8]
+ 368 02bc FEFFFFEB 		bl	CyFxAppErrorHandler
+ 369              	.L20:
+ 144:../auxutil.c  **** }
+ 145:../auxutil.c  **** 
+ 146:../auxutil.c  **** /* Full speed configuration descriptor */
+ 147:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_FS_CONFIG_DESCR, (int)NULL, (uint8_t *)CyFxUSBFSConfi
+ 370              		.loc 1 147 0
+ 371 02c0 0300A0E3 		mov	r0, #3
+ 372 02c4 0010A0E3 		mov	r1, #0
+ 373 02c8 00219FE5 		ldr	r2, .L25+40
+ 374 02cc FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 375 02d0 08000BE5 		str	r0, [fp, #-8]
+ 148:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 376              		.loc 1 148 0
+ 377 02d4 08301BE5 		ldr	r3, [fp, #-8]
+ 378 02d8 000053E3 		cmp	r3, #0
+ 379 02dc 0500000A 		beq	.L21
+ 149:../auxutil.c  **** {
+ 150:../auxutil.c  ****     CyU3PDebugPrint (4, "USB Set Configuration Descriptor failed, Error Code = %d\n", apiRetStatus)
+ 380              		.loc 1 150 0
+ 381 02e0 0400A0E3 		mov	r0, #4
+ 382 02e4 E8109FE5 		ldr	r1, .L25+44
+ 383 02e8 08201BE5 		ldr	r2, [fp, #-8]
+ 384 02ec FEFFFFEB 		bl	CyU3PDebugPrint
+ 151:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 385              		.loc 1 151 0
+ 386 02f0 08001BE5 		ldr	r0, [fp, #-8]
+ 387 02f4 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 388              	.L21:
+ 152:../auxutil.c  **** }
+ 153:../auxutil.c  **** 
+ 154:../auxutil.c  **** /* String descriptor 0 */
+ 155:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_STRING_DESCR, 0, (uint8_t *)CyFxUSBStringLangIDDscr);
+ 389              		.loc 1 155 0
+ 390 02f8 0500A0E3 		mov	r0, #5
+ 391 02fc 0010A0E3 		mov	r1, #0
+ 392 0300 D0209FE5 		ldr	r2, .L25+48
+ 393 0304 FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 394 0308 08000BE5 		str	r0, [fp, #-8]
+ 156:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 395              		.loc 1 156 0
+ 396 030c 08301BE5 		ldr	r3, [fp, #-8]
+ 397 0310 000053E3 		cmp	r3, #0
+ 398 0314 0500000A 		beq	.L22
+ 157:../auxutil.c  **** {
+ 158:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set string descriptor failed, Error code = %d\n", apiRetStatus);
+ 399              		.loc 1 158 0
+ 400 0318 0400A0E3 		mov	r0, #4
+ 401 031c B8109FE5 		ldr	r1, .L25+52
+ 402 0320 08201BE5 		ldr	r2, [fp, #-8]
+ 403 0324 FEFFFFEB 		bl	CyU3PDebugPrint
+ 159:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 404              		.loc 1 159 0
+ 405 0328 08001BE5 		ldr	r0, [fp, #-8]
+ 406 032c FEFFFFEB 		bl	CyFxAppErrorHandler
+ 407              	.L22:
+ 160:../auxutil.c  **** }
+ 161:../auxutil.c  **** 
+ 162:../auxutil.c  **** /* String descriptor 1 */
+ 163:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_STRING_DESCR, 1, (uint8_t *)CyFxUSBManufactureDscr);
+ 408              		.loc 1 163 0
+ 409 0330 0500A0E3 		mov	r0, #5
+ 410 0334 0110A0E3 		mov	r1, #1
+ 411 0338 A0209FE5 		ldr	r2, .L25+56
+ 412 033c FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 413 0340 08000BE5 		str	r0, [fp, #-8]
+ 164:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 414              		.loc 1 164 0
+ 415 0344 08301BE5 		ldr	r3, [fp, #-8]
+ 416 0348 000053E3 		cmp	r3, #0
+ 417 034c 0500000A 		beq	.L23
+ 165:../auxutil.c  **** {
+ 166:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set string descriptor failed, Error code = %d\n", apiRetStatus);
+ 418              		.loc 1 166 0
+ 419 0350 0400A0E3 		mov	r0, #4
+ 420 0354 80109FE5 		ldr	r1, .L25+52
+ 421 0358 08201BE5 		ldr	r2, [fp, #-8]
+ 422 035c FEFFFFEB 		bl	CyU3PDebugPrint
+ 167:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 423              		.loc 1 167 0
+ 424 0360 08001BE5 		ldr	r0, [fp, #-8]
+ 425 0364 FEFFFFEB 		bl	CyFxAppErrorHandler
+ 426              	.L23:
+ 168:../auxutil.c  **** }
+ 169:../auxutil.c  **** 
+ 170:../auxutil.c  **** /* String descriptor 2 */
+ 171:../auxutil.c  **** apiRetStatus = CyU3PUsbSetDesc(CY_U3P_USB_SET_STRING_DESCR, 2, (uint8_t *)CyFxUSBProductDscr);
+ 427              		.loc 1 171 0
+ 428 0368 0500A0E3 		mov	r0, #5
+ 429 036c 0210A0E3 		mov	r1, #2
+ 430 0370 6C209FE5 		ldr	r2, .L25+60
+ 431 0374 FEFFFFEB 		bl	CyU3PUsbSetDesc
+ 432 0378 08000BE5 		str	r0, [fp, #-8]
+ 172:../auxutil.c  **** if (apiRetStatus != CY_U3P_SUCCESS)
+ 433              		.loc 1 172 0
+ 434 037c 08301BE5 		ldr	r3, [fp, #-8]
+ 435 0380 000053E3 		cmp	r3, #0
+ 436 0384 0500000A 		beq	.L14
+ 173:../auxutil.c  **** {
+ 174:../auxutil.c  ****     CyU3PDebugPrint (4, "USB set string descriptor failed, Error code = %d\n", apiRetStatus);
+ 437              		.loc 1 174 0
+ 438 0388 0400A0E3 		mov	r0, #4
+ 439 038c 48109FE5 		ldr	r1, .L25+52
+ 440 0390 08201BE5 		ldr	r2, [fp, #-8]
+ 441 0394 FEFFFFEB 		bl	CyU3PDebugPrint
+ 175:../auxutil.c  ****     CyFxAppErrorHandler(apiRetStatus);
+ 442              		.loc 1 175 0
+ 443 0398 08001BE5 		ldr	r0, [fp, #-8]
+ 444 039c FEFFFFEB 		bl	CyFxAppErrorHandler
+ 445              	.L14:
+ 176:../auxutil.c  **** }
+ 177:../auxutil.c  **** 
+ 178:../auxutil.c  **** }
+ 446              		.loc 1 178 0
+ 447 03a0 04D04BE2 		sub	sp, fp, #4
+ 448              		@ sp needed
+ 449 03a4 0088BDE8 		ldmfd	sp!, {fp, pc}
+ 450              	.L26:
+ 451              		.align	2
+ 452              	.L25:
+ 453 03a8 00000000 		.word	CyFxUSB30DeviceDscr
+ 454 03ac 30000000 		.word	.LC2
+ 455 03b0 00000000 		.word	CyFxUSB20DeviceDscr
+ 456 03b4 00000000 		.word	CyFxUSBBOSDscr
+ 457 03b8 64000000 		.word	.LC3
+ 458 03bc 00000000 		.word	CyFxUSBDeviceQualDscr
+ 459 03c0 A0000000 		.word	.LC4
+ 460 03c4 00000000 		.word	CyFxUSBSSConfigDscr
+ 461 03c8 00000000 		.word	CyFxUSBHSConfigDscr
+ 462 03cc E0000000 		.word	.LC5
+ 463 03d0 00000000 		.word	CyFxUSBFSConfigDscr
+ 464 03d4 18010000 		.word	.LC6
+ 465 03d8 00000000 		.word	CyFxUSBStringLangIDDscr
+ 466 03dc 54010000 		.word	.LC7
+ 467 03e0 00000000 		.word	CyFxUSBManufactureDscr
+ 468 03e4 00000000 		.word	CyFxUSBProductDscr
+ 469              		.cfi_endproc
+ 470              	.LFE3:
+ 472              	.Letext0:
+ 473              		.file 2 "c:\\program files (x86)\\cypress\\ez-usb fx3 sdk\\1.3\\arm gcc\\arm-none-eabi\\include\\s
+ 474              		.file 3 "C:\\Program Files (x86)\\Cypress\\EZ-USB FX3 SDK\\1.3\\\\firmware\\u3p_firmware\\inc/cyu3
+ 475              		.file 4 "C:\\Program Files (x86)\\Cypress\\EZ-USB FX3 SDK\\1.3\\\\firmware\\u3p_firmware\\inc/cyu3
+ 476              		.file 5 "C:\\Program Files (x86)\\Cypress\\EZ-USB FX3 SDK\\1.3\\\\firmware\\u3p_firmware\\inc/cyu3
+ 477              		.file 6 "C:\\Program Files (x86)\\Cypress\\EZ-USB FX3 SDK\\1.3\\\\firmware\\u3p_firmware\\inc/cyu3
+ 478              		.file 7 "C:\\Program Files (x86)\\Cypress\\EZ-USB FX3 SDK\\1.3\\\\firmware\\u3p_firmware\\inc/cyu3
+ 479              		.file 8 "../cyfxslfifosyncmulti.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 auxutil.c
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:17     .rodata:00000000 $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:21     .text:00000000 $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:24     .text:00000000 CyFxAppErrorHandler
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:55     .text:0000002c $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:59     .text:00000030 $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:62     .text:00000030 CyFxApplnLPMRqtCB
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:98     .text:00000058 CyFxSlFifoApplnDebugInit
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:204    .text:00000154 $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:235    .text:0000015c $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:238    .text:0000015c setDescriptors
+C:\Users\CHARLIE\AppData\Local\Temp\ccubDROa.s:453    .text:000003a8 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+CyU3PDebugPrint
+_tx_thread_sleep
+CyU3PUartInit
+CyU3PMemSet
+CyU3PUartSetConfig
+CyU3PUartTxSetBlockXfer
+CyU3PDebugInit
+CyU3PUsbSetDesc
+CyFxUSB30DeviceDscr
+CyFxUSB20DeviceDscr
+CyFxUSBBOSDscr
+CyFxUSBDeviceQualDscr
+CyFxUSBSSConfigDscr
+CyFxUSBHSConfigDscr
+CyFxUSBFSConfigDscr
+CyFxUSBStringLangIDDscr
+CyFxUSBManufactureDscr
+CyFxUSBProductDscr

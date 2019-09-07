@@ -686,17 +686,17 @@
  479              		.file 8 "../cyfxslfifosyncmulti.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 auxutil.c
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:17     .rodata:00000000 $d
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:21     .text:00000000 $a
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:24     .text:00000000 CyFxAppErrorHandler
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:55     .text:0000002c $d
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:59     .text:00000030 $a
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:62     .text:00000030 CyFxApplnLPMRqtCB
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:98     .text:00000058 CyFxSlFifoApplnDebugInit
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:204    .text:00000154 $d
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:235    .text:0000015c $a
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:238    .text:0000015c setDescriptors
-C:\Users\CHARLIE\AppData\Local\Temp\ccSEmOmu.s:453    .text:000003a8 $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:17     .rodata:00000000 $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:21     .text:00000000 $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:24     .text:00000000 CyFxAppErrorHandler
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:55     .text:0000002c $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:59     .text:00000030 $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:62     .text:00000030 CyFxApplnLPMRqtCB
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:98     .text:00000058 CyFxSlFifoApplnDebugInit
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:204    .text:00000154 $d
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:235    .text:0000015c $a
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:238    .text:0000015c setDescriptors
+C:\Users\CHARLIE\AppData\Local\Temp\ccHTVXi4.s:453    .text:000003a8 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

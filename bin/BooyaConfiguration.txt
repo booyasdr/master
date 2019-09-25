@@ -1,0 +1,5 @@
+// BooyaSDR configuration file
+// set variables below to 1 or 0 to turn function on and off
+gui 1
+server 1
+maxConnection 2 // maximum number of server connections

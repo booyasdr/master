@@ -1,0 +1,506 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   FFFFFF00  s_BSEG                          
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_CONST                         
+C:   00000000  l_GSINIT                        
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG_BYTES                    
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_PSEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000000  s_XISEG                         
+C:   00000000  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000008  l_HOME                          
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_GSINIT0                       
+C:   00000008  s_REG_BANK_1                    
+C:   00000008  s_SSEG                          
+C:   0000000A  l_GSINIT2                       
+C:   0000000B  s_GSINIT1                       
+C:   0000000B  s_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000015  s_GSINIT3                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000037  s_GSINIT4                       
+C:   00000061  s_GSFINAL                       
+C:   00000061  s_GSINIT                        
+C:   00000061  s_GSINIT5                       
+C:   00000064  s_CSEG                          
+C:   00000080  l_DSEG                          
+C:   000000F8  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   00000415  l_CSEG                          
+C:   00000479  s_CONST                         
+C:   00000479  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _IOA                               fx2pipe
+     00000081  _SP                                fx2pipe
+     00000082  _DPL                               fx2pipe
+     00000083  _DPH                               fx2pipe
+     00000084  _DPL1                              fx2pipe
+     00000085  _DPH1                              fx2pipe
+     00000086  _DPS                               fx2pipe
+     00000087  _PCON                              fx2pipe
+     00000088  _TCON                              fx2pipe
+     00000089  _TMOD                              fx2pipe
+     0000008A  _TL0                               fx2pipe
+     0000008B  _TL1                               fx2pipe
+     0000008C  _TH0                               fx2pipe
+     0000008D  _TH1                               fx2pipe
+     0000008E  _CKCO                              fx2pipe
+     0000008F  _SPC_                              fx2pipe
+     00000090  _IOB                               fx2pipe
+     00000091  _EXIF                              fx2pipe
+     00000092  _MPA                               fx2pipe
+     00000098  _SCO                               fx2pipe
+     00000099  _SBU                               fx2pipe
+     0000009A  _APTR1H                            fx2pipe
+     0000009B  _APTR1L                            fx2pipe
+     0000009C  _AUTODAT1                          fx2pipe
+     0000009D  _AUTOPTRH2                         fx2pipe
+     0000009E  _AUTOPTRL2                         fx2pipe
+     0000009F  _AUTODAT2                          fx2pipe
+     000000A0  _IOC                               fx2pipe
+     000000A0  __XPAGE                            
+     000000A1  _INT2CLR                           fx2pipe
+     000000A2  _INT4CLR                           fx2pipe
+     000000A8  _IE                                fx2pipe
+     000000AA  _EP2468STAT                        fx2pipe
+     000000AB  _EP24FIFOFLGS                      fx2pipe
+     000000AC  _EP68FIFOFLGS                      fx2pipe
+     000000AF  _AUTOPTRSETUP                      fx2pipe
+     000000B0  _IOD                               fx2pipe
+     000000B1  _IOE                               fx2pipe
+     000000B2  _OEA                               fx2pipe
+     000000B3  _OEB                               fx2pipe
+     000000B4  _OEC                               fx2pipe
+     000000B5  _OED                               fx2pipe
+     000000B6  _OEE                               fx2pipe
+     000000B8  _IP                                fx2pipe
+     000000BA  _EP01STAT                          fx2pipe
+     000000BB  _GPIFTRIG                          fx2pipe
+     000000BD  _GPIFSGLDATH                       fx2pipe
+     000000BE  _GPIFSGLDATLX                      fx2pipe
+     000000BF  _GPIFSGLDATLNOX                    fx2pipe
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000C0  _SCON1                             fx2pipe
+     000000C1  _SBUF1                             fx2pipe
+     000000C8  _T2CON                             fx2pipe
+     000000CA  _RCAP2L                            fx2pipe
+     000000CB  _RCAP2H                            fx2pipe
+     000000CC  _TL2                               fx2pipe
+     000000CD  _TH2                               fx2pipe
+     000000D0  _PSW                               fx2pipe
+     000000D8  _EICON                             fx2pipe
+     000000E0  _ACC                               fx2pipe
+     000000E8  _EIE                               fx2pipe
+     000000F0  _B                                 fx2pipe
+     000000F8  _EIP                               fx2pipe
+     0000E400  _GPIF_WAVE_DATA                    fx2pipe
+     0000E480  _RES_WAVEDATA_END                  fx2pipe
+     0000E600  _CPUCS                             fx2pipe
+     0000E601  _IFCONFIG                          fx2pipe
+     0000E602  _PINFLAGSAB                        fx2pipe
+     0000E603  _PINFLAGSCD                        fx2pipe
+     0000E604  _FIFORESET                         fx2pipe
+     0000E605  _BREAKPT                           fx2pipe
+     0000E606  _BPADDRH                           fx2pipe
+     0000E607  _BPADDRL                           fx2pipe
+     0000E608  _UART230                           fx2pipe
+     0000E609  _FIFOPINPOLAR                      fx2pipe
+     0000E60A  _REVID                             fx2pipe
+     0000E60B  _REVCTL                            fx2pipe
+     0000E60C  _GPIFHOLDAMOUNT                    fx2pipe
+     0000E610  _EP1OUTCFG                         fx2pipe
+     0000E611  _EP1INCFG                          fx2pipe
+     0000E612  _EP2CFG                            fx2pipe
+     0000E613  _EP4CFG                            fx2pipe
+     0000E614  _EP6CFG                            fx2pipe
+     0000E615  _EP8CFG                            fx2pipe
+     0000E618  _EP2FIFOCFG                        fx2pipe
+     0000E619  _EP4FIFOCFG                        fx2pipe
+     0000E61A  _EP6FIFOCFG                        fx2pipe
+     0000E61B  _EP8FIFOCFG                        fx2pipe
+     0000E620  _EP2AUTOINLENH                     fx2pipe
+     0000E621  _EP2AUTOINLENL                     fx2pipe
+     0000E622  _EP4AUTOINLENH                     fx2pipe
+     0000E623  _EP4AUTOINLENL                     fx2pipe
+     0000E624  _EP6AUTOINLENH                     fx2pipe
+     0000E625  _EP6AUTOINLENL                     fx2pipe
+     0000E626  _EP8AUTOINLENH                     fx2pipe
+     0000E627  _EP8AUTOINLENL                     fx2pipe
+     0000E630  _EP2FIFOPFH                        fx2pipe
+     0000E631  _EP2FIFOPFL                        fx2pipe
+     0000E632  _EP4FIFOPFH                        fx2pipe
+     0000E633  _EP4FIFOPFL                        fx2pipe
+     0000E634  _EP6FIFOPFH                        fx2pipe
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E635  _EP6FIFOPFL                        fx2pipe
+     0000E636  _EP8FIFOPFH                        fx2pipe
+     0000E637  _EP8FIFOPFL                        fx2pipe
+     0000E640  _EP2ISOINPKTS                      fx2pipe
+     0000E641  _EP4ISOINPKTS                      fx2pipe
+     0000E642  _EP6ISOINPKTS                      fx2pipe
+     0000E643  _EP8ISOINPKTS                      fx2pipe
+     0000E648  _INPKTEND                          fx2pipe
+     0000E649  _OUTPKTEND                         fx2pipe
+     0000E650  _EP2FIFOIE                         fx2pipe
+     0000E651  _EP2FIFOIRQ                        fx2pipe
+     0000E652  _EP4FIFOIE                         fx2pipe
+     0000E653  _EP4FIFOIRQ                        fx2pipe
+     0000E654  _EP6FIFOIE                         fx2pipe
+     0000E655  _EP6FIFOIRQ                        fx2pipe
+     0000E656  _EP8FIFOIE                         fx2pipe
+     0000E657  _EP8FIFOIRQ                        fx2pipe
+     0000E658  _IBNIE                             fx2pipe
+     0000E659  _IBNIRQ                            fx2pipe
+     0000E65A  _NAKIE                             fx2pipe
+     0000E65B  _NAKIRQ                            fx2pipe
+     0000E65C  _USBIE                             fx2pipe
+     0000E65D  _USBIRQ                            fx2pipe
+     0000E65E  _EPIE                              fx2pipe
+     0000E65F  _EPIRQ                             fx2pipe
+     0000E660  _GPIFIE                            fx2pipe
+     0000E661  _GPIFIRQ                           fx2pipe
+     0000E662  _USBERRIE                          fx2pipe
+     0000E663  _USBERRIRQ                         fx2pipe
+     0000E664  _ERRCNTLIM                         fx2pipe
+     0000E665  _CLRERRCNT                         fx2pipe
+     0000E666  _INT2IVEC                          fx2pipe
+     0000E667  _INT4IVEC                          fx2pipe
+     0000E668  _INTSETUP                          fx2pipe
+     0000E670  _PORTACFG                          fx2pipe
+     0000E671  _PORTCCFG                          fx2pipe
+     0000E672  _PORTECFG                          fx2pipe
+     0000E678  _I2CS                              fx2pipe
+     0000E679  _I2DAT                             fx2pipe
+     0000E67A  _I2CTL                             fx2pipe
+     0000E67B  _XAUTODAT1                         fx2pipe
+     0000E67C  _XAUTODAT2                         fx2pipe
+     0000E67D  _UDMACRCH                          fx2pipe
+     0000E67E  _UDMACRCL                          fx2pipe
+     0000E67F  _UDMACRCQUAL                       fx2pipe
+     0000E680  _USBCS                             fx2pipe
+     0000E681  _SUSPEND                           fx2pipe
+     0000E682  _WAKEUPCS                          fx2pipe
+     0000E683  _TOGCTL                            fx2pipe
+     0000E684  _USBFRAMEH                         fx2pipe
+     0000E685  _USBFRAMEL                         fx2pipe
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E686  _MICROFRAME                        fx2pipe
+     0000E687  _FNADDR                            fx2pipe
+     0000E68A  _EP0BCH                            fx2pipe
+     0000E68B  _EP0BCL                            fx2pipe
+     0000E68D  _EP1OUTBC                          fx2pipe
+     0000E68F  _EP1INBC                           fx2pipe
+     0000E690  _EP2BCH                            fx2pipe
+     0000E691  _EP2BCL                            fx2pipe
+     0000E694  _EP4BCH                            fx2pipe
+     0000E695  _EP4BCL                            fx2pipe
+     0000E698  _EP6BCH                            fx2pipe
+     0000E699  _EP6BCL                            fx2pipe
+     0000E69C  _EP8BCH                            fx2pipe
+     0000E69D  _EP8BCL                            fx2pipe
+     0000E6A0  _EP0CS                             fx2pipe
+     0000E6A1  _EP1OUTCS                          fx2pipe
+     0000E6A2  _EP1INCS                           fx2pipe
+     0000E6A3  _EP2CS                             fx2pipe
+     0000E6A4  _EP4CS                             fx2pipe
+     0000E6A5  _EP6CS                             fx2pipe
+     0000E6A6  _EP8CS                             fx2pipe
+     0000E6A7  _EP2FIFOFLGS                       fx2pipe
+     0000E6A8  _EP4FIFOFLGS                       fx2pipe
+     0000E6A9  _EP6FIFOFLGS                       fx2pipe
+     0000E6AA  _EP8FIFOFLGS                       fx2pipe
+     0000E6AB  _EP2FIFOBCH                        fx2pipe
+     0000E6AC  _EP2FIFOBCL                        fx2pipe
+     0000E6AD  _EP4FIFOBCH                        fx2pipe
+     0000E6AE  _EP4FIFOBCL                        fx2pipe
+     0000E6AF  _EP6FIFOBCH                        fx2pipe
+     0000E6B0  _EP6FIFOBCL                        fx2pipe
+     0000E6B1  _EP8FIFOBCH                        fx2pipe
+     0000E6B2  _EP8FIFOBCL                        fx2pipe
+     0000E6B3  _SUDPTRH                           fx2pipe
+     0000E6B4  _SUDPTRL                           fx2pipe
+     0000E6B5  _SUDPTRCTL                         fx2pipe
+     0000E6B8  _SETUPDAT                          fx2pipe
+     0000E6C0  _GPIFWFSELECT                      fx2pipe
+     0000E6C1  _GPIFIDLECS                        fx2pipe
+     0000E6C2  _GPIFIDLECTL                       fx2pipe
+     0000E6C3  _GPIFCTLCFG                        fx2pipe
+     0000E6C4  _GPIFADRH                          fx2pipe
+     0000E6C5  _GPIFADRL                          fx2pipe
+     0000E6C6  _FLOWSTATE                         fx2pipe
+     0000E6C7  _FLOWLOGIC                         fx2pipe
+     0000E6C8  _FLOWEQ0CTL                        fx2pipe
+     0000E6C9  _FLOWEQ1CTL                        fx2pipe
+     0000E6CA  _FLOWHOLDOFF                       fx2pipe
+     0000E6CB  _FLOWSTB                           fx2pipe
+     0000E6CC  _FLOWSTBEDGE                       fx2pipe
+     0000E6CD  _FLOWSTBHPERIOD                    fx2pipe
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6CE  _GPIFTCB3                          fx2pipe
+     0000E6CF  _GPIFTCB2                          fx2pipe
+     0000E6D0  _GPIFTCB1                          fx2pipe
+     0000E6D1  _GPIFTCB0                          fx2pipe
+     0000E6D2  _EP2GPIFFLGSEL                     fx2pipe
+     0000E6D3  _EP2GPIFPFSTOP                     fx2pipe
+     0000E6D4  _EP2GPIFTRIG                       fx2pipe
+     0000E6DA  _EP4GPIFFLGSEL                     fx2pipe
+     0000E6DB  _EP4GPIFPFSTOP                     fx2pipe
+     0000E6DC  _EP4GPIFTRIG                       fx2pipe
+     0000E6E2  _EP6GPIFFLGSEL                     fx2pipe
+     0000E6E3  _EP6GPIFPFSTOP                     fx2pipe
+     0000E6E4  _EP6GPIFTRIG                       fx2pipe
+     0000E6EA  _EP8GPIFFLGSEL                     fx2pipe
+     0000E6EB  _EP8GPIFPFSTOP                     fx2pipe
+     0000E6EC  _EP8GPIFTRIG                       fx2pipe
+     0000E6F0  _XGPIFSGLDATH                      fx2pipe
+     0000E6F1  _XGPIFSGLDATLX                     fx2pipe
+     0000E6F2  _XGPIFSGLDATLNOX                   fx2pipe
+     0000E6F3  _GPIFREADYCFG                      fx2pipe
+     0000E6F4  _GPIFREADYSTAT                     fx2pipe
+     0000E6F5  _GPIFABORT                         fx2pipe
+     0000E6F8  _DBUG                              fx2pipe
+     0000E6F9  _TESTCFG                           fx2pipe
+     0000E6FA  _USBTEST                           fx2pipe
+     0000E6FB  _CT1                               fx2pipe
+     0000E6FC  _CT2                               fx2pipe
+     0000E6FD  _CT3                               fx2pipe
+     0000E6FE  _CT4                               fx2pipe
+     0000E740  _EP0BUF                            fx2pipe
+     0000E780  _EP1OUTBUF                         fx2pipe
+     0000E7C0  _EP1INBUF                          fx2pipe
+     0000F000  _EP2FIFOBUF                        fx2pipe
+     0000F400  _EP4FIFOBUF                        fx2pipe
+     0000F800  _EP6FIFOBUF                        fx2pipe
+     0000FC00  _EP8FIFOBUF                        fx2pipe
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000008    000000F8 =         248. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  __start__stack                     fx2pipe
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000008 =           8. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000003  __sdcc_program_startup             fx2pipe
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000008    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000008  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             0000000B    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000015    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000015  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000037    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000037  __mcs51_genRAMCLEAR                
+C:   0000003D  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000061    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000064    00000415 =        1045. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000470  _main                              fx2pipe
+C:   00000475  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+
+Files Linked                              [ module(s) ]
+
+fx2pipe.rel                               [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

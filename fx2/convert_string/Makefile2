@@ -1,0 +1,39 @@
+INCLUDES = -I../include
+INCLUDES = 
+CC = sdcc -mmcs51
+BASENAME = convert
+BASENAMEREV = convertreverse26
+CYCFX2PROG =..\cycfx2prog.exe
+
+$(BASENAME).ihx: $(BASENAME).c
+	$(CC) $(INCLUDES) $(BASENAME).c
+
+.PHONY: clean
+clean:
+	rm -f $(BASENAME).asm $(BASENAME).ihx	$(BASENAME).ihx	$(BASENAME).lnk	$(BASENAME).lst	$(BASENAME).map	$(BASENAME).mem	$(BASENAME).rel	$(BASENAME).rst	$(BASENAME).sym
+	rm -f $(BASENAME).{asm,ihx,lnk,lst,map,mem,rel,rst,sym}
+
+#$(BASENAMEREV).ihx: $(BASENAMEREV).c
+#	$(CC) $(INCLUDES) $(BASENAMEREV).c
+
+.PHONY:run
+run:
+	$(CYCFX2PROG) reset prg:$(BASENAME).ihx run delay:10 fbulk:2,string.txt,128 dbulk:6,-512
+	
+runreverse:
+	$(CYCFX2PROG) reset prg:$(BASENAMEREV).ihx run delay:10 fbulk:6,string.txt,128 dbulk:2,-512
+	
+runout:
+	$(CYCFX2PROG) reset prg:$(BASENAME).ihx run delay:10 fbulk:2,string.txt,128
+	
+runoutdata:
+	$(CYCFX2PROG) reset prg:$(BASENAME).ihx run delay:10 fbulk:2,c:\matlab\adtest.dat,512
+	
+runoutrev:
+	$(CYCFX2PROG) reset prg:$(BASENAMEREV).ihx run delay:10 fbulk:6,string.txt,128
+	
+.PHONY:runconvert
+runconvert: $(BASENAME).ihx
+	$(CYCFX2PROG) prg:$(BASENAME).ihx run delay:10 sbulk:2,Hello_World dbulk:6,-512
+	$(CYCFX2PROG) sbulk:2,"This is another test :)" dbulk:6,-512
+	$(CYCFX2PROG) sbulk:2,"String one first" sbulk:2,"String two afterwards" dbulk:6,-512 dbulk:6,-512	

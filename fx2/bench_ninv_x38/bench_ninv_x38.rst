@@ -1,0 +1,766 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 3.2.0 #8008 (Jul  6 2012) (MINGW32)
+                              4 ; This file was generated Tue Mar 08 20:14:03 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module bench_ninv_x38
+                              7 	.optsdcc -mmcs51 --model-small
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _main
+                             13 	.globl _EIP
+                             14 	.globl _B
+                             15 	.globl _EIE
+                             16 	.globl _ACC
+                             17 	.globl _EICON
+                             18 	.globl _PSW
+                             19 	.globl _TH2
+                             20 	.globl _TL2
+                             21 	.globl _RCAP2H
+                             22 	.globl _RCAP2L
+                             23 	.globl _T2CON
+                             24 	.globl _SBUF1
+                             25 	.globl _SCON1
+                             26 	.globl _GPIFSGLDATLNOX
+                             27 	.globl _GPIFSGLDATLX
+                             28 	.globl _GPIFSGLDATH
+                             29 	.globl _GPIFTRIG
+                             30 	.globl _EP01STAT
+                             31 	.globl _IP
+                             32 	.globl _OEE
+                             33 	.globl _OED
+                             34 	.globl _OEC
+                             35 	.globl _OEB
+                             36 	.globl _OEA
+                             37 	.globl _IOE
+                             38 	.globl _IOD
+                             39 	.globl _AUTOPTRSETUP
+                             40 	.globl _EP68FIFOFLGS
+                             41 	.globl _EP24FIFOFLGS
+                             42 	.globl _EP2468STAT
+                             43 	.globl _IE
+                             44 	.globl _INT4CLR
+                             45 	.globl _INT2CLR
+                             46 	.globl _IOC
+                             47 	.globl _AUTODAT2
+                             48 	.globl _AUTOPTRL2
+                             49 	.globl _AUTOPTRH2
+                             50 	.globl _AUTODAT1
+                             51 	.globl _APTR1L
+                             52 	.globl _APTR1H
+                             53 	.globl _SBU
+                             54 	.globl _SCO
+                             55 	.globl _MPA
+                             56 	.globl _EXIF
+                             57 	.globl _IOB
+                             58 	.globl _SPC_
+                             59 	.globl _CKCO
+                             60 	.globl _TH1
+                             61 	.globl _TH0
+                             62 	.globl _TL1
+                             63 	.globl _TL0
+                             64 	.globl _TMOD
+                             65 	.globl _TCON
+                             66 	.globl _PCON
+                             67 	.globl _DPS
+                             68 	.globl _DPH1
+                             69 	.globl _DPL1
+                             70 	.globl _DPH
+                             71 	.globl _DPL
+                             72 	.globl _SP
+                             73 	.globl _IOA
+                             74 	.globl _EP8FIFOBUF
+                             75 	.globl _EP6FIFOBUF
+                             76 	.globl _EP4FIFOBUF
+                             77 	.globl _EP2FIFOBUF
+                             78 	.globl _EP1INBUF
+                             79 	.globl _EP1OUTBUF
+                             80 	.globl _EP0BUF
+                             81 	.globl _CT4
+                             82 	.globl _CT3
+                             83 	.globl _CT2
+                             84 	.globl _CT1
+                             85 	.globl _USBTEST
+                             86 	.globl _TESTCFG
+                             87 	.globl _DBUG
+                             88 	.globl _UDMACRCQUAL
+                             89 	.globl _UDMACRCL
+                             90 	.globl _UDMACRCH
+                             91 	.globl _GPIFHOLDAMOUNT
+                             92 	.globl _FLOWSTBHPERIOD
+                             93 	.globl _FLOWSTBEDGE
+                             94 	.globl _FLOWSTB
+                             95 	.globl _FLOWHOLDOFF
+                             96 	.globl _FLOWEQ1CTL
+                             97 	.globl _FLOWEQ0CTL
+                             98 	.globl _FLOWLOGIC
+                             99 	.globl _FLOWSTATE
+                            100 	.globl _GPIFABORT
+                            101 	.globl _GPIFREADYSTAT
+                            102 	.globl _GPIFREADYCFG
+                            103 	.globl _XGPIFSGLDATLNOX
+                            104 	.globl _XGPIFSGLDATLX
+                            105 	.globl _XGPIFSGLDATH
+                            106 	.globl _EP8GPIFTRIG
+                            107 	.globl _EP8GPIFPFSTOP
+                            108 	.globl _EP8GPIFFLGSEL
+                            109 	.globl _EP6GPIFTRIG
+                            110 	.globl _EP6GPIFPFSTOP
+                            111 	.globl _EP6GPIFFLGSEL
+                            112 	.globl _EP4GPIFTRIG
+                            113 	.globl _EP4GPIFPFSTOP
+                            114 	.globl _EP4GPIFFLGSEL
+                            115 	.globl _EP2GPIFTRIG
+                            116 	.globl _EP2GPIFPFSTOP
+                            117 	.globl _EP2GPIFFLGSEL
+                            118 	.globl _GPIFTCB0
+                            119 	.globl _GPIFTCB1
+                            120 	.globl _GPIFTCB2
+                            121 	.globl _GPIFTCB3
+                            122 	.globl _GPIFADRL
+                            123 	.globl _GPIFADRH
+                            124 	.globl _GPIFCTLCFG
+                            125 	.globl _GPIFIDLECTL
+                            126 	.globl _GPIFIDLECS
+                            127 	.globl _GPIFWFSELECT
+                            128 	.globl _SETUPDAT
+                            129 	.globl _SUDPTRCTL
+                            130 	.globl _SUDPTRL
+                            131 	.globl _SUDPTRH
+                            132 	.globl _EP8FIFOBCL
+                            133 	.globl _EP8FIFOBCH
+                            134 	.globl _EP6FIFOBCL
+                            135 	.globl _EP6FIFOBCH
+                            136 	.globl _EP4FIFOBCL
+                            137 	.globl _EP4FIFOBCH
+                            138 	.globl _EP2FIFOBCL
+                            139 	.globl _EP2FIFOBCH
+                            140 	.globl _EP8FIFOFLGS
+                            141 	.globl _EP6FIFOFLGS
+                            142 	.globl _EP4FIFOFLGS
+                            143 	.globl _EP2FIFOFLGS
+                            144 	.globl _EP8CS
+                            145 	.globl _EP6CS
+                            146 	.globl _EP4CS
+                            147 	.globl _EP2CS
+                            148 	.globl _EP1INCS
+                            149 	.globl _EP1OUTCS
+                            150 	.globl _EP0CS
+                            151 	.globl _EP8BCL
+                            152 	.globl _EP8BCH
+                            153 	.globl _EP6BCL
+                            154 	.globl _EP6BCH
+                            155 	.globl _EP4BCL
+                            156 	.globl _EP4BCH
+                            157 	.globl _EP2BCL
+                            158 	.globl _EP2BCH
+                            159 	.globl _EP1INBC
+                            160 	.globl _EP1OUTBC
+                            161 	.globl _EP0BCL
+                            162 	.globl _EP0BCH
+                            163 	.globl _FNADDR
+                            164 	.globl _MICROFRAME
+                            165 	.globl _USBFRAMEL
+                            166 	.globl _USBFRAMEH
+                            167 	.globl _TOGCTL
+                            168 	.globl _WAKEUPCS
+                            169 	.globl _SUSPEND
+                            170 	.globl _USBCS
+                            171 	.globl _XAUTODAT2
+                            172 	.globl _XAUTODAT1
+                            173 	.globl _I2CTL
+                            174 	.globl _I2DAT
+                            175 	.globl _I2CS
+                            176 	.globl _PORTECFG
+                            177 	.globl _PORTCCFG
+                            178 	.globl _PORTACFG
+                            179 	.globl _INTSETUP
+                            180 	.globl _INT4IVEC
+                            181 	.globl _INT2IVEC
+                            182 	.globl _CLRERRCNT
+                            183 	.globl _ERRCNTLIM
+                            184 	.globl _USBERRIRQ
+                            185 	.globl _USBERRIE
+                            186 	.globl _GPIFIRQ
+                            187 	.globl _GPIFIE
+                            188 	.globl _EPIRQ
+                            189 	.globl _EPIE
+                            190 	.globl _USBIRQ
+                            191 	.globl _USBIE
+                            192 	.globl _NAKIRQ
+                            193 	.globl _NAKIE
+                            194 	.globl _IBNIRQ
+                            195 	.globl _IBNIE
+                            196 	.globl _EP8FIFOIRQ
+                            197 	.globl _EP8FIFOIE
+                            198 	.globl _EP6FIFOIRQ
+                            199 	.globl _EP6FIFOIE
+                            200 	.globl _EP4FIFOIRQ
+                            201 	.globl _EP4FIFOIE
+                            202 	.globl _EP2FIFOIRQ
+                            203 	.globl _EP2FIFOIE
+                            204 	.globl _OUTPKTEND
+                            205 	.globl _INPKTEND
+                            206 	.globl _EP8ISOINPKTS
+                            207 	.globl _EP6ISOINPKTS
+                            208 	.globl _EP4ISOINPKTS
+                            209 	.globl _EP2ISOINPKTS
+                            210 	.globl _EP8FIFOPFL
+                            211 	.globl _EP8FIFOPFH
+                            212 	.globl _EP6FIFOPFL
+                            213 	.globl _EP6FIFOPFH
+                            214 	.globl _EP4FIFOPFL
+                            215 	.globl _EP4FIFOPFH
+                            216 	.globl _EP2FIFOPFL
+                            217 	.globl _EP2FIFOPFH
+                            218 	.globl _EP8AUTOINLENL
+                            219 	.globl _EP8AUTOINLENH
+                            220 	.globl _EP6AUTOINLENL
+                            221 	.globl _EP6AUTOINLENH
+                            222 	.globl _EP4AUTOINLENL
+                            223 	.globl _EP4AUTOINLENH
+                            224 	.globl _EP2AUTOINLENL
+                            225 	.globl _EP2AUTOINLENH
+                            226 	.globl _EP8FIFOCFG
+                            227 	.globl _EP6FIFOCFG
+                            228 	.globl _EP4FIFOCFG
+                            229 	.globl _EP2FIFOCFG
+                            230 	.globl _EP8CFG
+                            231 	.globl _EP6CFG
+                            232 	.globl _EP4CFG
+                            233 	.globl _EP2CFG
+                            234 	.globl _EP1INCFG
+                            235 	.globl _EP1OUTCFG
+                            236 	.globl _REVCTL
+                            237 	.globl _REVID
+                            238 	.globl _FIFOPINPOLAR
+                            239 	.globl _UART230
+                            240 	.globl _BPADDRL
+                            241 	.globl _BPADDRH
+                            242 	.globl _BREAKPT
+                            243 	.globl _FIFORESET
+                            244 	.globl _PINFLAGSCD
+                            245 	.globl _PINFLAGSAB
+                            246 	.globl _IFCONFIG
+                            247 	.globl _CPUCS
+                            248 	.globl _RES_WAVEDATA_END
+                            249 	.globl _GPIF_WAVE_DATA
+                            250 	.globl _FWmark
+                            251 ;--------------------------------------------------------
+                            252 ; special function registers
+                            253 ;--------------------------------------------------------
+                            254 	.area RSEG    (ABS,DATA)
+   0000                     255 	.org 0x0000
+                    0080    256 _IOA	=	0x0080
+                    0081    257 _SP	=	0x0081
+                    0082    258 _DPL	=	0x0082
+                    0083    259 _DPH	=	0x0083
+                    0084    260 _DPL1	=	0x0084
+                    0085    261 _DPH1	=	0x0085
+                    0086    262 _DPS	=	0x0086
+                    0087    263 _PCON	=	0x0087
+                    0088    264 _TCON	=	0x0088
+                    0089    265 _TMOD	=	0x0089
+                    008A    266 _TL0	=	0x008a
+                    008B    267 _TL1	=	0x008b
+                    008C    268 _TH0	=	0x008c
+                    008D    269 _TH1	=	0x008d
+                    008E    270 _CKCO	=	0x008e
+                    008F    271 _SPC_	=	0x008f
+                    0090    272 _IOB	=	0x0090
+                    0091    273 _EXIF	=	0x0091
+                    0092    274 _MPA	=	0x0092
+                    0098    275 _SCO	=	0x0098
+                    0099    276 _SBU	=	0x0099
+                    009A    277 _APTR1H	=	0x009a
+                    009B    278 _APTR1L	=	0x009b
+                    009C    279 _AUTODAT1	=	0x009c
+                    009D    280 _AUTOPTRH2	=	0x009d
+                    009E    281 _AUTOPTRL2	=	0x009e
+                    009F    282 _AUTODAT2	=	0x009f
+                    00A0    283 _IOC	=	0x00a0
+                    00A1    284 _INT2CLR	=	0x00a1
+                    00A2    285 _INT4CLR	=	0x00a2
+                    00A8    286 _IE	=	0x00a8
+                    00AA    287 _EP2468STAT	=	0x00aa
+                    00AB    288 _EP24FIFOFLGS	=	0x00ab
+                    00AC    289 _EP68FIFOFLGS	=	0x00ac
+                    00AF    290 _AUTOPTRSETUP	=	0x00af
+                    00B0    291 _IOD	=	0x00b0
+                    00B1    292 _IOE	=	0x00b1
+                    00B2    293 _OEA	=	0x00b2
+                    00B3    294 _OEB	=	0x00b3
+                    00B4    295 _OEC	=	0x00b4
+                    00B5    296 _OED	=	0x00b5
+                    00B6    297 _OEE	=	0x00b6
+                    00B8    298 _IP	=	0x00b8
+                    00BA    299 _EP01STAT	=	0x00ba
+                    00BB    300 _GPIFTRIG	=	0x00bb
+                    00BD    301 _GPIFSGLDATH	=	0x00bd
+                    00BE    302 _GPIFSGLDATLX	=	0x00be
+                    00BF    303 _GPIFSGLDATLNOX	=	0x00bf
+                    00C0    304 _SCON1	=	0x00c0
+                    00C1    305 _SBUF1	=	0x00c1
+                    00C8    306 _T2CON	=	0x00c8
+                    00CA    307 _RCAP2L	=	0x00ca
+                    00CB    308 _RCAP2H	=	0x00cb
+                    00CC    309 _TL2	=	0x00cc
+                    00CD    310 _TH2	=	0x00cd
+                    00D0    311 _PSW	=	0x00d0
+                    00D8    312 _EICON	=	0x00d8
+                    00E0    313 _ACC	=	0x00e0
+                    00E8    314 _EIE	=	0x00e8
+                    00F0    315 _B	=	0x00f0
+                    00F8    316 _EIP	=	0x00f8
+                            317 ;--------------------------------------------------------
+                            318 ; special function bits
+                            319 ;--------------------------------------------------------
+                            320 	.area RSEG    (ABS,DATA)
+   0000                     321 	.org 0x0000
+                            322 ;--------------------------------------------------------
+                            323 ; overlayable register banks
+                            324 ;--------------------------------------------------------
+                            325 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                     326 	.ds 8
+                            327 ;--------------------------------------------------------
+                            328 ; internal ram data
+                            329 ;--------------------------------------------------------
+                            330 	.area DSEG    (DATA)
+   0008                     331 _FWmark::
+   0008                     332 	.ds 3
+                            333 ;--------------------------------------------------------
+                            334 ; overlayable items in internal ram 
+                            335 ;--------------------------------------------------------
+                            336 ;--------------------------------------------------------
+                            337 ; Stack segment in internal ram 
+                            338 ;--------------------------------------------------------
+                            339 	.area	SSEG	(DATA)
+   000B                     340 __start__stack:
+   000B                     341 	.ds	1
+                            342 
+                            343 ;--------------------------------------------------------
+                            344 ; indirectly addressable internal ram data
+                            345 ;--------------------------------------------------------
+                            346 	.area ISEG    (DATA)
+                            347 ;--------------------------------------------------------
+                            348 ; absolute internal ram data
+                            349 ;--------------------------------------------------------
+                            350 	.area IABS    (ABS,DATA)
+                            351 	.area IABS    (ABS,DATA)
+                            352 ;--------------------------------------------------------
+                            353 ; bit data
+                            354 ;--------------------------------------------------------
+                            355 	.area BSEG    (BIT)
+                            356 ;--------------------------------------------------------
+                            357 ; paged external ram data
+                            358 ;--------------------------------------------------------
+                            359 	.area PSEG    (PAG,XDATA)
+                            360 ;--------------------------------------------------------
+                            361 ; external ram data
+                            362 ;--------------------------------------------------------
+                            363 	.area XSEG    (XDATA)
+                    E400    364 _GPIF_WAVE_DATA	=	0xe400
+                    E480    365 _RES_WAVEDATA_END	=	0xe480
+                    E600    366 _CPUCS	=	0xe600
+                    E601    367 _IFCONFIG	=	0xe601
+                    E602    368 _PINFLAGSAB	=	0xe602
+                    E603    369 _PINFLAGSCD	=	0xe603
+                    E604    370 _FIFORESET	=	0xe604
+                    E605    371 _BREAKPT	=	0xe605
+                    E606    372 _BPADDRH	=	0xe606
+                    E607    373 _BPADDRL	=	0xe607
+                    E608    374 _UART230	=	0xe608
+                    E609    375 _FIFOPINPOLAR	=	0xe609
+                    E60A    376 _REVID	=	0xe60a
+                    E60B    377 _REVCTL	=	0xe60b
+                    E610    378 _EP1OUTCFG	=	0xe610
+                    E611    379 _EP1INCFG	=	0xe611
+                    E612    380 _EP2CFG	=	0xe612
+                    E613    381 _EP4CFG	=	0xe613
+                    E614    382 _EP6CFG	=	0xe614
+                    E615    383 _EP8CFG	=	0xe615
+                    E618    384 _EP2FIFOCFG	=	0xe618
+                    E619    385 _EP4FIFOCFG	=	0xe619
+                    E61A    386 _EP6FIFOCFG	=	0xe61a
+                    E61B    387 _EP8FIFOCFG	=	0xe61b
+                    E620    388 _EP2AUTOINLENH	=	0xe620
+                    E621    389 _EP2AUTOINLENL	=	0xe621
+                    E622    390 _EP4AUTOINLENH	=	0xe622
+                    E623    391 _EP4AUTOINLENL	=	0xe623
+                    E624    392 _EP6AUTOINLENH	=	0xe624
+                    E625    393 _EP6AUTOINLENL	=	0xe625
+                    E626    394 _EP8AUTOINLENH	=	0xe626
+                    E627    395 _EP8AUTOINLENL	=	0xe627
+                    E630    396 _EP2FIFOPFH	=	0xe630
+                    E631    397 _EP2FIFOPFL	=	0xe631
+                    E632    398 _EP4FIFOPFH	=	0xe632
+                    E633    399 _EP4FIFOPFL	=	0xe633
+                    E634    400 _EP6FIFOPFH	=	0xe634
+                    E635    401 _EP6FIFOPFL	=	0xe635
+                    E636    402 _EP8FIFOPFH	=	0xe636
+                    E637    403 _EP8FIFOPFL	=	0xe637
+                    E640    404 _EP2ISOINPKTS	=	0xe640
+                    E641    405 _EP4ISOINPKTS	=	0xe641
+                    E642    406 _EP6ISOINPKTS	=	0xe642
+                    E643    407 _EP8ISOINPKTS	=	0xe643
+                    E648    408 _INPKTEND	=	0xe648
+                    E649    409 _OUTPKTEND	=	0xe649
+                    E650    410 _EP2FIFOIE	=	0xe650
+                    E651    411 _EP2FIFOIRQ	=	0xe651
+                    E652    412 _EP4FIFOIE	=	0xe652
+                    E653    413 _EP4FIFOIRQ	=	0xe653
+                    E654    414 _EP6FIFOIE	=	0xe654
+                    E655    415 _EP6FIFOIRQ	=	0xe655
+                    E656    416 _EP8FIFOIE	=	0xe656
+                    E657    417 _EP8FIFOIRQ	=	0xe657
+                    E658    418 _IBNIE	=	0xe658
+                    E659    419 _IBNIRQ	=	0xe659
+                    E65A    420 _NAKIE	=	0xe65a
+                    E65B    421 _NAKIRQ	=	0xe65b
+                    E65C    422 _USBIE	=	0xe65c
+                    E65D    423 _USBIRQ	=	0xe65d
+                    E65E    424 _EPIE	=	0xe65e
+                    E65F    425 _EPIRQ	=	0xe65f
+                    E660    426 _GPIFIE	=	0xe660
+                    E661    427 _GPIFIRQ	=	0xe661
+                    E662    428 _USBERRIE	=	0xe662
+                    E663    429 _USBERRIRQ	=	0xe663
+                    E664    430 _ERRCNTLIM	=	0xe664
+                    E665    431 _CLRERRCNT	=	0xe665
+                    E666    432 _INT2IVEC	=	0xe666
+                    E667    433 _INT4IVEC	=	0xe667
+                    E668    434 _INTSETUP	=	0xe668
+                    E670    435 _PORTACFG	=	0xe670
+                    E671    436 _PORTCCFG	=	0xe671
+                    E672    437 _PORTECFG	=	0xe672
+                    E678    438 _I2CS	=	0xe678
+                    E679    439 _I2DAT	=	0xe679
+                    E67A    440 _I2CTL	=	0xe67a
+                    E67B    441 _XAUTODAT1	=	0xe67b
+                    E67C    442 _XAUTODAT2	=	0xe67c
+                    E680    443 _USBCS	=	0xe680
+                    E681    444 _SUSPEND	=	0xe681
+                    E682    445 _WAKEUPCS	=	0xe682
+                    E683    446 _TOGCTL	=	0xe683
+                    E684    447 _USBFRAMEH	=	0xe684
+                    E685    448 _USBFRAMEL	=	0xe685
+                    E686    449 _MICROFRAME	=	0xe686
+                    E687    450 _FNADDR	=	0xe687
+                    E68A    451 _EP0BCH	=	0xe68a
+                    E68B    452 _EP0BCL	=	0xe68b
+                    E68D    453 _EP1OUTBC	=	0xe68d
+                    E68F    454 _EP1INBC	=	0xe68f
+                    E690    455 _EP2BCH	=	0xe690
+                    E691    456 _EP2BCL	=	0xe691
+                    E694    457 _EP4BCH	=	0xe694
+                    E695    458 _EP4BCL	=	0xe695
+                    E698    459 _EP6BCH	=	0xe698
+                    E699    460 _EP6BCL	=	0xe699
+                    E69C    461 _EP8BCH	=	0xe69c
+                    E69D    462 _EP8BCL	=	0xe69d
+                    E6A0    463 _EP0CS	=	0xe6a0
+                    E6A1    464 _EP1OUTCS	=	0xe6a1
+                    E6A2    465 _EP1INCS	=	0xe6a2
+                    E6A3    466 _EP2CS	=	0xe6a3
+                    E6A4    467 _EP4CS	=	0xe6a4
+                    E6A5    468 _EP6CS	=	0xe6a5
+                    E6A6    469 _EP8CS	=	0xe6a6
+                    E6A7    470 _EP2FIFOFLGS	=	0xe6a7
+                    E6A8    471 _EP4FIFOFLGS	=	0xe6a8
+                    E6A9    472 _EP6FIFOFLGS	=	0xe6a9
+                    E6AA    473 _EP8FIFOFLGS	=	0xe6aa
+                    E6AB    474 _EP2FIFOBCH	=	0xe6ab
+                    E6AC    475 _EP2FIFOBCL	=	0xe6ac
+                    E6AD    476 _EP4FIFOBCH	=	0xe6ad
+                    E6AE    477 _EP4FIFOBCL	=	0xe6ae
+                    E6AF    478 _EP6FIFOBCH	=	0xe6af
+                    E6B0    479 _EP6FIFOBCL	=	0xe6b0
+                    E6B1    480 _EP8FIFOBCH	=	0xe6b1
+                    E6B2    481 _EP8FIFOBCL	=	0xe6b2
+                    E6B3    482 _SUDPTRH	=	0xe6b3
+                    E6B4    483 _SUDPTRL	=	0xe6b4
+                    E6B5    484 _SUDPTRCTL	=	0xe6b5
+                    E6B8    485 _SETUPDAT	=	0xe6b8
+                    E6C0    486 _GPIFWFSELECT	=	0xe6c0
+                    E6C1    487 _GPIFIDLECS	=	0xe6c1
+                    E6C2    488 _GPIFIDLECTL	=	0xe6c2
+                    E6C3    489 _GPIFCTLCFG	=	0xe6c3
+                    E6C4    490 _GPIFADRH	=	0xe6c4
+                    E6C5    491 _GPIFADRL	=	0xe6c5
+                    E6CE    492 _GPIFTCB3	=	0xe6ce
+                    E6CF    493 _GPIFTCB2	=	0xe6cf
+                    E6D0    494 _GPIFTCB1	=	0xe6d0
+                    E6D1    495 _GPIFTCB0	=	0xe6d1
+                    E6D2    496 _EP2GPIFFLGSEL	=	0xe6d2
+                    E6D3    497 _EP2GPIFPFSTOP	=	0xe6d3
+                    E6D4    498 _EP2GPIFTRIG	=	0xe6d4
+                    E6DA    499 _EP4GPIFFLGSEL	=	0xe6da
+                    E6DB    500 _EP4GPIFPFSTOP	=	0xe6db
+                    E6DC    501 _EP4GPIFTRIG	=	0xe6dc
+                    E6E2    502 _EP6GPIFFLGSEL	=	0xe6e2
+                    E6E3    503 _EP6GPIFPFSTOP	=	0xe6e3
+                    E6E4    504 _EP6GPIFTRIG	=	0xe6e4
+                    E6EA    505 _EP8GPIFFLGSEL	=	0xe6ea
+                    E6EB    506 _EP8GPIFPFSTOP	=	0xe6eb
+                    E6EC    507 _EP8GPIFTRIG	=	0xe6ec
+                    E6F0    508 _XGPIFSGLDATH	=	0xe6f0
+                    E6F1    509 _XGPIFSGLDATLX	=	0xe6f1
+                    E6F2    510 _XGPIFSGLDATLNOX	=	0xe6f2
+                    E6F3    511 _GPIFREADYCFG	=	0xe6f3
+                    E6F4    512 _GPIFREADYSTAT	=	0xe6f4
+                    E6F5    513 _GPIFABORT	=	0xe6f5
+                    E6C6    514 _FLOWSTATE	=	0xe6c6
+                    E6C7    515 _FLOWLOGIC	=	0xe6c7
+                    E6C8    516 _FLOWEQ0CTL	=	0xe6c8
+                    E6C9    517 _FLOWEQ1CTL	=	0xe6c9
+                    E6CA    518 _FLOWHOLDOFF	=	0xe6ca
+                    E6CB    519 _FLOWSTB	=	0xe6cb
+                    E6CC    520 _FLOWSTBEDGE	=	0xe6cc
+                    E6CD    521 _FLOWSTBHPERIOD	=	0xe6cd
+                    E60C    522 _GPIFHOLDAMOUNT	=	0xe60c
+                    E67D    523 _UDMACRCH	=	0xe67d
+                    E67E    524 _UDMACRCL	=	0xe67e
+                    E67F    525 _UDMACRCQUAL	=	0xe67f
+                    E6F8    526 _DBUG	=	0xe6f8
+                    E6F9    527 _TESTCFG	=	0xe6f9
+                    E6FA    528 _USBTEST	=	0xe6fa
+                    E6FB    529 _CT1	=	0xe6fb
+                    E6FC    530 _CT2	=	0xe6fc
+                    E6FD    531 _CT3	=	0xe6fd
+                    E6FE    532 _CT4	=	0xe6fe
+                    E740    533 _EP0BUF	=	0xe740
+                    E780    534 _EP1OUTBUF	=	0xe780
+                    E7C0    535 _EP1INBUF	=	0xe7c0
+                    F000    536 _EP2FIFOBUF	=	0xf000
+                    F400    537 _EP4FIFOBUF	=	0xf400
+                    F800    538 _EP6FIFOBUF	=	0xf800
+                    FC00    539 _EP8FIFOBUF	=	0xfc00
+                            540 ;--------------------------------------------------------
+                            541 ; absolute external ram data
+                            542 ;--------------------------------------------------------
+                            543 	.area XABS    (ABS,XDATA)
+                            544 ;--------------------------------------------------------
+                            545 ; external initialized ram data
+                            546 ;--------------------------------------------------------
+                            547 	.area XISEG   (XDATA)
+                            548 	.area HOME    (CODE)
+                            549 	.area GSINIT0 (CODE)
+                            550 	.area GSINIT1 (CODE)
+                            551 	.area GSINIT2 (CODE)
+                            552 	.area GSINIT3 (CODE)
+                            553 	.area GSINIT4 (CODE)
+                            554 	.area GSINIT5 (CODE)
+                            555 	.area GSINIT  (CODE)
+                            556 	.area GSFINAL (CODE)
+                            557 	.area CSEG    (CODE)
+                            558 ;--------------------------------------------------------
+                            559 ; interrupt vector 
+                            560 ;--------------------------------------------------------
+                            561 	.area HOME    (CODE)
+   0000                     562 __interrupt_vect:
+   0000 02 00 08            563 	ljmp	__sdcc_gsinit_startup
+                            564 ;--------------------------------------------------------
+                            565 ; global & static initialisations
+                            566 ;--------------------------------------------------------
+                            567 	.area HOME    (CODE)
+                            568 	.area GSINIT  (CODE)
+                            569 	.area GSFINAL (CODE)
+                            570 	.area GSINIT  (CODE)
+                            571 	.globl __sdcc_gsinit_startup
+                            572 	.globl __sdcc_program_startup
+                            573 	.globl __start__stack
+                            574 	.globl __mcs51_genXINIT
+                            575 	.globl __mcs51_genXRAMCLEAR
+                            576 	.globl __mcs51_genRAMCLEAR
+                            577 ;	bench_ninv_x38.c:58: const char *FWmark = "FWEEPRv000.001";
+   0061 75 08 10            578 	mov	_FWmark,#__str_0
+   0064 75 09 01            579 	mov	(_FWmark + 1),#(__str_0 >> 8)
+   0067 75 0A 80            580 	mov	(_FWmark + 2),#0x80
+                            581 	.area GSFINAL (CODE)
+   006A 02 00 03            582 	ljmp	__sdcc_program_startup
+                            583 ;--------------------------------------------------------
+                            584 ; Home
+                            585 ;--------------------------------------------------------
+                            586 	.area HOME    (CODE)
+                            587 	.area HOME    (CODE)
+   0003                     588 __sdcc_program_startup:
+   0003 12 01 07            589 	lcall	_main
+                            590 ;	return from main will lock up
+   0006 80 FE               591 	sjmp .
+                            592 ;--------------------------------------------------------
+                            593 ; code
+                            594 ;--------------------------------------------------------
+                            595 	.area CSEG    (CODE)
+                            596 ;------------------------------------------------------------
+                            597 ;Allocation info for local variables in function 'Initialize'
+                            598 ;------------------------------------------------------------
+                            599 ;	bench_ninv_x38.c:62: static void Initialize(void)
+                            600 ;	-----------------------------------------
+                            601 ;	 function Initialize
+                            602 ;	-----------------------------------------
+   006D                     603 _Initialize:
+                    0007    604 	ar7 = 0x07
+                    0006    605 	ar6 = 0x06
+                    0005    606 	ar5 = 0x05
+                    0004    607 	ar4 = 0x04
+                    0003    608 	ar3 = 0x03
+                    0002    609 	ar2 = 0x02
+                    0001    610 	ar1 = 0x01
+                    0000    611 	ar0 = 0x00
+                            612 ;	bench_ninv_x38.c:64: CPUCS = 0x12;  // 48MHz, output to CLKOUT signal enabled.
+   006D 90 E6 00            613 	mov	dptr,#_CPUCS
+   0070 74 12               614 	mov	a,#0x12
+   0072 F0                  615 	movx	@dptr,a
+                            616 ;	bench_ninv_x38.c:68: IFCONFIG = 0xc3;
+   0073 90 E6 01            617 	mov	dptr,#_IFCONFIG
+   0076 74 C3               618 	mov	a,#0xC3
+   0078 F0                  619 	movx	@dptr,a
+                            620 ;	bench_ninv_x38.c:69: SYNCDELAY;
+   0079 00                  621 	nop 
+   007A 00                  622 	nop 
+   007B 00                  623 	nop 
+   007C 00                  624 	nop 
+                            625 ;	bench_ninv_x38.c:74: IFCONFIG = 0x43;
+   007D 90 E6 01            626 	mov	dptr,#_IFCONFIG
+   0080 74 43               627 	mov	a,#0x43
+   0082 F0                  628 	movx	@dptr,a
+                            629 ;	bench_ninv_x38.c:75: SYNCDELAY;
+   0083 00                  630 	nop 
+   0084 00                  631 	nop 
+   0085 00                  632 	nop 
+   0086 00                  633 	nop 
+                            634 ;	bench_ninv_x38.c:77: REVCTL = 0x03;   // See TRM...
+   0087 90 E6 0B            635 	mov	dptr,#_REVCTL
+   008A 74 03               636 	mov	a,#0x03
+   008C F0                  637 	movx	@dptr,a
+                            638 ;	bench_ninv_x38.c:78: SYNCDELAY;
+   008D 00                  639 	nop 
+   008E 00                  640 	nop 
+   008F 00                  641 	nop 
+   0090 00                  642 	nop 
+                            643 ;	bench_ninv_x38.c:81: EP6CFG = 0xe0;
+   0091 90 E6 14            644 	mov	dptr,#_EP6CFG
+   0094 74 E0               645 	mov	a,#0xE0
+   0096 F0                  646 	movx	@dptr,a
+                            647 ;	bench_ninv_x38.c:82: SYNCDELAY;
+   0097 00                  648 	nop 
+   0098 00                  649 	nop 
+   0099 00                  650 	nop 
+   009A 00                  651 	nop 
+                            652 ;	bench_ninv_x38.c:84: FIFORESET = 0x80;  SYNCDELAY;  // NAK all requests from host.
+   009B 90 E6 04            653 	mov	dptr,#_FIFORESET
+   009E 74 80               654 	mov	a,#0x80
+   00A0 F0                  655 	movx	@dptr,a
+   00A1 00                  656 	nop 
+   00A2 00                  657 	nop 
+   00A3 00                  658 	nop 
+   00A4 00                  659 	nop 
+                            660 ;	bench_ninv_x38.c:85: FIFORESET = 0x82;  SYNCDELAY;  // Reset individual EP (2,4,6,8)
+   00A5 90 E6 04            661 	mov	dptr,#_FIFORESET
+   00A8 74 82               662 	mov	a,#0x82
+   00AA F0                  663 	movx	@dptr,a
+   00AB 00                  664 	nop 
+   00AC 00                  665 	nop 
+   00AD 00                  666 	nop 
+   00AE 00                  667 	nop 
+                            668 ;	bench_ninv_x38.c:86: FIFORESET = 0x84;  SYNCDELAY;
+   00AF 90 E6 04            669 	mov	dptr,#_FIFORESET
+   00B2 74 84               670 	mov	a,#0x84
+   00B4 F0                  671 	movx	@dptr,a
+   00B5 00                  672 	nop 
+   00B6 00                  673 	nop 
+   00B7 00                  674 	nop 
+   00B8 00                  675 	nop 
+                            676 ;	bench_ninv_x38.c:87: FIFORESET = 0x86;  SYNCDELAY;
+   00B9 90 E6 04            677 	mov	dptr,#_FIFORESET
+   00BC 74 86               678 	mov	a,#0x86
+   00BE F0                  679 	movx	@dptr,a
+   00BF 00                  680 	nop 
+   00C0 00                  681 	nop 
+   00C1 00                  682 	nop 
+   00C2 00                  683 	nop 
+                            684 ;	bench_ninv_x38.c:88: FIFORESET = 0x88;  SYNCDELAY;
+   00C3 90 E6 04            685 	mov	dptr,#_FIFORESET
+   00C6 74 88               686 	mov	a,#0x88
+   00C8 F0                  687 	movx	@dptr,a
+   00C9 00                  688 	nop 
+   00CA 00                  689 	nop 
+   00CB 00                  690 	nop 
+   00CC 00                  691 	nop 
+                            692 ;	bench_ninv_x38.c:89: FIFORESET = 0x00;  SYNCDELAY;  // Resume normal operation.
+   00CD 90 E6 04            693 	mov	dptr,#_FIFORESET
+   00D0 E4                  694 	clr	a
+   00D1 F0                  695 	movx	@dptr,a
+   00D2 00                  696 	nop 
+   00D3 00                  697 	nop 
+   00D4 00                  698 	nop 
+   00D5 00                  699 	nop 
+                            700 ;	bench_ninv_x38.c:92: EP6FIFOCFG = 0x09;
+   00D6 90 E6 1A            701 	mov	dptr,#_EP6FIFOCFG
+   00D9 74 09               702 	mov	a,#0x09
+   00DB F0                  703 	movx	@dptr,a
+                            704 ;	bench_ninv_x38.c:94: SYNCDELAY;
+   00DC 00                  705 	nop 
+   00DD 00                  706 	nop 
+   00DE 00                  707 	nop 
+   00DF 00                  708 	nop 
+                            709 ;	bench_ninv_x38.c:97: PORTACFG = 0x00;
+   00E0 90 E6 70            710 	mov	dptr,#_PORTACFG
+   00E3 E4                  711 	clr	a
+   00E4 F0                  712 	movx	@dptr,a
+                            713 ;	bench_ninv_x38.c:98: SYNCDELAY; // maybe not needed
+   00E5 00                  714 	nop 
+   00E6 00                  715 	nop 
+   00E7 00                  716 	nop 
+   00E8 00                  717 	nop 
+                            718 ;	bench_ninv_x38.c:101: FIFOPINPOLAR=0x38;
+   00E9 90 E6 09            719 	mov	dptr,#_FIFOPINPOLAR
+   00EC 74 38               720 	mov	a,#0x38
+   00EE F0                  721 	movx	@dptr,a
+                            722 ;	bench_ninv_x38.c:102: SYNCDELAY;
+   00EF 00                  723 	nop 
+   00F0 00                  724 	nop 
+   00F1 00                  725 	nop 
+   00F2 00                  726 	nop 
+                            727 ;	bench_ninv_x38.c:106: EP6AUTOINLENH = 0x02; // MSB
+   00F3 90 E6 24            728 	mov	dptr,#_EP6AUTOINLENH
+   00F6 74 02               729 	mov	a,#0x02
+   00F8 F0                  730 	movx	@dptr,a
+                            731 ;	bench_ninv_x38.c:108: SYNCDELAY;
+   00F9 00                  732 	nop 
+   00FA 00                  733 	nop 
+   00FB 00                  734 	nop 
+   00FC 00                  735 	nop 
+                            736 ;	bench_ninv_x38.c:109: EP6AUTOINLENL = 0x00; // LSB
+   00FD 90 E6 25            737 	mov	dptr,#_EP6AUTOINLENL
+   0100 E4                  738 	clr	a
+   0101 F0                  739 	movx	@dptr,a
+                            740 ;	bench_ninv_x38.c:111: SYNCDELAY;
+   0102 00                  741 	nop 
+   0103 00                  742 	nop 
+   0104 00                  743 	nop 
+   0105 00                  744 	nop 
+   0106 22                  745 	ret
+                            746 ;------------------------------------------------------------
+                            747 ;Allocation info for local variables in function 'main'
+                            748 ;------------------------------------------------------------
+                            749 ;	bench_ninv_x38.c:115: void main()
+                            750 ;	-----------------------------------------
+                            751 ;	 function main
+                            752 ;	-----------------------------------------
+   0107                     753 _main:
+                            754 ;	bench_ninv_x38.c:117: Initialize();
+   0107 12 00 6D            755 	lcall	_Initialize
+   010A                     756 00102$:
+   010A 80 FE               757 	sjmp	00102$
+                            758 	.area CSEG    (CODE)
+                            759 	.area CONST   (CODE)
+   0110                     760 __str_0:
+   0110 46 57 45 45 50 52   761 	.ascii "FWEEPRv000.001"
+        76 30 30 30 2E 30
+        30 31
+   011E 00                  762 	.db 0x00
+                            763 	.area XINIT   (CODE)
+                            764 	.area CABS    (ABS,CODE)

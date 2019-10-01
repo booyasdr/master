@@ -1,0 +1,554 @@
+ASxxxx Linker V02.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   FFFFFF00  s_BSEG                          
+     0C:   00000000  l_BIT_BANK                      
+     0C:   00000000  l_BSEG                          
+     0C:   00000000  l_BSEG_BYTES                    
+     0C:   00000000  l_CABS                          
+     0C:   00000000  l_GSINIT1                       
+     0C:   00000000  l_GSINIT5                       
+     0C:   00000000  l_IABS                          
+     0C:   00000000  l_ISEG                          
+     0C:   00000000  l_PSEG                          
+     0C:   00000000  l_REG_BANK_1                    
+     0C:   00000000  l_REG_BANK_2                    
+     0C:   00000000  l_REG_BANK_3                    
+     0C:   00000000  l_RSEG                          
+     0C:   00000000  l_RSEG0                         
+     0C:   00000000  l_RSEG1                         
+     0C:   00000000  l_XABS                          
+     0C:   00000000  l_XINIT                         
+     0C:   00000000  l_XISEG                         
+     0C:   00000000  l_XSEG                          
+     0C:   00000000  l__CODE                         
+     0C:   00000000  s_BSEG_BYTES                    
+     0C:   00000000  s_CABS                          
+     0C:   00000000  s_DSEG                          
+     0C:   00000000  s_HOME                          
+     0C:   00000000  s_IABS                          
+     0C:   00000000  s_ISEG                          
+     0C:   00000000  s_PSEG                          
+     0C:   00000000  s_REG_BANK_0                    
+     0C:   00000000  s_RSEG                          
+     0C:   00000000  s_RSEG0                         
+     0C:   00000000  s_RSEG1                         
+     0C:   00000000  s_XABS                          
+     0C:   00000000  s_XISEG                         
+     0C:   00000000  s_XSEG                          
+     0C:   00000003  l_GSFINAL                       
+     0C:   00000003  l_GSINIT0                       
+     0C:   00000006  l_OSEG                          
+     0C:   00000008  l_HOME                          
+     0C:   00000008  l_REG_BANK_0                    
+     0C:   00000008  s_GSINIT0                       
+     0C:   00000008  s_REG_BANK_1                    
+     0C:   0000000A  l_GSINIT2                       
+     0C:   0000000B  s_GSINIT1                       
+     0C:   0000000B  s_GSINIT2                       
+     0C:   00000010  s_REG_BANK_2                    
+     0C:   00000015  s_GSINIT3                       
+     0C:   00000016  s_OSEG                          
+     0C:   00000018  s_BIT_BANK                      
+     0C:   00000018  s_REG_BANK_3                    
+ASxxxx Linker V02.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   0000001B  l_CONST                         
+     0C:   0000001C  s_SSEG                          
+     0C:   00000020  s__CODE                         
+     0C:   00000021  l_GSINIT                        
+     0C:   00000022  l_GSINIT3                       
+     0C:   0000002A  l_GSINIT4                       
+     0C:   00000037  s_GSINIT4                       
+     0C:   00000061  s_GSINIT                        
+     0C:   00000061  s_GSINIT5                       
+     0C:   00000080  l_DSEG                          
+     0C:   00000082  s_GSFINAL                       
+     0C:   00000085  s_CSEG                          
+     0C:   000000E4  l_SSEG                          
+     0C:   00000100  l_IRAM                          
+     0C:   000004BB  l_CSEG                          
+     0C:   00000540  s_CONST                         
+     0C:   0000055B  s_XINIT                         
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.	.ABS.                             00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           00000000  .__.ABS.                           _startup
+           00000080  _IOA                               eeprom_read_mark
+           00000081  _SP                                eeprom_read_mark
+           00000082  _DPL                               eeprom_read_mark
+           00000083  _DPH                               eeprom_read_mark
+           00000084  _DPL1                              eeprom_read_mark
+           00000085  _DPH1                              eeprom_read_mark
+           00000086  _DPS                               eeprom_read_mark
+           00000087  _PCON                              eeprom_read_mark
+           00000088  _TCON                              eeprom_read_mark
+           00000089  _TMOD                              eeprom_read_mark
+           0000008A  _TL0                               eeprom_read_mark
+           0000008B  _TL1                               eeprom_read_mark
+           0000008C  _TH0                               eeprom_read_mark
+           0000008D  _TH1                               eeprom_read_mark
+           0000008E  _CKCO                              eeprom_read_mark
+           0000008F  _SPC_                              eeprom_read_mark
+           00000090  _IOB                               eeprom_read_mark
+           00000091  _EXIF                              eeprom_read_mark
+           00000092  _MPA                               eeprom_read_mark
+           00000098  _SCO                               eeprom_read_mark
+           00000099  _SBU                               eeprom_read_mark
+           0000009A  _APTR1H                            eeprom_read_mark
+           0000009B  _APTR1L                            eeprom_read_mark
+           0000009C  _AUTODAT1                          eeprom_read_mark
+           0000009D  _AUTOPTRH2                         eeprom_read_mark
+           0000009E  _AUTOPTRL2                         eeprom_read_mark
+           0000009F  _AUTODAT2                          eeprom_read_mark
+           000000A0  _IOC                               eeprom_read_mark
+           000000A0  __XPAGE                            
+           000000A1  _INT2CLR                           eeprom_read_mark
+           000000A2  _INT4CLR                           eeprom_read_mark
+           000000A8  _IE                                eeprom_read_mark
+           000000AA  _EP2468STAT                        eeprom_read_mark
+           000000AB  _EP24FIFOFLGS                      eeprom_read_mark
+           000000AC  _EP68FIFOFLGS                      eeprom_read_mark
+           000000AF  _AUTOPTRSETUP                      eeprom_read_mark
+           000000B0  _IOD                               eeprom_read_mark
+           000000B1  _IOE                               eeprom_read_mark
+           000000B2  _OEA                               eeprom_read_mark
+           000000B3  _OEB                               eeprom_read_mark
+           000000B4  _OEC                               eeprom_read_mark
+           000000B5  _OED                               eeprom_read_mark
+           000000B6  _OEE                               eeprom_read_mark
+           000000B8  _IP                                eeprom_read_mark
+           000000BA  _EP01STAT                          eeprom_read_mark
+           000000BB  _GPIFTRIG                          eeprom_read_mark
+           000000BD  _GPIFSGLDATH                       eeprom_read_mark
+           000000BE  _GPIFSGLDATLX                      eeprom_read_mark
+           000000BF  _GPIFSGLDATLNOX                    eeprom_read_mark
+ASxxxx Linker V02.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.	.ABS.                             00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           000000C0  _SCON1                             eeprom_read_mark
+           000000C1  _SBUF1                             eeprom_read_mark
+           000000C8  _T2CON                             eeprom_read_mark
+           000000CA  _RCAP2L                            eeprom_read_mark
+           000000CB  _RCAP2H                            eeprom_read_mark
+           000000CC  _TL2                               eeprom_read_mark
+           000000CD  _TH2                               eeprom_read_mark
+           000000D0  _PSW                               eeprom_read_mark
+           000000D8  _EICON                             eeprom_read_mark
+           000000E0  _ACC                               eeprom_read_mark
+           000000E8  _EIE                               eeprom_read_mark
+           000000F0  _B                                 eeprom_read_mark
+           000000F5  _B_5                               _gptrget
+           000000F6  _B_6                               _gptrget
+           000000F7  _B_7                               _gptrget
+           000000F8  _EIP                               eeprom_read_mark
+           0000E400  _GPIF_WAVE_DATA                    eeprom_read_mark
+           0000E480  _RES_WAVEDATA_END                  eeprom_read_mark
+           0000E600  _CPUCS                             eeprom_read_mark
+           0000E601  _IFCONFIG                          eeprom_read_mark
+           0000E602  _PINFLAGSAB                        eeprom_read_mark
+           0000E603  _PINFLAGSCD                        eeprom_read_mark
+           0000E604  _FIFORESET                         eeprom_read_mark
+           0000E605  _BREAKPT                           eeprom_read_mark
+           0000E606  _BPADDRH                           eeprom_read_mark
+           0000E607  _BPADDRL                           eeprom_read_mark
+           0000E608  _UART230                           eeprom_read_mark
+           0000E609  _FIFOPINPOLAR                      eeprom_read_mark
+           0000E60A  _REVID                             eeprom_read_mark
+           0000E60B  _REVCTL                            eeprom_read_mark
+           0000E60C  _GPIFHOLDAMOUNT                    eeprom_read_mark
+           0000E610  _EP1OUTCFG                         eeprom_read_mark
+           0000E611  _EP1INCFG                          eeprom_read_mark
+           0000E612  _EP2CFG                            eeprom_read_mark
+           0000E613  _EP4CFG                            eeprom_read_mark
+           0000E614  _EP6CFG                            eeprom_read_mark
+           0000E615  _EP8CFG                            eeprom_read_mark
+           0000E618  _EP2FIFOCFG                        eeprom_read_mark
+           0000E619  _EP4FIFOCFG                        eeprom_read_mark
+           0000E61A  _EP6FIFOCFG                        eeprom_read_mark
+           0000E61B  _EP8FIFOCFG                        eeprom_read_mark
+           0000E620  _EP2AUTOINLENH                     eeprom_read_mark
+           0000E621  _EP2AUTOINLENL                     eeprom_read_mark
+           0000E622  _EP4AUTOINLENH                     eeprom_read_mark
+           0000E623  _EP4AUTOINLENL                     eeprom_read_mark
+           0000E624  _EP6AUTOINLENH                     eeprom_read_mark
+           0000E625  _EP6AUTOINLENL                     eeprom_read_mark
+           0000E626  _EP8AUTOINLENH                     eeprom_read_mark
+           0000E627  _EP8AUTOINLENL                     eeprom_read_mark
+           0000E630  _EP2FIFOPFH                        eeprom_read_mark
+           0000E631  _EP2FIFOPFL                        eeprom_read_mark
+ASxxxx Linker V02.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.	.ABS.                             00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           0000E632  _EP4FIFOPFH                        eeprom_read_mark
+           0000E633  _EP4FIFOPFL                        eeprom_read_mark
+           0000E634  _EP6FIFOPFH                        eeprom_read_mark
+           0000E635  _EP6FIFOPFL                        eeprom_read_mark
+           0000E636  _EP8FIFOPFH                        eeprom_read_mark
+           0000E637  _EP8FIFOPFL                        eeprom_read_mark
+           0000E640  _EP2ISOINPKTS                      eeprom_read_mark
+           0000E641  _EP4ISOINPKTS                      eeprom_read_mark
+           0000E642  _EP6ISOINPKTS                      eeprom_read_mark
+           0000E643  _EP8ISOINPKTS                      eeprom_read_mark
+           0000E648  _INPKTEND                          eeprom_read_mark
+           0000E649  _OUTPKTEND                         eeprom_read_mark
+           0000E650  _EP2FIFOIE                         eeprom_read_mark
+           0000E651  _EP2FIFOIRQ                        eeprom_read_mark
+           0000E652  _EP4FIFOIE                         eeprom_read_mark
+           0000E653  _EP4FIFOIRQ                        eeprom_read_mark
+           0000E654  _EP6FIFOIE                         eeprom_read_mark
+           0000E655  _EP6FIFOIRQ                        eeprom_read_mark
+           0000E656  _EP8FIFOIE                         eeprom_read_mark
+           0000E657  _EP8FIFOIRQ                        eeprom_read_mark
+           0000E658  _IBNIE                             eeprom_read_mark
+           0000E659  _IBNIRQ                            eeprom_read_mark
+           0000E65A  _NAKIE                             eeprom_read_mark
+           0000E65B  _NAKIRQ                            eeprom_read_mark
+           0000E65C  _USBIE                             eeprom_read_mark
+           0000E65D  _USBIRQ                            eeprom_read_mark
+           0000E65E  _EPIE                              eeprom_read_mark
+           0000E65F  _EPIRQ                             eeprom_read_mark
+           0000E660  _GPIFIE                            eeprom_read_mark
+           0000E661  _GPIFIRQ                           eeprom_read_mark
+           0000E662  _USBERRIE                          eeprom_read_mark
+           0000E663  _USBERRIRQ                         eeprom_read_mark
+           0000E664  _ERRCNTLIM                         eeprom_read_mark
+           0000E665  _CLRERRCNT                         eeprom_read_mark
+           0000E666  _INT2IVEC                          eeprom_read_mark
+           0000E667  _INT4IVEC                          eeprom_read_mark
+           0000E668  _INTSETUP                          eeprom_read_mark
+           0000E670  _PORTACFG                          eeprom_read_mark
+           0000E671  _PORTCCFG                          eeprom_read_mark
+           0000E672  _PORTECFG                          eeprom_read_mark
+           0000E678  _I2CS                              eeprom_read_mark
+           0000E679  _I2DAT                             eeprom_read_mark
+           0000E67A  _I2CTL                             eeprom_read_mark
+           0000E67B  _XAUTODAT1                         eeprom_read_mark
+           0000E67C  _XAUTODAT2                         eeprom_read_mark
+           0000E67D  _UDMACRCH                          eeprom_read_mark
+           0000E67E  _UDMACRCL                          eeprom_read_mark
+           0000E67F  _UDMACRCQUAL                       eeprom_read_mark
+           0000E680  _USBCS                             eeprom_read_mark
+           0000E681  _SUSPEND                           eeprom_read_mark
+           0000E682  _WAKEUPCS                          eeprom_read_mark
+ASxxxx Linker V02.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.	.ABS.                             00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           0000E683  _TOGCTL                            eeprom_read_mark
+           0000E684  _USBFRAMEH                         eeprom_read_mark
+           0000E685  _USBFRAMEL                         eeprom_read_mark
+           0000E686  _MICROFRAME                        eeprom_read_mark
+           0000E687  _FNADDR                            eeprom_read_mark
+           0000E68A  _EP0BCH                            eeprom_read_mark
+           0000E68B  _EP0BCL                            eeprom_read_mark
+           0000E68D  _EP1OUTBC                          eeprom_read_mark
+           0000E68F  _EP1INBC                           eeprom_read_mark
+           0000E690  _EP2BCH                            eeprom_read_mark
+           0000E691  _EP2BCL                            eeprom_read_mark
+           0000E694  _EP4BCH                            eeprom_read_mark
+           0000E695  _EP4BCL                            eeprom_read_mark
+           0000E698  _EP6BCH                            eeprom_read_mark
+           0000E699  _EP6BCL                            eeprom_read_mark
+           0000E69C  _EP8BCH                            eeprom_read_mark
+           0000E69D  _EP8BCL                            eeprom_read_mark
+           0000E6A0  _EP0CS                             eeprom_read_mark
+           0000E6A1  _EP1OUTCS                          eeprom_read_mark
+           0000E6A2  _EP1INCS                           eeprom_read_mark
+           0000E6A3  _EP2CS                             eeprom_read_mark
+           0000E6A4  _EP4CS                             eeprom_read_mark
+           0000E6A5  _EP6CS                             eeprom_read_mark
+           0000E6A6  _EP8CS                             eeprom_read_mark
+           0000E6A7  _EP2FIFOFLGS                       eeprom_read_mark
+           0000E6A8  _EP4FIFOFLGS                       eeprom_read_mark
+           0000E6A9  _EP6FIFOFLGS                       eeprom_read_mark
+           0000E6AA  _EP8FIFOFLGS                       eeprom_read_mark
+           0000E6AB  _EP2FIFOBCH                        eeprom_read_mark
+           0000E6AC  _EP2FIFOBCL                        eeprom_read_mark
+           0000E6AD  _EP4FIFOBCH                        eeprom_read_mark
+           0000E6AE  _EP4FIFOBCL                        eeprom_read_mark
+           0000E6AF  _EP6FIFOBCH                        eeprom_read_mark
+           0000E6B0  _EP6FIFOBCL                        eeprom_read_mark
+           0000E6B1  _EP8FIFOBCH                        eeprom_read_mark
+           0000E6B2  _EP8FIFOBCL                        eeprom_read_mark
+           0000E6B3  _SUDPTRH                           eeprom_read_mark
+           0000E6B4  _SUDPTRL                           eeprom_read_mark
+           0000E6B5  _SUDPTRCTL                         eeprom_read_mark
+           0000E6B8  _SETUPDAT                          eeprom_read_mark
+           0000E6C0  _GPIFWFSELECT                      eeprom_read_mark
+           0000E6C1  _GPIFIDLECS                        eeprom_read_mark
+           0000E6C2  _GPIFIDLECTL                       eeprom_read_mark
+           0000E6C3  _GPIFCTLCFG                        eeprom_read_mark
+           0000E6C4  _GPIFADRH                          eeprom_read_mark
+           0000E6C5  _GPIFADRL                          eeprom_read_mark
+           0000E6C6  _FLOWSTATE                         eeprom_read_mark
+           0000E6C7  _FLOWLOGIC                         eeprom_read_mark
+           0000E6C8  _FLOWEQ0CTL                        eeprom_read_mark
+           0000E6C9  _FLOWEQ1CTL                        eeprom_read_mark
+           0000E6CA  _FLOWHOLDOFF                       eeprom_read_mark
+ASxxxx Linker V02.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.	.ABS.                             00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           0000E6CB  _FLOWSTB                           eeprom_read_mark
+           0000E6CC  _FLOWSTBEDGE                       eeprom_read_mark
+           0000E6CD  _FLOWSTBHPERIOD                    eeprom_read_mark
+           0000E6CE  _GPIFTCB3                          eeprom_read_mark
+           0000E6CF  _GPIFTCB2                          eeprom_read_mark
+           0000E6D0  _GPIFTCB1                          eeprom_read_mark
+           0000E6D1  _GPIFTCB0                          eeprom_read_mark
+           0000E6D2  _EP2GPIFFLGSEL                     eeprom_read_mark
+           0000E6D3  _EP2GPIFPFSTOP                     eeprom_read_mark
+           0000E6D4  _EP2GPIFTRIG                       eeprom_read_mark
+           0000E6DA  _EP4GPIFFLGSEL                     eeprom_read_mark
+           0000E6DB  _EP4GPIFPFSTOP                     eeprom_read_mark
+           0000E6DC  _EP4GPIFTRIG                       eeprom_read_mark
+           0000E6E2  _EP6GPIFFLGSEL                     eeprom_read_mark
+           0000E6E3  _EP6GPIFPFSTOP                     eeprom_read_mark
+           0000E6E4  _EP6GPIFTRIG                       eeprom_read_mark
+           0000E6EA  _EP8GPIFFLGSEL                     eeprom_read_mark
+           0000E6EB  _EP8GPIFPFSTOP                     eeprom_read_mark
+           0000E6EC  _EP8GPIFTRIG                       eeprom_read_mark
+           0000E6F0  _XGPIFSGLDATH                      eeprom_read_mark
+           0000E6F1  _XGPIFSGLDATLX                     eeprom_read_mark
+           0000E6F2  _XGPIFSGLDATLNOX                   eeprom_read_mark
+           0000E6F3  _GPIFREADYCFG                      eeprom_read_mark
+           0000E6F4  _GPIFREADYSTAT                     eeprom_read_mark
+           0000E6F5  _GPIFABORT                         eeprom_read_mark
+           0000E6F8  _DBUG                              eeprom_read_mark
+           0000E6F9  _TESTCFG                           eeprom_read_mark
+           0000E6FA  _USBTEST                           eeprom_read_mark
+           0000E6FB  _CT1                               eeprom_read_mark
+           0000E6FC  _CT2                               eeprom_read_mark
+           0000E6FD  _CT3                               eeprom_read_mark
+           0000E6FE  _CT4                               eeprom_read_mark
+           0000E740  _EP0BUF                            eeprom_read_mark
+           0000E780  _EP1OUTBUF                         eeprom_read_mark
+           0000E7C0  _EP1INBUF                          eeprom_read_mark
+           0000F000  _EP2FIFOBUF                        eeprom_read_mark
+           0000F400  _EP4FIFOBUF                        eeprom_read_mark
+           0000F800  _EP6FIFOBUF                        eeprom_read_mark
+           0000FC00  _EP8FIFOBUF                        eeprom_read_mark
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V02.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           00000008  _err                               eeprom_read_mark
+           0000000A  _dat                               eeprom_read_mark
+           0000000C  _command                           eeprom_read_mark
+           0000000E  _HWmark                            eeprom_read_mark
+           00000013  _FWmark                            eeprom_read_mark
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                00000016    00000006 =           6. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           00000016  __gptrput_PARM_2                   _gptrput
+           00000016  _strncmp_PARM_2                    _strncmp
+           00000019  _strncmp_PARM_3                    _strncmp
+ASxxxx Linker V02.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                0000001C    000000E4 =         228. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+           0000001C  __start__stack                     eeprom_read_mark
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000008 =           8. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   00000003  __sdcc_program_startup             eeprom_read_mark
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000008    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   00000008  __sdcc_gsinit_startup              
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             0000000B    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V02.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000015    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   00000015  __mcs51_genXINIT                   
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000037    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   00000037  __mcs51_genRAMCLEAR                
+     0C:   0000003D  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00000061    00000021 =          33. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V02.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000082    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V02.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000085    000004BB =        1211. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0C:   0000043B  _main                              eeprom_read_mark
+     0C:   00000488  _strncmp                           _strncmp
+     0C:   00000507  __gptrput                          _gptrput
+     0C:   00000520  __gptrget                          _gptrget
+     0C:   0000053C  __sdcc_external_startup            _startup
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000540    0000001B =          27. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V02.00 + NoICE + sdld,  page 21.
+
+Files Linked                              [ module(s) ]
+
+eeprom_read_mark.rel                      [  ]
+
+
+Libraries Linked                          [ object file ]
+
+c:\GNURadio\sdcc\bin\..\lib\small/libsdcc.lib
+                                          [ _strncmp.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrput.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+c:\GNURadio\sdcc\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V02.00 + NoICE + sdld,  page 22.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

@@ -1,0 +1,506 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   FFFFFF00  s_BSEG                          
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_CONST                         
+C:   00000000  l_GSINIT                        
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG_BYTES                    
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_PSEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000000  s_XISEG                         
+C:   00000000  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000008  l_HOME                          
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_GSINIT0                       
+C:   00000008  s_REG_BANK_1                    
+C:   00000008  s_SSEG                          
+C:   0000000A  l_GSINIT2                       
+C:   0000000B  s_GSINIT1                       
+C:   0000000B  s_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000015  s_GSINIT3                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000037  s_GSINIT4                       
+C:   00000061  s_GSFINAL                       
+C:   00000061  s_GSINIT                        
+C:   00000061  s_GSINIT5                       
+C:   00000064  s_CSEG                          
+C:   00000080  l_DSEG                          
+C:   000000A2  l_CSEG                          
+C:   000000F8  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   00000106  s_CONST                         
+C:   00000106  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _IOA                               bench_cinv
+     00000081  _SP                                bench_cinv
+     00000082  _DPL                               bench_cinv
+     00000083  _DPH                               bench_cinv
+     00000084  _DPL1                              bench_cinv
+     00000085  _DPH1                              bench_cinv
+     00000086  _DPS                               bench_cinv
+     00000087  _PCON                              bench_cinv
+     00000088  _TCON                              bench_cinv
+     00000089  _TMOD                              bench_cinv
+     0000008A  _TL0                               bench_cinv
+     0000008B  _TL1                               bench_cinv
+     0000008C  _TH0                               bench_cinv
+     0000008D  _TH1                               bench_cinv
+     0000008E  _CKCO                              bench_cinv
+     0000008F  _SPC_                              bench_cinv
+     00000090  _IOB                               bench_cinv
+     00000091  _EXIF                              bench_cinv
+     00000092  _MPA                               bench_cinv
+     00000098  _SCO                               bench_cinv
+     00000099  _SBU                               bench_cinv
+     0000009A  _APTR1H                            bench_cinv
+     0000009B  _APTR1L                            bench_cinv
+     0000009C  _AUTODAT1                          bench_cinv
+     0000009D  _AUTOPTRH2                         bench_cinv
+     0000009E  _AUTOPTRL2                         bench_cinv
+     0000009F  _AUTODAT2                          bench_cinv
+     000000A0  _IOC                               bench_cinv
+     000000A0  __XPAGE                            
+     000000A1  _INT2CLR                           bench_cinv
+     000000A2  _INT4CLR                           bench_cinv
+     000000A8  _IE                                bench_cinv
+     000000AA  _EP2468STAT                        bench_cinv
+     000000AB  _EP24FIFOFLGS                      bench_cinv
+     000000AC  _EP68FIFOFLGS                      bench_cinv
+     000000AF  _AUTOPTRSETUP                      bench_cinv
+     000000B0  _IOD                               bench_cinv
+     000000B1  _IOE                               bench_cinv
+     000000B2  _OEA                               bench_cinv
+     000000B3  _OEB                               bench_cinv
+     000000B4  _OEC                               bench_cinv
+     000000B5  _OED                               bench_cinv
+     000000B6  _OEE                               bench_cinv
+     000000B8  _IP                                bench_cinv
+     000000BA  _EP01STAT                          bench_cinv
+     000000BB  _GPIFTRIG                          bench_cinv
+     000000BD  _GPIFSGLDATH                       bench_cinv
+     000000BE  _GPIFSGLDATLX                      bench_cinv
+     000000BF  _GPIFSGLDATLNOX                    bench_cinv
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000C0  _SCON1                             bench_cinv
+     000000C1  _SBUF1                             bench_cinv
+     000000C8  _T2CON                             bench_cinv
+     000000CA  _RCAP2L                            bench_cinv
+     000000CB  _RCAP2H                            bench_cinv
+     000000CC  _TL2                               bench_cinv
+     000000CD  _TH2                               bench_cinv
+     000000D0  _PSW                               bench_cinv
+     000000D8  _EICON                             bench_cinv
+     000000E0  _ACC                               bench_cinv
+     000000E8  _EIE                               bench_cinv
+     000000F0  _B                                 bench_cinv
+     000000F8  _EIP                               bench_cinv
+     0000E400  _GPIF_WAVE_DATA                    bench_cinv
+     0000E480  _RES_WAVEDATA_END                  bench_cinv
+     0000E600  _CPUCS                             bench_cinv
+     0000E601  _IFCONFIG                          bench_cinv
+     0000E602  _PINFLAGSAB                        bench_cinv
+     0000E603  _PINFLAGSCD                        bench_cinv
+     0000E604  _FIFORESET                         bench_cinv
+     0000E605  _BREAKPT                           bench_cinv
+     0000E606  _BPADDRH                           bench_cinv
+     0000E607  _BPADDRL                           bench_cinv
+     0000E608  _UART230                           bench_cinv
+     0000E609  _FIFOPINPOLAR                      bench_cinv
+     0000E60A  _REVID                             bench_cinv
+     0000E60B  _REVCTL                            bench_cinv
+     0000E60C  _GPIFHOLDAMOUNT                    bench_cinv
+     0000E610  _EP1OUTCFG                         bench_cinv
+     0000E611  _EP1INCFG                          bench_cinv
+     0000E612  _EP2CFG                            bench_cinv
+     0000E613  _EP4CFG                            bench_cinv
+     0000E614  _EP6CFG                            bench_cinv
+     0000E615  _EP8CFG                            bench_cinv
+     0000E618  _EP2FIFOCFG                        bench_cinv
+     0000E619  _EP4FIFOCFG                        bench_cinv
+     0000E61A  _EP6FIFOCFG                        bench_cinv
+     0000E61B  _EP8FIFOCFG                        bench_cinv
+     0000E620  _EP2AUTOINLENH                     bench_cinv
+     0000E621  _EP2AUTOINLENL                     bench_cinv
+     0000E622  _EP4AUTOINLENH                     bench_cinv
+     0000E623  _EP4AUTOINLENL                     bench_cinv
+     0000E624  _EP6AUTOINLENH                     bench_cinv
+     0000E625  _EP6AUTOINLENL                     bench_cinv
+     0000E626  _EP8AUTOINLENH                     bench_cinv
+     0000E627  _EP8AUTOINLENL                     bench_cinv
+     0000E630  _EP2FIFOPFH                        bench_cinv
+     0000E631  _EP2FIFOPFL                        bench_cinv
+     0000E632  _EP4FIFOPFH                        bench_cinv
+     0000E633  _EP4FIFOPFL                        bench_cinv
+     0000E634  _EP6FIFOPFH                        bench_cinv
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E635  _EP6FIFOPFL                        bench_cinv
+     0000E636  _EP8FIFOPFH                        bench_cinv
+     0000E637  _EP8FIFOPFL                        bench_cinv
+     0000E640  _EP2ISOINPKTS                      bench_cinv
+     0000E641  _EP4ISOINPKTS                      bench_cinv
+     0000E642  _EP6ISOINPKTS                      bench_cinv
+     0000E643  _EP8ISOINPKTS                      bench_cinv
+     0000E648  _INPKTEND                          bench_cinv
+     0000E649  _OUTPKTEND                         bench_cinv
+     0000E650  _EP2FIFOIE                         bench_cinv
+     0000E651  _EP2FIFOIRQ                        bench_cinv
+     0000E652  _EP4FIFOIE                         bench_cinv
+     0000E653  _EP4FIFOIRQ                        bench_cinv
+     0000E654  _EP6FIFOIE                         bench_cinv
+     0000E655  _EP6FIFOIRQ                        bench_cinv
+     0000E656  _EP8FIFOIE                         bench_cinv
+     0000E657  _EP8FIFOIRQ                        bench_cinv
+     0000E658  _IBNIE                             bench_cinv
+     0000E659  _IBNIRQ                            bench_cinv
+     0000E65A  _NAKIE                             bench_cinv
+     0000E65B  _NAKIRQ                            bench_cinv
+     0000E65C  _USBIE                             bench_cinv
+     0000E65D  _USBIRQ                            bench_cinv
+     0000E65E  _EPIE                              bench_cinv
+     0000E65F  _EPIRQ                             bench_cinv
+     0000E660  _GPIFIE                            bench_cinv
+     0000E661  _GPIFIRQ                           bench_cinv
+     0000E662  _USBERRIE                          bench_cinv
+     0000E663  _USBERRIRQ                         bench_cinv
+     0000E664  _ERRCNTLIM                         bench_cinv
+     0000E665  _CLRERRCNT                         bench_cinv
+     0000E666  _INT2IVEC                          bench_cinv
+     0000E667  _INT4IVEC                          bench_cinv
+     0000E668  _INTSETUP                          bench_cinv
+     0000E670  _PORTACFG                          bench_cinv
+     0000E671  _PORTCCFG                          bench_cinv
+     0000E672  _PORTECFG                          bench_cinv
+     0000E678  _I2CS                              bench_cinv
+     0000E679  _I2DAT                             bench_cinv
+     0000E67A  _I2CTL                             bench_cinv
+     0000E67B  _XAUTODAT1                         bench_cinv
+     0000E67C  _XAUTODAT2                         bench_cinv
+     0000E67D  _UDMACRCH                          bench_cinv
+     0000E67E  _UDMACRCL                          bench_cinv
+     0000E67F  _UDMACRCQUAL                       bench_cinv
+     0000E680  _USBCS                             bench_cinv
+     0000E681  _SUSPEND                           bench_cinv
+     0000E682  _WAKEUPCS                          bench_cinv
+     0000E683  _TOGCTL                            bench_cinv
+     0000E684  _USBFRAMEH                         bench_cinv
+     0000E685  _USBFRAMEL                         bench_cinv
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E686  _MICROFRAME                        bench_cinv
+     0000E687  _FNADDR                            bench_cinv
+     0000E68A  _EP0BCH                            bench_cinv
+     0000E68B  _EP0BCL                            bench_cinv
+     0000E68D  _EP1OUTBC                          bench_cinv
+     0000E68F  _EP1INBC                           bench_cinv
+     0000E690  _EP2BCH                            bench_cinv
+     0000E691  _EP2BCL                            bench_cinv
+     0000E694  _EP4BCH                            bench_cinv
+     0000E695  _EP4BCL                            bench_cinv
+     0000E698  _EP6BCH                            bench_cinv
+     0000E699  _EP6BCL                            bench_cinv
+     0000E69C  _EP8BCH                            bench_cinv
+     0000E69D  _EP8BCL                            bench_cinv
+     0000E6A0  _EP0CS                             bench_cinv
+     0000E6A1  _EP1OUTCS                          bench_cinv
+     0000E6A2  _EP1INCS                           bench_cinv
+     0000E6A3  _EP2CS                             bench_cinv
+     0000E6A4  _EP4CS                             bench_cinv
+     0000E6A5  _EP6CS                             bench_cinv
+     0000E6A6  _EP8CS                             bench_cinv
+     0000E6A7  _EP2FIFOFLGS                       bench_cinv
+     0000E6A8  _EP4FIFOFLGS                       bench_cinv
+     0000E6A9  _EP6FIFOFLGS                       bench_cinv
+     0000E6AA  _EP8FIFOFLGS                       bench_cinv
+     0000E6AB  _EP2FIFOBCH                        bench_cinv
+     0000E6AC  _EP2FIFOBCL                        bench_cinv
+     0000E6AD  _EP4FIFOBCH                        bench_cinv
+     0000E6AE  _EP4FIFOBCL                        bench_cinv
+     0000E6AF  _EP6FIFOBCH                        bench_cinv
+     0000E6B0  _EP6FIFOBCL                        bench_cinv
+     0000E6B1  _EP8FIFOBCH                        bench_cinv
+     0000E6B2  _EP8FIFOBCL                        bench_cinv
+     0000E6B3  _SUDPTRH                           bench_cinv
+     0000E6B4  _SUDPTRL                           bench_cinv
+     0000E6B5  _SUDPTRCTL                         bench_cinv
+     0000E6B8  _SETUPDAT                          bench_cinv
+     0000E6C0  _GPIFWFSELECT                      bench_cinv
+     0000E6C1  _GPIFIDLECS                        bench_cinv
+     0000E6C2  _GPIFIDLECTL                       bench_cinv
+     0000E6C3  _GPIFCTLCFG                        bench_cinv
+     0000E6C4  _GPIFADRH                          bench_cinv
+     0000E6C5  _GPIFADRL                          bench_cinv
+     0000E6C6  _FLOWSTATE                         bench_cinv
+     0000E6C7  _FLOWLOGIC                         bench_cinv
+     0000E6C8  _FLOWEQ0CTL                        bench_cinv
+     0000E6C9  _FLOWEQ1CTL                        bench_cinv
+     0000E6CA  _FLOWHOLDOFF                       bench_cinv
+     0000E6CB  _FLOWSTB                           bench_cinv
+     0000E6CC  _FLOWSTBEDGE                       bench_cinv
+     0000E6CD  _FLOWSTBHPERIOD                    bench_cinv
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6CE  _GPIFTCB3                          bench_cinv
+     0000E6CF  _GPIFTCB2                          bench_cinv
+     0000E6D0  _GPIFTCB1                          bench_cinv
+     0000E6D1  _GPIFTCB0                          bench_cinv
+     0000E6D2  _EP2GPIFFLGSEL                     bench_cinv
+     0000E6D3  _EP2GPIFPFSTOP                     bench_cinv
+     0000E6D4  _EP2GPIFTRIG                       bench_cinv
+     0000E6DA  _EP4GPIFFLGSEL                     bench_cinv
+     0000E6DB  _EP4GPIFPFSTOP                     bench_cinv
+     0000E6DC  _EP4GPIFTRIG                       bench_cinv
+     0000E6E2  _EP6GPIFFLGSEL                     bench_cinv
+     0000E6E3  _EP6GPIFPFSTOP                     bench_cinv
+     0000E6E4  _EP6GPIFTRIG                       bench_cinv
+     0000E6EA  _EP8GPIFFLGSEL                     bench_cinv
+     0000E6EB  _EP8GPIFPFSTOP                     bench_cinv
+     0000E6EC  _EP8GPIFTRIG                       bench_cinv
+     0000E6F0  _XGPIFSGLDATH                      bench_cinv
+     0000E6F1  _XGPIFSGLDATLX                     bench_cinv
+     0000E6F2  _XGPIFSGLDATLNOX                   bench_cinv
+     0000E6F3  _GPIFREADYCFG                      bench_cinv
+     0000E6F4  _GPIFREADYSTAT                     bench_cinv
+     0000E6F5  _GPIFABORT                         bench_cinv
+     0000E6F8  _DBUG                              bench_cinv
+     0000E6F9  _TESTCFG                           bench_cinv
+     0000E6FA  _USBTEST                           bench_cinv
+     0000E6FB  _CT1                               bench_cinv
+     0000E6FC  _CT2                               bench_cinv
+     0000E6FD  _CT3                               bench_cinv
+     0000E6FE  _CT4                               bench_cinv
+     0000E740  _EP0BUF                            bench_cinv
+     0000E780  _EP1OUTBUF                         bench_cinv
+     0000E7C0  _EP1INBUF                          bench_cinv
+     0000F000  _EP2FIFOBUF                        bench_cinv
+     0000F400  _EP4FIFOBUF                        bench_cinv
+     0000F800  _EP6FIFOBUF                        bench_cinv
+     0000FC00  _EP8FIFOBUF                        bench_cinv
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000008    000000F8 =         248. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  __start__stack                     bench_cinv
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000008 =           8. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000003  __sdcc_program_startup             bench_cinv
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000008    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000008  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             0000000B    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000015    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000015  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000037    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000037  __mcs51_genRAMCLEAR                
+C:   0000003D  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000061    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000064    000000A2 =         162. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000FD  _main                              bench_cinv
+C:   00000102  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+
+Files Linked                              [ module(s) ]
+
+bench_cinv.rel                            [  ]
+
+
+Libraries Linked                          [ object file ]
+
+c:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+c:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+c:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+c:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+c:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+c:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+
